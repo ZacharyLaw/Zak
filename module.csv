@@ -1,0 +1,197 @@
+﻿Module,Filename
+Chaingun,chaingun
+cg,chaingun
+Combat Shield,combatshield
+cs,combatshield
+Combat Shield Mk2,combatshieldmk2
+cs2,combatshieldmk2
+Small Ion Drive,smalliondrive
+id,smalliondrive
+Small Ion Drive Mk2,smalliondrivemk2
+id2,smalliondrivemk2
+Small Reactor,smallreactor
+r,smallreactor
+Small Laser,smalllaser
+sl,smalllaser
+Small Laser Mk2,smalllasermk2
+sl2,smalllasermk2
+Bunker Shield,bunkershield
+bs,bunkershield
+Bunker Shield Mk2,bunkershieldmk2
+bs2,bunkershieldmk2
+Vectored Thruster,vectoredthruster
+vt,vectoredthruster
+Vectored Thruster Mk2,vectoredthrustermk2
+vt,vectoredthrustermk2
+Vulcan Cannon,vulcancannon
+vc,vulcancannon
+Battle Shield,battleshield
+bs,battleshield
+Chaingun Mk2,chaingunmk2
+cg2,chaingunmk2
+Laser Beam,laserbeam
+lb,laserbeam
+Laser Beam Mk2,laserbeammk2
+lb2,laserbeammk2
+Laser Beam Mk3,laserbeammk3
+lb3,laserbeammk3
+Warp Drive,warpdrive
+wd,warpdrive
+Afterburner,afterburner
+ab,afterburner
+Large Ion Drive,largeiondrive
+33id,largeiondrive
+Rocket Launcher,rocketlauncher
+rl,rocketlauncher
+Rocket Launcher Mk2,rocketlaunchermk2
+rl2,rocketlaunchermk2
+Railgun,railgun
+rg,railgun
+Railgun Mk2,railgunmk2
+rg2,railgunmk2
+Small Solar Armor,smallsolararmor
+s,smallsolararmor
+11s,smallsolararmor
+War Shield,warshield
+ws,warshield
+Medium Reactor,mediumreactor
+22r,mediumreactor
+Fusion Ray,fusionray
+fr,fusionray
+Missile Launcher,missilelauncher
+ml,missilelauncher
+Laser Turret,laserturret
+lt,laserturret
+Small Steel Armor,smallsteelarmor
+11s,smallsteelarmor
+Vulcan Turret,vulcanturret
+vt,vulcanturret
+Vulcan Turret Mk2,vulcanturretmk2
+vt2,vulcanturretmk2
+Vulcan Turret Mk3,vulcanturretmk3
+vt3,vulcanturretmk3
+Quantum Rifle,quantumrifle
+qr,quantumrifle
+Grand Ion Drive,grandiondrive
+gid,grandiondrive
+Grand Ion Drive Mk2,grandiondrivemk2
+gid,grandiondrivemk2
+Impact Missile,impactmissile
+im,impactmissile
+Gaussian Shotgun,gaussianshotgun
+gs,gaussianshotgun
+Gauss Rifle,gaussrifle
+gr,gaussrifle
+Rocket Turret,rocketturret
+rt,rocketturret
+Rocket Turret Mk2,rocketturretmk2
+rt2,rocketturretmk2
+Rocket Turret Mk3,rocketturretmk3
+rt3,rocketturretmk3
+Pulse Laser,pulselaser
+pl,pulselaser
+Pulse Laser Mk2,pulselasermk2
+pl2,pulselasermk2
+Pulse Laser Mk3,pulselasermk3
+pl3,pulselasermk3
+Small Reactive Armor,smallreactivearmor
+11r,smallreactivearmor
+Scorpion Launcher,scorpionlauncher
+sl,scorpionlauncher
+Scorpion Launcher Mk2,scorpionlaunchermk2
+sl2,scorpionlaunchermk2
+Scorpion Launcher Mk3,scorpionlaunchermk3
+sl3,scorpionlaunchermk3
+Mass Drive,massdrive
+md,massdrive
+Mass Drive Mk2,massdrivemk2
+md2,massdrivemk2
+Junk Launcher,junklauncher
+jl,junklauncher
+Torpedo Launcher,torpedolauncher
+tl,torpedolauncher
+Medium Armored Reactor,mediumarmoredreactor
+22ar,mediumarmoredreactor
+Medium Armored Reactor Mk2,mediumarmoredreactormk2
+22ar2,mediumarmoredreactormk2
+Large Reactor,largereactor
+33r,largereactor
+Repair Bay,repairbay
+rb,repairbay
+Hyperion Chaingun,hyperionchaingun
+hc,hyperionchaingun
+Mine Launcher,minelauncher
+ml,minelauncher
+Mine Launcher Mk2,minelaunchermk2
+ml2,minelaunchermk2
+Flak Rocket Turret,flakrocketturret
+flak,flakrocketturret
+frt,flakrocketturret
+Flak Rocket Turret Mk2,flakrocketturretmk2
+flak2,flakrocketturretmk2
+frt2,flakrocketturretmk2
+Plasma Armor,plasmaarmor
+pa,plasmaarmor
+Arcfusion Array,arcfusionarray
+aa,arcfusionarray
+Medium Solar Armor,mediumsolararmor
+22solar,mediumsolararmor
+msa,mediumsolararmor
+22s,mediumsolararmor
+Medium Solar Armor Mk2,mediumsolararmormk2
+22solar2,mediumsolararmormk2
+22s2,mediumsolararmormk2
+msa2,mediumsolararmormk2
+Point Defense Turret,pointdefenseturret
+pdt,pointdefenseturret
+Point Defense Turret Mk2,pointdefenseturretmk2
+pdt2,pointdefenseturretmk2
+Point Defense Turret Mk3,pointdefenseturretmk3
+pdt3,pointdefenseturretmk3
+Rail Turret,railturret
+rt,railturret
+Rail Turret Mk2,railturretmk2
+rt2,railturretmk2
+Quantum Turret,quantumturret
+qt,quantumturret
+Quantum Turret Mk2,quantumturretmk2
+qt2,quantumturretmk2
+Fusion Turret,fusionturret
+ft,fusionturret
+Warhead Launcher,warheadlauncher
+wl,warheadlauncher
+Arsenal Wall,arsenalwall
+aw,arsenalwall
+Medium Steel Armor,mediumsteelarmor
+22steel,mediumsteelarmor
+msa,mediumsteelarmor
+22s,mediumsteelarmor
+Grand Reactor,grandreactor
+gr,grandreactor
+44r,grandreactor
+Hydra Turret,hydraturret
+ht,hydraturret
+Hydra Turret Mk2,hydraturretmk2
+ht2,hydraturretmk2
+Large Armored Reactor,largearmoredreactor
+lar,largearmoredreactor
+33ar,largearmoredreactor
+Gaussian War Shotgun,gaussianwarshotgun
+gws,gaussianwarshotgun
+Medium Reactive Armor,mediumreactivearmor
+mra,mediumreactivearmor
+22ra,mediumreactivearmor
+Large Solar Armor,largesolararmor
+33sa,largesolararmor
+Capital Cannon,capitalcannon
+cc,capitalcannon
+Capital Cannon Mk2,capitalcannonmk2
+cc2,capitalcannonmk2
+Ballistic Armor,ballisticarmor
+ba,ballisticarmor
+Large Steel Armor,largesteelarmor
+33s,largesteelarmor
+33steel,largesteelarmor
+lsa,largesteelarmor
+Large Reactive Armor,largereactivearmor
+33ra,largereactivearmor

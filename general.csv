@@ -1,0 +1,686 @@
+﻿Index,Alternative,Level,Acquisition,Credit,Celestium,Blueprint,Speed,Turning,Cell,Max,Support,Supp. Cell,Supp. Max,Mod 1,Mod 2,Mod 3,Mod 4,Mod 5,Supp. Mod 1,Supp. Mod 2,Supp. Mod 3,Supp. Mod 4,Supp. Mod 5,Upgradeable Bonus,Unique Bonus,Size,Power Use,Health,Armor,Mass,Reflect,Power Generation,Anti Penetration Damage,Explosion Damage,Explosion Radius,Damage,Range,Fire Cone,Fire Rate,Penetrating Damage,No. of Missiles,Rocket Explosion Radius,Flight Time,No. of Mines,Mines Explosion Radius,Mine Lifespan,Laser Duration,Max Regeneration,Regen Speed,Shield Radius,Shield Strength,Junk Amount,Junk Flight Time,Mine Disruption %,Rocket Disruption %,Torpedo Disruption %,Thrust Power,Turn Power,Warp Force,Duration,Thrust Boost,Turning Boost,Max Module
+Light Fighter,,1,Free,,,,7,1.5,7,,,,,,,,,,,,,,,"Ballistic Health
+Shield Health
+Armor Armor
+Power Health
+Missile Power Usage
+Power Power Generation",Total Module Damage,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Heavy Fighter,,2,Free,,,,5.5,1.2,12,,,,,,,,,,,,,,,"Laser Damage
+Missile Range
+Shield Radius
+Engine Health
+Armor Mass
+Power Explosion Radius",Total Module Power Generation,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Lightning,,3,,5 000,20,,8.5,3,13,15,,,,1<:celes:570222210476670976>,2<:celes:570222210476670976>,,,,,,,,,"Shield Range
+Missile Fire Cone
+Armor Reflect
+Shield Max Regeneration
+Power Explosion Radius",Total Module Damage,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Wing,,4,Special Offer,,,,8.2,2.1,19,27,,,,?,?,,,,,,,,,"Missile Fire Cone
+Laser Fire Cone
+Shield Max Regeneration
+Power Armor
+Shield Mass
+Engine Turn Speed",Total Module Range,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Wing Mk2,,4,,720 000,,5,8,2,21,27,,,,4<:blueprint:568688146683002880> & 20<:celes:570222210476670976>,4<:blueprint:568688146683002880> & 20<:celes:570222210476670976>,,,,,,,,,"Ballistic Fire Cone
+Laser Range
+Shield Radius
+Engine Armor
+Laser Mass
+Engine Mass",Total Module Power Generation,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Type k4-8U70,,0,,900 000,,13,8.5,2.25,21,33,,,,7<:blueprint:568688146683002880> & 200<:celes:570222210476670976>,8<:blueprint:568688146683002880> & 200<:celes:570222210476670976>,7<:blueprint:568688146683002880> & 200<:celes:570222210476670976>,,,,,,,,"Laser Damage
+Shield Strength
+Armor Armor
+Laser Power Use
+Power Explode Damage
+Power Generation",Total Module Health,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Corvette,,4,,25 000,30,,9,1.5,18,22,,,,5<:celes:570222210476670976>,5<:celes:570222210476670976>,,,,,,,,,"Ballistic Damage
+Shield Radius
+Armor Reflect
+Shield Regen Speed
+Engine Health
+Ballistic Power Usage
+Laser Mass
+Armor Power Generation",Total Module Power Generation,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Viper,,5,,45 000,40,,8,1.2,22,26,,,,23<:celes:570222210476670976>,17<:celes:570222210476670976>,,,,,,,,,"Laser Range
+Missile Health
+Shield Radius
+Power Reflect
+Engine Armor
+Power Armor
+Ballistic Mass
+Engine Mass",Total Module Reflect,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Dart,,6,,80 000,80,,9,1.5,24,29,,,,15<:celes:570222210476670976>,15<:celes:570222210476670976>,15<:celes:570222210476670976>,,,,,,,,"Missile Damage
+Missile Health
+Shield Strength
+Shield Regen Speed
+Laser Power Usage
+Ballistic Mass
+Engine Thrust Power
+Power Power Generation
+Power Explode Damage",Total Module Damage,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Raven,,7,,99 000,150,,8,1.2,20,25,2 Light Fighter,7,,54<:celes:570222210476670976>,42<:celes:570222210476670976>,54<:celes:570222210476670976>,,,,,,,,"Ballistic Fire Cone
+Laser Fire Cone
+Engine Armor
+Armor Power Generation
+Shield Power Usage
+Power Mass",Total Module Firing Arc,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Ironwing,,8,,249 000,160,,7,1.2,26,32,,,,58<:celes:570222210476670976>,44<:celes:570222210476670976>,58<:celes:570222210476670976>,,,,,,,,"Ballistic Range
+Engine Health
+Power Reflect
+Ballistic Mass
+Shield Mass
+Armor Power Generation",Total Module Mass,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PSS Sparrow,,0,Special Offer,,,,?,?,28,48,,,,100<:celes:570222210476670976>,100<:celes:570222210476670976>,100<:celes:570222210476670976>,100<:celes:570222210476670976>,,,,,,,?,?,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PSS Sparrow Mk2,,0,,1 100 000,,5,9.5,1.75,30,58,,,,4<:blueprint:568688146683002880> & 100<:celes:570222210476670976>,4<:blueprint:568688146683002880> & 100<:celes:570222210476670976>,5<:blueprint:568688146683002880> & 100<:celes:570222210476670976>,3<:blueprint:568688146683002880> & 100<:celes:570222210476670976>,,,,,,,"Missile Range
+Missile Fire Cone
+Ballistic Range
+Engine Reflect
+Armor Mass
+Engine Mass",Total Module Firing Arc,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Valkyrie,,9,,349 000,160,,7,1.2,37,43,,,,58<:celes:570222210476670976>,44<:celes:570222210476670976>,58<:celes:570222210476670976>,,,,,,,,"Ballistic Damage
+Missile Fire Cone
+Shield Regen Speed
+Armor Armor
+Shield Strength
+Power Health
+Power Armor
+Missile Mass
+Engine Power Usage",Total Module Reflect,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Scythe,,10,,399 000,200,,6,0.75,32,38,1 Lightning,13,15,79<:celes:570222210476670976>,61<:celes:570222210476670976>,61<:celes:570222210476670976>,,,75<:celes:570222210476670976>,75<:celes:570222210476670976>,,,,"Missile Damage
+Laser Range
+Ballistic Health
+Shield Radius
+Armor Armor
+Armor Reflect
+Engine Power Usage
+Power Explode Damage
+Engine Thrust Power",Total Module Armor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Rapier,,12,,449 000,250,,6.5,0.8,48,54,,,,90<:celes:570222210476670976>,69<:celes:570222210476670976>,90<:celes:570222210476670976>,,,,,,,,"Shield Max Regen
+Engine Health
+Power Reflect
+Laser Mass
+Ballistic Power Usage
+Armor Power Generation
+Engine Power Usage",Total Module Reflect,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Arrow,,13,,499 000,280,,6.5,1,40,46,1 Heavy Fighter,12,,101<:celes:570222210476670976>,78<:celes:570222210476670976>,101<:celes:570222210476670976>,,,,,,,,"Laser Damage
+Missile Range
+Armor Reflect
+Armor Health
+Shield Strength
+Shield Max Regen
+Engine Armor
+Missile Health
+Power Explode Damage
+Engine Power Usage
+Engine Turn Power
+Power Power Generation",Total Module Power Use,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PSS Miran,,0,Special Offer,,,,4,0.4,72,92,,,,100<:celes:570222210476670976>,100<:celes:570222210476670976>,100<:celes:570222210476670976>,,,,,,,,?,Total Module Firing Arc,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PSS Miran Mk2,,0,,1 500 000,,5,4.25,0.45,76,108,,,,4<:blueprint:568688146683002880> & 100<:celes:570222210476670976>,4<:blueprint:568688146683002880> & 100<:celes:570222210476670976>,3<:blueprint:568688146683002880> & 100<:celes:570222210476670976>,3<:blueprint:568688146683002880> & 100<:celes:570222210476670976>,,,,,,,"Laser FIre Cone
+Laser Range
+Shield Radius
+Armor Power Generation
+Engine Mass
+Power Mass",Total Module Range,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Hammerhead,,15,,549 000,280,,4.5,0.5,54,64,,,,111<:celes:570222210476670976>,86<:celes:570222210476670976>,111<:celes:570222210476670976>,,,,,,,,"Ballistic Range
+Laser Fire Cone
+Shield Radius
+Engine Reflect
+Armor Reflect
+Shield Regen Speed",Total Module Mass,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Orkaan,,0,,1 750 000,,8,5,0.7,76,108,,,,6<:blueprint:568688146683002880> & 180<:celes:570222210476670976>,5<:blueprint:568688146683002880> & 130<:celes:570222210476670976>,6<:blueprint:568688146683002880> & 180<:celes:570222210476670976>,5<:blueprint:568688146683002880> & 180<:celes:570222210476670976>,,,,,,,Armor Armor
+Shield Health
+Power Health
+Armor Mass
+Engine Mass
+Engine Thrust Power,Total Module Reflect,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Morningstar,,16,,699 000,280,,5,0.6,60,68,,,,112<:celes:570222210476670976>,86<:celes:570222210476670976>,112<:celes:570222210476670976>,,,,,,,,"Missile Fire Cone
+Ballistic Range
+Shield Max Regen
+Power Mass
+Power Explosion Radius",Total Module Range,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Starbridge,,18,,749 000,290,,4.5,0.6,54,65,3 Light Fighter,7,,98<:celes:570222210476670976>,76<:celes:570222210476670976>,76<:celes:570222210476670976>,76<:celes:570222210476670976>,,,,,,,"Ballistic Fire Cone
+Missile Range
+Engine Reflect
+Armor Reflect
+Armor Power Generation
+Engine Mass",Total Module Armor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Age Eagle,,18,,1 499 000,600,,5.5,1,61,72,,,,162<:celes:570222210476670976>,102<:celes:570222210476670976>,,,,,,,,,"Ballistic Damage
+Missile Health
+Armor Reflect
+Power Armor
+Missile Power Usage
+Armor Power Usage
+Shield Power Usage
+Power Explode Damage
+Power Power Generation",Total Module Health,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Broadsword,,20,,799 000,310,,4.5,0.5,62,72,,,,99<:celes:570222210476670976>,76<:celes:570222210476670976>,76<:celes:570222210476670976>,99<:celes:570222210476670976>,,,,,,,"Laser Fire Cone
+Missile Fire Cone
+Armor Mass
+Armor Power Generation
+Engine Turn Power
+Power Explosion Radius",Total Module Firing Arc,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Javelin,,21,,849 000,340,,6,0.6,66,78,,,,110<:celes:570222210476670976>,84<:celes:570222210476670976>,84<:celes:570222210476670976>,110<:celes:570222210476670976>,,,,,,,"Missile Damage
+Ballistic Penetrating Damage
+Laser Health
+Shield Regen Speed
+Armor Reflect
+Power Health
+Power Armor
+Ballistic Power Usage
+Armor Power Usage
+Shield Power Usage
+Power Power Generation
+Engine Thrust Power",Total Module Health,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Wanderer,,22,,899 000,370,,7,0.6,78,88,,,,120<:celes:570222210476670976>,93<:celes:570222210476670976>,93<:celes:570222210476670976>,120<:celes:570222210476670976>,,,,,,,"Laser Range
+Shield Health
+Engine Armor
+Missile Mass
+Power Mass
+Power Power Generation
+Power Explosion Radius",Total Module Mass,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Hawk,,24,,949 000,420,,5,0.5,61,73,1 Ironwing,26,32,138<:celes:570222210476670976>,106<:celes:570222210476670976>,106<:celes:570222210476670976>,138<:celes:570222210476670976>,,134<:celes:570222210476670976>,101<:celes:570222210476670976>,134<:celes:570222210476670976>,,,"Ballistic Health
+Shield Health
+Shield Radius
+Power Armor
+Power Health
+Missile Power Usage
+Laser Mass
+Power Explode Damage
+Engine Power Usage",Total Module Power Generation,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PSS EL-K,,0,Special Offer,,,,?,?,76,108,,,,250<:celes:570222210476670976>,250<:celes:570222210476670976>,250<:celes:570222210476670976>,250<:celes:570222210476670976>,,,,,,,?,?,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PSS EL-k Mk2,,0,,1 700 000,,8,3.75,0.45,78,118,,,,6<:blueprint:568688146683002880> & 250<:celes:570222210476670976>,6<:blueprint:568688146683002880> & 250<:celes:570222210476670976>,6<:blueprint:568688146683002880> & 250<:celes:570222210476670976>,6<:blueprint:568688146683002880> & 250<:celes:570222210476670976>,,,,,,,"Laser Range
+Missile Fire Cone
+Power Health
+Power Armor
+Shield Mass
+Armor Power Generation",Total Module Firing Arc,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Warrior,,26,,999 000,460,,5,0.5,90,104,,,,152<:celes:570222210476670976>,117<:celes:570222210476670976>,117<:celes:570222210476670976>,152<:celes:570222210476670976>,,,,,,,"Ballistic Range
+Shield Strength
+Armor Health
+Missile Mass
+Engine Turn Power
+Power Mass",Total Module Firing Arc,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Charger,,27,,1 047 000,510,,6,0.4,80,91,3 Lightning,13,15,170<:celes:570222210476670976>,131<:celes:570222210476670976>,131<:celes:570222210476670976>,170<:celes:570222210476670976>,,225<:celes:570222210476670976>,225<:celes:570222210476670976>,,,,"Ballistic Damage
+Missile Damage
+Ballistic Health
+Armor Health
+Armor Armor
+Shield Strength
+Power Health
+Missile Power Usage
+Shield Power Usage
+Engine Turn Power
+Engine Thrust Power
+Power Explode Damage",Total Module Power Use,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Therion,,28,,1 164 000,560,,4,0.4,106,124,,,,115<:celes:570222210476670976>,119<:celes:570222210476670976>,119<:celes:570222210476670976>,119<:celes:570222210476670976>,115<:celes:570222210476670976>,,,,,,"Laser Fire Cone
+Armor Reflect
+Engine Armor
+Power Reflect
+Ballistic Mass
+Ballistic Power Usage
+Armor Power Usage
+Power Explosion Radius
+Engine Power Usage",Total Module Firing Arc,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Wraith,,30,,1 288 000,620,,4.5,0.5,90,102,3 Corvette,18,22,210<:celes:570222210476670976>,162<:celes:570222210476670976>,162<:celes:570222210476670976>,210<:celes:570222210476670976>,,280<:celes:570222210476670976>,280<:celes:570222210476670976>,,,,"Laser Damage
+Missile Range
+Engine Reflect
+Power Armor
+Armor Power Usage
+Armor Mass
+Power Power Generation",Total Module Reflect,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Cerberos,,32,,1 418 000,670,,4,0.45,94,110,5 Hevay Fighter,12,,229<:celes:570222210476670976>,176<:celes:570222210476670976>,176<:celes:570222210476670976>,229<:celes:570222210476670976>,,,,,,,"Ballistic Fire Cone
+Shield Max Regen
+Armor Health
+Engine Reflect
+Engine Armor
+Missile Mass
+Power Explosion Radius",Total Module Range,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Myrmidon,,33,,1 554 000,730,,9,1.3,71,83,9 Light Fighter,7,,252<:celes:570222210476670976>,194<:celes:570222210476670976>,194<:celes:570222210476670976>,252<:celes:570222210476670976>,,,,,,,"Ballistic Damage
+Missile health
+Armor Armor
+Shield Strength
+Shield Max Regen
+Engine Health
+Missile Power Usage
+Armor Health
+Power Power Generation
+Engine Thrust Power
+Engine Turn Power",Total Module Armor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Destoyer Vega,,34,,2 499 000,1 000,,5,0.5,111,139,,,,240<:celes:570222210476670976>,240<:celes:570222210476670976>,240<:celes:570222210476670976>,,,,,,,,"Laser Range
+Armor Reflect
+Engine Reflect
+Engine Armor
+Ballistic Mass
+Ballistic Power Usage
+Shield Power Usage
+Shield Mass
+Power Explosion Radius",Total Module Mass,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Phantom,,35,,1 697 000,790,,5.5,0.75,132,145,,,,275<:celes:570222210476670976>,211<:celes:570222210476670976>,211<:celes:570222210476670976>,275<:celes:570222210476670976>,,,,,,,"Ballistic Range
+Missile Fire Cone
+Power Armor
+Engine Reflect
+Armor Mass
+Shield Mass",Total Module Range,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Phantom Mk2,,0,,1 697 000,,8,5.65,0.78,140,160,,,,6<:blueprint:568688146683002880> & 275<:celes:570222210476670976>,6<:blueprint:568688146683002880> & 211<:celes:570222210476670976>,5<:blueprint:568688146683002880> & 211<:celes:570222210476670976>,6<:blueprint:568688146683002880> & 275<:celes:570222210476670976>,,,,,,,"Ballistic Fire Cone
+Missile Range
+Shield Radius
+Engine Health
+Armor Mass
+Engine Turning Power",Total Module Range,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Baron,,37,,1 845 000,850,,4.5,0.6,104,118,2 Valkries,37,43,298<:celes:570222210476670976>,229<:celes:570222210476670976>,229<:celes:570222210476670976>,298<:celes:570222210476670976>,,286<:celes:570222210476670976>,217<:celes:570222210476670976>,286<:celes:570222210476670976>,,,"Ballistic Damage
+Ballistic Penetrating Damage
+Shield Radius
+Armor Health
+Engine Reflect
+Power Reflect
+Ballistic Power Usage
+Missile Power Usage
+Shield Mass",Total Module Power Generation,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Crusader,,39,,2 000 000,910,,4.5,0.55,161,177,,,,344<:celes:570222210476670976>,265<:celes:570222210476670976>,265<:celes:570222210476670976>,265<:celes:570222210476670976>,,,,,,,"Laser Damage
+Armor Health
+Armor Armor
+Engine Health
+Missile Mass
+Ballistic Mass
+Armor Power Generation
+Engine Power Usage
+Power Explode Damage",Total Module Damage,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Captain,,40,,2 250 000,1 020,,5,0.55,136,148,1 Javelin,66,78,363<:celes:570222210476670976>,280<:celes:570222210476670976>,280<:celes:570222210476670976>,363<:celes:570222210476670976>,,273<:celes:570222210476670976>,208<:celes:570222210476670976>,208<:celes:570222210476670976>,273<:celes:570222210476670976>,,"Ballistic Fire Cone
+Shield Max Regen
+Engine Reflect
+Laser Mass
+Missile Power Usage
+Shield Mass
+Power Explosion Radius",Total Module Power Generation,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Duke,,42,,2 500 000,1 120,,4,0.5,126,142,4 Viper,22,26,561<:celes:570222210476670976>,431<:celes:570222210476670976>,431<:celes:570222210476670976>,,,615<:celes:570222210476670976>,454<:celes:570222210476670976>,,,,"Laser Damage
+Shield Regen Speed
+Shield Max Regen
+Shield Health
+Power Reflect
+Engine Armor
+Laser Power Usage
+Laser Mass
+Engine Thrust Power",Total Module Health,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Sleipnir,,44,,2 750 000,1 220,,5,0.45,124,138,8 Heavy Fighter,12,,441<:celes:570222210476670976>,340<:celes:570222210476670976>,340<:celes:570222210476670976>,441<:celes:570222210476670976>,,,,,,,"Ballistic Damage
+Ballistic Penetrating Damage
+Missile Health
+Shield Max Regen
+Shield Regen Speed
+Armor Armor
+Shield Strength
+Power Health
+Ballistic Power Usage
+Engine Turn Power
+Power Power Generation
+Armor Power Generation",Total Module Armor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Eidolon,,45,,3 000 000,1 320,,5,0.5,113,130,2 Morningstar,60,68,481<:celes:570222210476670976>,370<:celes:570222210476670976>,370<:celes:570222210476670976>,481<:celes:570222210476670976>,,462<:celes:570222210476670976>,355<:celes:570222210476670976>,462<:celes:570222210476670976>,,,"Laser Range
+Engine Armor
+Ballistic Mass
+Shield Mass
+Armor Power Generation
+Engine Mass",Total Module Mass,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Eidolon Mk2,,0,,3 000 000,,8,5.2,0.7,119,144,2 Morningstar,60,68,6<:blueprint:568688146683002880> & 481<:celes:570222210476670976>,6<:blueprint:568688146683002880> & 370<:celes:570222210476670976>,5<:blueprint:568688146683002880> & 370<:celes:570222210476670976>,4<:blueprint:568688146683002880> & 481<:celes:570222210476670976>,,462<:celes:570222210476670976>,355<:celes:570222210476670976>,462<:celes:570222210476670976>,,,"Laser Fire Cone
+Ballistic Range
+Shield Radius
+Shield Mass
+Power Mass
+Power Power Generation",Total Module Mass,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Thane,,47,,3 250 000,1 420,,3.5,0.25,211,232,,,,429<:celes:570222210476670976>,330<:celes:570222210476670976>,330<:celes:570222210476670976>,429<:celes:570222210476670976>,128<:celes:570222210476670976>,,,,,,"Ballistic Damage
+Ballistic Penetrating Damage
+Ballistic Health
+Armor Armor
+Armor Health
+Shield Regen Speed
+Shield Health
+Laser Power Usage
+Armor Power Usage
+Engine Turn Power
+Ballistic Mass
+Power Power Generation",Total Module Power Use,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Arbiter,,48,,3 500 000,1 510,,6,0.55,178,199,6 Raven,20,25,559<:celes:570222210476670976>,430<:celes:570222210476670976>,430<:celes:570222210476670976>,559<:celes:570222210476670976>,,534<:celes:570222210476670976>,415<:celes:570222210476670976>,534<:celes:570222210476670976>,,,"Missile Damage
+Ballistic Fire Cone
+Ballistic Damage
+Missile Health
+Shield Strength
+Armor Health
+Shield Health
+Armor Power Usage
+Engine Power Useage
+Engine Thrust Power
+Engine Mass
+Power Mass",Total Module Health,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Mjollnir,,49,,3 750 000,1 610,,5,0.65,154,174,3 Hammerhead,54,62,601<:celes:570222210476670976>,462<:celes:570222210476670976>,462<:celes:570222210476670976>,601<:celes:570222210476670976>,,576<:celes:570222210476670976>,446<:celes:570222210476670976>,576<:celes:570222210476670976>,,,"Missile Range
+Laser Damage
+Armor Reflect
+Engine Armor
+Shield Power Usage
+Power Mass",Total Module Firing Arc,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Mjollnir Mk2,,0,,3 750 000,,10,5.75,0.73,158,194,3 Hammerhead,54,62,8<:blueprint:568688146683002880> & 601<:celes:570222210476670976>,7<:blueprint:568688146683002880> & 462<:celes:570222210476670976>,6<:blueprint:568688146683002880> & 462<:celes:570222210476670976>,5<:blueprint:568688146683002880> & 601<:celes:570222210476670976>,,576<:celes:570222210476670976>,446<:celes:570222210476670976>,576<:celes:570222210476670976>,,,"Laser Range
+Laser Health
+Shield Health
+Power Armor
+Engine Reflect
+Armor Mass
+Power Explode Damage
+Engine Turn Power",Total Module Range,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Revenant,,50,,4 250 000,1 810,,8,0.8,176,186,4 Scythe,32,38,559<:celes:570222210476670976>,430<:celes:570222210476670976>,430<:celes:570222210476670976>,430<:celes:570222210476670976>,559<:celes:570222210476670976>,709<:celes:570222210476670976>,548<:celes:570222210476670976>,548<:celes:570222210476670976>,,,"Ballistic Damage
+Ballistic Penetrating Damage
+Armor Armor
+Shield Strength
+Power Health
+Ballistic Power Usage
+Armor Power Generation
+Engine Turn Power
+Power Power Generation",Total Module Damage,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Vindicator,,50,,4 250 000,1 810,,7.5,0.65,178,202,1 Warrior,90,108,563<:celes:570222210476670976>,433<:celes:570222210476670976>,433<:celes:570222210476670976>,433<:celes:570222210476670976>,563<:celes:570222210476670976>,514<:celes:570222210476670976>,395<:celes:570222210476670976>,395<:celes:570222210476670976>,514<:celes:570222210476670976>,,"Laser Damage
+Laser Health
+Shield Max Regen
+Shield Health
+Engine Health
+Power Armor
+Laser Power Usage
+Shield Mass
+Power Generation",Total Module Power Generation,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Radiant X,,52,,8 000 000,2 700,,8.5,0.9,218,238,2 Boardsword,62,72,1250<:celes:570222210476670976>,1700<:celes:570222210476670976>,1050<:celes:570222210476670976>,,,576<:celes:570222210476670976>,442<:celes:570222210476670976>,442<:celes:570222210476670976>,576<:celes:570222210476670976>,,"Laser Fire Cone
+Shield Strength
+Shield Radius
+Armor Reflect
+Engine Armor
+Missle Mass
+Ballistic Power Usage
+Armor Mass
+Power Explosion Radius",Total Module Range,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Ritari,,54,,10 200 000,4 000,,7,1,208,256,2 Therion,106,124,950<:celes:570222210476670976>,1100<:celes:570222210476670976>,1300<:celes:570222210476670976>,1500<:celes:570222210476670976>,1150<:celes:570222210476670976>,721<:celes:570222210476670976>,553<:celes:570222210476670976>,553<:celes:570222210476670976>,553<:celes:570222210476670976>,721<:celes:570222210476670976>,"Missile Range
+Ballistic Range
+Shield Max Regen
+Power Armor
+Engine Mass",Total Module Mass,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Ritari Mk2,,0,,10 200 000 ,,15,7.1,1.1,214,274,2 Therion,106,124,12<:blueprint:568688146683002880> & 950<:celes:570222210476670976>,11<:blueprint:568688146683002880> & 1100<:celes:570222210476670976>,9<:blueprint:568688146683002880> & 1300<:celes:570222210476670976>,8<:blueprint:568688146683002880> & 1500<:celes:570222210476670976>,8<:blueprint:568688146683002880> & 1100<:celes:570222210476670976>,721<:celes:570222210476670976>,553<:celes:570222210476670976>,553<:celes:570222210476670976>,553<:celes:570222210476670976>,721<:celes:570222210476670976>,"Laser Range
+Laser Fire Cone
+Shield Strength
+Armor Armor
+Shield Mass
+Armor Power Generation
+Engine Mass
+Power Explosion Radius",Total Module Reflect,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Oblivion Ark,,0,,13 000 000,,18,9,1.55,216,268,3 Age Eagle,61,72,10<:blueprint:568688146683002880> & 1000<:celes:570222210476670976>,12<:blueprint:568688146683002880> & 1200<:celes:570222210476670976>,14<:blueprint:568688146683002880> & 1300<:celes:570222210476670976>,14<:blueprint:568688146683002880> & 1400<:celes:570222210476670976>,7<:blueprint:568688146683002880> & 1200<:celes:570222210476670976>,486<:celes:570222210476670976>,312<:celes:570222210476670976>,,,,"Rocket Damage
+All Armor
+Shield Regen Speed
+Shield Strength
+Armor Health
+Power Health
+Missile Power Use
+All Power Generation
+Engine Thrust Power
+Armor Power Use",Total Module Power Use,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Khonarl,,0,,13 000 000,,20,9,2,156,258,5 Kahje,71,108,16<:blueprint:568688146683002880> & 1200<:celes:570222210476670976>,14<:blueprint:568688146683002880> & 1500<:celes:570222210476670976>,12<:blueprint:568688146683002880> & 1000<:celes:570222210476670976>,10<:blueprint:568688146683002880> & 1300<:celes:570222210476670976>,8<:blueprint:568688146683002880> & 1800<:celes:570222210476670976>,450<:celes:570222210476670976>,350<:celes:570222210476670976>,350<:celes:570222210476670976>,600<:celes:570222210476670976>,,"Laser Range
+Laser Fire Cone
+Shield Strength
+Armor Armor
+Shield Mass
+Armor Power Genration
+Engine Mass
+Power Explosion Radius",Total Module Mass,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+USS Centurion,,56,,12 500 000,,,6,0.9,323,429,4 Starbridge,54,65,1200<:celes:570222210476670976>,1300<:celes:570222210476670976>,1000<:celes:570222210476670976>,1100<:celes:570222210476670976>,1500<:celes:570222210476670976>,980<:celes:570222210476670976>,760<:celes:570222210476670976>,760<:celes:570222210476670976>,760<:celes:570222210476670976>,,"Penetrating Damage
+Ballistic Damage
+Total Module Health
+Armor Reflect
+Shield Strength
+Ballistic Power Use
+Armor Power Generation",Armor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Chaingun,,0,Free,,,,,,,,,,,,,,,,,,,,,,,1x1,10,15,,10,,,,,,4,35Slots,70º,3.333/s,,,,,,,,,,,,,,,,,,,,,,,,
+cg,Chaingun,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Chaingun Mk2,,24,,460 000,920,,,,,,,,,,,,,,,,,,,,,1x1,10,90,,30,,,,,,4,35Slots,70º,0.999/s,,,,,,,,,,,,,,,,,,,,,,,,
+cgmk2,Chaingun Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+cg2,Chaingun Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Vulcan Cannon,,1,,750,,,,,,,,,,,,,,,,,,,,,,1x2,20,40,,25,,,,,,5,40Slots,70º,3.333/s,,,,,,,,,,,,,,,,,,,,,,,,
+vc,Vulcan Cannon,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Vulcan Turret,,8,,39 000,,,,,,,,,,,,,,,,,,,,,,2x2,45,90,,80,,,,,,6,40Slots,360º,3.03/s,,,,,,,,,,,,,,,,,,,,,,,,
+vt,Vulcan Turret,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Vulcan Turret Mk2,,14,Sector 2,,,,,,,,,,,,,,,,,,,,,,,2x2,30,90,,80,,,,,,6,50Slots,360º,4.545/s,,,,,,,,,,,,,,,,,,,,,,,,
+vtmk2,Vulcan Turret Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+vt2,Vulcan Turret Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Vulcan Turret Mk3,,16,,170 000,340,,,,,,,,,,,,,,,,,,,,,2x2,55,115,,80,,,,,,9,40Slots,360º,3.03/s,,,,,,,,,,,,,,,,,,,,,,,,
+vtmk3,Vulcan Turret Mk3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+vt3,Vulcan Turret Mk3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Railgun,,11,,90 000,,,,,,,,,,,,,,,,,,,,,,1x3,30,60,,50,,,,,,19,65Slots,70º,0.4/s,,,,,,,,,,,,,,,,,,,,,,,,
+rg,Railgun,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Railgun Mk2,Railgun,18,Sector 3,,,,,,,,,,,,,,,,,,,,,,,1x3,25,60,,50,,,,,,30,75Slots,70º,0.4/s,,,,,,,,,,,,,,,,,,,,,,,,
+rgmk2,Railgun,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+rg2,Railgun,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Quantum Rifle,,16,,155 000,,,,,,,,,,,,,,,,,,,,,,1x4,70,75,,80,,,,,,16,80Slots,70º,0.4/s,0.55,,,,,,,,,,,,,,,,,,,,,,,
+qr,Quantum Rifle,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Gaussian Shotgun,,17,,155 000,,,,,,,,,,,,,,,,,,,,,,2x3,70,150,,100,,,,,,8,28Slots,70º,0.588/s,,,,,,,,,,,,,,,,,,,,,,,,
+gs,Gaussian Shotgun,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Mass Drive,,21,,125 000,,,,,,,,,,,,,,,,,,,,,,2x3,70,130,,120,,,,,,7,50Slots,70º,5/s,,,,,,,,,,,,,,,,,,,,,,,,
+md,Mass Drive,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Mass Drive Mk2,,28,,630 000,1 260,,,,,,,,,,,,,,,,,,,,,2x3,70,160,,120,,,,,,8,70Slots,70º,5/s,,,,,,,,,,,,,,,,,,,,,,,,
+mdmk2,Mass Drive Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+md2,Mass Drive Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Rail Turret,,27,,255 000,,,,,,,,,,,,,,,,,,,,,,3x3,110,220,,220,,,,,,15,70Slots,360º,1.695/s,,,,,,,,,,,,,,,,,,,,,,,,
+rt,Rail Turret,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Rail Turret Mk2,,41,,1470 000,2 480,,,,,,,,,,,,,,,,,,,,,3x3,110,220,,220,,,,,,14,70Slots,360º,3.729/s,,,,,,,,,,,,,,,,,,,,,,,,
+rtmk2,Rail Turret Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+rt2,Rail Turret Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Gauss Rifle,,33,,340 000,,,,,,,,,,,,,,,,,,,,,,1x5,60,110,,100,,,,,,37,95Slots,70º,0.333/s,,,,,,,,,,,,,,,,,,,,,,,,
+Quantum Turret,,39,,625 000,,,,,,,,,,,,,,,,,,,,,,3x3,150,190,,230,,,,,,13,80Slots,360º,1.053/s,0.5,,,,,,,,,,,,,,,,,,,,,,,
+qt,Quantum Turret,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Quantum Turret Mk2,,44,,1 590 000,3 180,,,,,,,,,,,,,,,,,,,,,3x3,150,190,,230,,,,,,24,70Slots,360º,0.6318/s,0.5,,,,,,,,,,,,,,,,,,,,,,,
+qt2,Quantum Turret Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+qtmk2,Quantum Turret Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Hyperion Chaingun,,43,,2 500 000,,,,,,,,,,,,,,,,,,,,,,2x4,90,180,,160,,,,,,9,60Slots,70º,4.615/s,,,,,,,,,,,,,,,,,,,,,,,,
+hc,Hyperion Chaingun,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Gaussian War Shotgun,,46,,2 950 000,,,,,,,,,,,,,,,,,,,,,,3x4,155,380,,400,,,,,,11,37Slots,70º,0.87/s,,,,,,,,,,,,,,,,,,,,,,,,
+gws,Gaussian War Shotgun,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Capital Cannon,,50,,2 500 000,,,,,,,,,,,,,,,,,,,,,,2x7,280,300,,500,,,,,,75,120Slots,40º,0.286/s,0.45,,,,,,,,,,,,,,,,,,,,,,,
+cc,Capital Cannon,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Capital Cannon Mk2,,50,,3 210 000,6 420,,,,,,,,,,,,,,,,,,,,,2x7,280,360,,500,,,,,,81,120Slots,40º,0.32032/s,0.45,,,,,,,,,,,,,,,,,,,,,,,
+ccmk2,Capital Cannon Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+cc2,Capital Cannon Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Rocket Launcher,,3,,1 500,,,,,,,,,,,,,,,,,,,,,,1x2,30,35,,40,,,,,,14,45Slots,60º,0.714/s,,1,1.2Slots,4s,,,,,,,,,,,,,,,,,,,,
+rl,Rocket Launcher,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Rocket Launcher Mk2,,22,Sector 6,,,,,,,,,,,,,,,,,,,,,,,1x2,100,35,,40,,,,,,18,45Slots,60º,0.9996/s,,1,1.2Slots,4s,,,,,,,,,,,,,,,,,,,,
+rlmk2,Rocket Launcher Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+rl2,Rocket Launcher Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Rocket Turret,,9,,22 500,,,,,,,,,,,,,,,,,,,,,,2x2,60,85,,100,,,,,,14,50Slots,360º,0.5/s,,2,1.2Slots,4s,,,,,,,,,,,,,,,,,,,,
+Rocket Turret Mk2,,22,,230 000,460,,,,,,,,,,,,,,,,,,,,,2x2,60,85,,100,,,,,,14,40Slots,360º,1/s,,3,1.2Slots,4s,,,,,,,,,,,,,,,,,,,,
+Rocket Turret Mk3,,26,,660 000,1 320,,,,,,,,,,,,,,,,,,,,,2x2,60,85,,100,,,,,,14,80Slots,360º,0.5/s,,1,1.2Slots,4s,,,,,,,,,,,,,,,,,,,,
+rtmk3,Rocket Turret Mk3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+rt3,Rocket Turret Mk3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Missile Launcher,,13,,70 000,,,,,,,,,,,,,,,,,,,,,,1x3,50,60,,70,,,,,,23,60Slots,60º,0.714/s,,1,1.2Slots,4s,,,,,,,,,,,,,,,,,,,,
+ml,Missile Launcher,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Mine Launcher,,14,,55 000,,,,,,,,,,,,,,,,,,,,,,3x2,70,180,,160,,,,,,55,100Slots,360º,0.25/s,,,,,3,2.1Slots,15ss,,,,,,,,,,,,,,,,,
+ml,Mine Launcher,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Mine Launcher Mk2,,25,,410 000,820,,,,,,,,,,,,,,,,,,,,,3x2,170,240,,160,,,,,,85,100Slots,360º,0.25/s,,,,,3,2.1Slots,15ss,,,,,,,,,,,,,,,,,
+mlmk2,Mine Launcher Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ml2,Mine Launcher Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Torpedo Launcher,,20,,230 000,,,,,,,,,,,,,,,,,,,,,,1x4,85,120,,150,,,,,,63,90Slots,50º,0.189/s,,1,2.1Slots,10s,,,,,,,,,,,,,,,,,,,,
+tl,Torpedo Launcher,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Arsenal Wall,,23,,150 000,,,,,,,,,,,,,,,,,,,,,,4x2,140,350,2,300,30%,,,,,17,60Slots,60º,1.2Slots,,1,1.2Slots,4s,,,,,,,,,,,,,,,,,,,,
+aw,Arsenal Wall,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Scorpion Launcher,,29,,495 000,,,,,,,,,,,,,,,,,,,,,,2x3,110,120,,110,,,,,,20,75Slots,60º,0.923/s,,1,1.2Slots,4s,,,,,,,,,,,,,,,,,,,,
+sl,Scorpion Launcher,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Scorpion Launcher Mk2,,30,,470 000,940,,,,,,,,,,,,,,,,,,,,,2x3,110,120,3,110,50%,,,,,26,75Slots,60º,0.923/s,,1,1.2Slots,4s,,,,,,,,,,,,,,,,,,,,
+Scorpion Launcher Mk3,,36,,900 000,1 800,,,,,,,,,,,,,,,,,,,,,2x3,365,120,,110,,,,,,20,75Slots,60º,0.923/s,,2,1.2Slots,4s,,,,,,,,,,,,,,,,,,,,
+Impact Missile,,30,,285 000,,,,,,,,,,,,,,,,,,,,,,1x4,80,100,,90,,,,,,34,80Slots,60º,0.556/s,,1,1.2Slots,4s,,,,,,,,,,,,,,,,,,,,
+im,Impact Missile,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Flak Rocket Turret,,34,,975 000,,,,,,,,,,,,,,,,,,,,,,3x3,155,240,,160,,,,,,12,55Slots,360º,0.333/s,,6,1.2Slots,0.65s,,,,,,,,,,,,,,,,,,,,
+flak,Flak Rocket Turret,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+frt,Flak Rocket Turret,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Flak Rocket Turret Mk2,,38,,920 000,1 840,,,,,,,,,,,,,,,,,,,,,3x3,155,350,,160,25%,,,,,19,55Slots,360º,0.333/s,,6,1.2Slots,0.65s,,,,,,,,,,,,,,,,,,,,
+frtmk2,Flak Rocket Turret Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+frt2,Flak Rocket Turret Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+flakmk2,Flak Rocket Turret Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+flak2,Flak Rocket Turret Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Warhead Launcher,,41,,1 500 000,,,,,,,,,,,,,,,,,,,,,,2x4,160,250,,250,,,,,,115,120Slots,40º,0.25/s,,1,2.1Slots,12s,,,,,,,,,,,,,,,,,,,,
+wl,Warhead Launcher,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Hydra Turret,,47,,1 350 000,,,,,,,,,,,,,,,,,,,,,,3x4,195,300,,350,,,,,,28,90Slots,360º,0.4/s,,3,1.6Slots,4s,,,,,,,,,,,,,,,,,,,,
+ht,Hydra Turret,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Hydra Turret Mk2,,47,,1 350 000,,,,,,,,,,,,,,,,,,,,,,3x4,195,300,,350,,,,,,28,90Slots,360º,0.4/s,,3,1.6Slots,4s,,,,,,,,,,,,,,,,,,,,
+htmk2,Hydra Turret Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ht2,Hydra Turret Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Small Laser,,3,,7 500,,,,,,,,,,,,,,,,,,,,,,1x1,20,13,,15,,,,,,20,35Slots,70º,2.5/s,,,,,,,,0.15s,,,,,,,,,,,,,,,,
+sl,Small Laser,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Small Laser Mk2,,22,Sector 4,,,,,,,,,,,,,,,,,,,,,,,1x1,,13,,15,,25,,,,28,35Slots,70º,0.925/s,,,,,,,,0.15s,,,,,,,,,,,,,,,,
+slmk2,Small Laser Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+sl2,Small Laser Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Laser Beam,,5,,20 000,,,,,,,,,,,,,,,,,,,,,,1x2,40,35,,30,,,,,,25,60Slots,60º,0.5/s,,,,,,,,1.5s,,,,,,,,,,,,,,,,
+lb,Laser Beam,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Laser Beam Mk2,,22,Sector 1,,,,,,,,,,,,,,,,,,,,,,,1x2,30,35,,30,,,,,,25,55Slots,60º,0.5/s,,,,,,,,1.5s,,,,,,,,,,,,,,,,
+lbmk2,Laser Beam Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+lb2,Laser Beam Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Laser Beam Mk3,,20,,330 000,660,,,,,,,,,,,,,,,,,,,,,1x2,40,23,,30,,,,,,28,85Slots,60º,0.5/s,,,,,,,,1.5s,,,,,,,,,,,,,,,,
+lb3,Laser Beam Mk3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+lbmk3,Laser Beam Mk3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Laser Turret,,12,,85 000,,,,,,,,,,,,,,,,,,,,,,2x2,70,75,,70,,,,,,40,55Slots,360º,0.5/s,,,,,,,,1.5s,,,,,,,,,,,,,,,,
+lt,Laser Turret,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Fusion Ray,,19,,220 000,,,,,,,,,,,,,,,,,,,,,,1x3,65,60,,60,,,,,,45,60Slots,70º,0.333/s,,,,,,,,3s,,,,,,,,,,,,,,,,
+fr,Fusion Ray,25,,450 000,,,,,,,,,,,,,,,,,,,,,,2x3,125,130,,100,,,,,,60,50Slots,120º,5/s,,,,,,,,0.15s,,,,,,,,,,,,,,,,
+Pulse Laser Mk2,,32,,770 000,1 540,,,,,,,,,,,,,,,,,,,,,2x3,100,130,,100,,,,,,90,50Slots,120º,5/s,,,,,,,,0.117s,,,,,,,,,,,,,,,,
+plmk2,Pulse Laser Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+pulsemk2,Pulse Laser Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+pulse2,Pulse Laser Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+pl2,Pulse Laser Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Fusion Turret,,36,,980 000,,,,,,,,,,,,,,,,,,,,,,3x3,200,210,,240,,,,,,90,86Slots,360º,0.333/s,,,,,,,,3s,,,,,,,,,,,,,,,,
+ft,Fusion Turret,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Pulse Laser Mk3,,40,,1 200 000,2 400,,,,,,,,,,,,,,,,,,,,,2x3,150,130,4,100,,,,,,60,50Slots,120º,5/s,,,,,,,,0.35s,,,,,,,,,,,,,,,,
+plmk3,Pulse Laser Mk3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+pl3,Pulse Laser Mk3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+pulsemk3,Pulse Laser Mk3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+pulse3,Pulse Laser Mk3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Arcfusion Array,,31,,855 000,,,,,,,,,,,,,,,,,,,,,,2x4,180,200,,200,,,,,,100,100Slots,60º,0.4/s,,,,,,,,1.5s,,,,,,,,,,,,,,,,
+aa,Arcfusion Array,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Small Steel Armor,,0,Free,,,,,,,,,,,,,,,,,,,,,,,1x1,,125,3,75,55%,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+11steel,Small Steel Armor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+steel,Small Steel Armor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Small Steel Armor Mk2,,0,Wing Special Offer,,,,,,,,,,,,,,,,,,,,,,,1x1,,125,4,75,60%,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+steelmk2,Small Steel Armor Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+11steelmk2,Small Steel Armor Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Small Solar Armor,,7,,25 000,,,,,,,,,,,,,,,,,,,,,,1x1,,75,2,50,50%,10,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+11solar,Small Solar Armor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+solar,Small Solar Armor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Medium Steel Armor,,9,,22 500,,,,,,,,,,,,,,,,,,,,,,2x2,,550,4,300,55%,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+22steel,Medium Steel Armor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Medium Solar Armor,,13,,55 000,,,,,,,,,,,,,,,,,,,,,,2x2,,330,3,200,50%,50,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+22solar,Medium Solar Armor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Medium Solar Armor Mk2,,15,,260 000,520,,,,,,,,,,,,,,,,,,,,,2x2,,490,3,200,50%,65,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+22solarmk2,Medium Solar Armor Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+22solar2,Medium Solar Armor Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Plasma Armor,,17,,100 000,,,,,,,,,,,,,,,,,,,,,,1x2,15,200,3,180,50%,,30%,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+pa,Plasma Armor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Small Reactive Armor,,18,,95 000,,,,,,,,,,,,,,,,,,,,,,1x1,5,175,4,100,60%,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+reactive,Small Reactive Armor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+sra,Small Reactive Armor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+11reactive,Small Reactive Armor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Large Steel Armor,,20,,75 000,,,,,,,,,,,,,,,,,,,,,,3x3,,1300,5,675,55%,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+33steel,Large Steel Armor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Large Solar Armor,,22,,125 000,,,,,,,,,,,,,,,,,,,,,,3x3,,750,4,450,50%,125,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+33solar,Large Solar Armor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Medium Reactive Armor,,26,,200 000,,,,,,,,,,,,,,,,,,,,,,2x2,25,750,5,400,60%,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+22reactive,Medium Reactive Armor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Large Reactive Armor,,38,,,,,,,,,,,,,,,,,,,,,,,,3x3,60,1850,6,900,60%,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+33reactive,Large Reactive Armor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Ballistic Armor,,47,,1 400 000,,,,,,,,,,,,,,,,,,,,,,3x2,,800,11,500,1%,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ba,Ballistic Armor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Combat Shield,,3,,4 000,,,,,,,,,,,,,,,,,,,,,,1x1,60,15,,10,,,,,,,,,,,,,,,,,,100,20/s,6.1Slots,100,,,,,,,,,,,,
+11shield,Combat Shield,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+cs,Combat Shield,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Combat Shield Mk2,,30,Sector 5,,,,,,,,,,,,,,,,,,,,,,,1x1,70,15,,10,,,,,,,,,,,,,,,,,,120,20/s,6.1Slots,125,,,,,,,,,,,,
+csmk2,Combat Shield Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+cs2,Combat Shield Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+11shieldmk2,Combat Shield Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+11shield2,Combat Shield Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Bunker Shield,,14,,65 000,,,,,,,,,,,,,,,,,,,,,,1x1,80,20,,15,,,,,,,,,,,,,,,,,,0,0/s,3.6Slots,150,,,,,,,,,,,,
+bunker,Bunker Shield,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Bunker Shield Mk2,,46,Sector 7,,,,,,,,,,,,,,,,,,,,,,,1x1,20,20,,15,,,,,,,,,,,,,,,,,,0,0/s,3.6Slots,90,,,,,,,,,,,,
+bunkermk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+bunker2,bunkermk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+bsmk2,Bunker Shield Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+bs2,Bunker Shield Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Battle Shield,,16,,100 000,,,,,,,,,,,,,,,,,,,,,,1x2,135,30,,25,,,,,,,,,,,,,,,,,,225,50/s,9.1Slots,225,,,,,,,,,,,,
+bs,Battle Shield,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+12shield,Battle Shield,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+War Shield,,24,,175 000,,,,,,,,,,,,,,,,,,,,,,2x2,280,60,,50,,,,,,,,,,,,,,,,,,500,100/s,13.1Slots,500,,,,,,,,,,,,
+22shield,War Shield,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+war,War Shield,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ws,War Shield,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+War Shield MK2,,52,,5 000 000,10 000,,,,,,,,,,,,,,,,,,,,,2x2,350,60,,50,,,,,,,,,,,,,,,,,,50,100/s,13.1Slots,1000,,,,,,,,,,,,
+22shield2,War Shield Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+war2,War Shield Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ws2,War Shield Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Junk Launcher,,10,,30 000,,,,,,,,,,,,,,,,,,,,,,2x2,35,175,1,120,,,,,,,70Slots,360º,0.333/s,,,,,,,,,,,,,4,10s,,,,,,,,,,
+junk,Junk Launcher,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+jl,Junk Launcher,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Point Defense Turret,,11,,70 000,,,,,,,,,,,,,,,,,,,,,,2x2,35,250,2,200,20%,,,,,,,,,,,,,,,,,,,,,,,25%,35%,70%,,,,,,,
+pdt,Point Defense Turret,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Point Defense Turret Mk2,,14,,210 000,420,,,,,,,,,,,,,,,,,,,,,2x2,25,250,2,200,20%,,,,,,,,,,,,,,,,,,,,,,,35%,20%,70%,,,,,,,
+pdtmk2,Point Defense Turret Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+pdt2,Point Defense Turret Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Point Defense Turret Mk3,,16,,260 000,520,,,,,,,,,,,,,,,,,,,,,2x2,35,250,2,200,20%,,,,,,,,,,,,,,,,,,,,,,,10%,20%,90%,,,,,,,
+pdtmk3,Point Defense Turret Mk3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+pdt3,Point Defense Turret Mk3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Small Ion Drive,,0,Free,,,,,,,,,,,,,,,,,,,,,,,1x1,5,60,2,10,25%,,,,,,,,,,,,,,,,,,,,,,,,,,900,1200,,,,,
+engine,Small Ion Drive,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+11engine,Small Ion Drive,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+sid,Small Ion Drive,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Small Ion Drive Mk2,,0,Wing Special Offer,,,,,,,,,,,,,,,,,,,,,,,1x1,5,57.5,2,10,25%,,,,,,,,,,,,,,,,,,,,,,,,,,1100,1200,,,,,
+11enginemk2,Small Ion Drive Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+enginemk2,Small Ion Drive Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+sidmk2,Small Ion Drive Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Warp Drive,,5,,10 000,,,,,,,,,,,,,,,,,,,,,,1x2,45,75,1,30,25%,,,,,,,,,,,,,,,,,,,,,,,,,,,,12,,,,
+warp,Warp Drive,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+wd,Warp Drive,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Vectored Thruster,,7,,30 000,,,,,,,,,,,,,,,,,,,,,,2x1,30,90,1,20,25%,,,,,,,,,,,,,,,,,,,,,,,,,,,7000,,,,,
+vector,Vectored Thruster,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Vectored Thruster Mk2,,7,,140 000,280,,,,,,,,,,,,,,,,,,,,,2x1,40,90,1,20,25%,,,,,,,,,,,,,,,,,,,,,,,,,,,8200,,,,,
+vectormk2,Vectored Thruster Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+vector2,Vectored Thruster Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Afterburner,,9,,20 000,,,,,,,,,,,,,,,,,,,,,,1x2,30,100,1,30,25%,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2s,3,6.5,
+ab,Afterburner,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Large Ion Drive,,10,,45 000,,,,,,,,,,,,,,,,,,,,,,2x2,25,280,3,35,25%,,,,,,,,,,,,,,,,,,,,,,,,,,6000,6500,,,,,
+22engine,Large Ion Drive,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+22ion,Large Ion Drive,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+lid,Large Ion Drive,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Grand Ion Drive,,26,,175 000,,,,,,,,,,,,,,,,,,,,,,2x3,40,500,4,80,25%,,,,,,,,,,,,,,,,,,,,,,,,,,12000,12000,,,,,
+23ion,Grand Ion Drive,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+23engine,Grand Ion Drive,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+gid,Grand Ion Drive,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Grand Ion Drive Mk2,,26,,1 280 000,2 560,,,,,,,,,,,,,,,,,,,,,2x3,60,400,4,80,25%,,,,,,,,,,,,,,,,,,,,,,,,,,12000,18000,,,,,
+23ionmk2,Grand Ion Drive Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+23ion2,Grand Ion Drive Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+23enginemk2,Grand Ion Drive Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+23engine2,Grand Ion Drive Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+gidmk2,Grand Ion Drive Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+gid2,Grand Ion Drive Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Small Reactor,,0,Free,,,,,,,,,,,,,,,,,,,,,,,1x1,,20,,10,,50,,10,1Slot,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+11reactor,Small Reactor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+reactor,Small Reactor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Medium Reactor,,8,,36 000,,,,,,,,,,,,,,,,,,,,,,2x2,,80,1,50,,250,,50,2Slots,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+22reactor,Medium Reactor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+mr,Medium Reactor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Medium Armored Reactor,,13,,55 000,,,,,,,,,,,,,,,,,,,,,,2x2,,160,2,150,35%,160,,30,2Slots,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+22areactor,Medium Armored Reactor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+22ar,Medium Armored Reactor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+mar,Medium Armored Reactor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Medium Armored Reactor Mk2,,34,,260 000,520,,,,,,,,,,,,,,,,,,,,,2x2,,160,2,150,50%,200,,0,2Slots,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+22areactormk2,Medium Armored Reactor Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+22areactor2,Medium Armored Reactor Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+22armk2,Medium Armored Reactor Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+22ar2,Medium Armored Reactor Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Mar-02,Medium Armored Reactor Mk2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Large Reactor,,18,,95 000 ,,,,,,,,,,,,,,,,,,,,,,3x3,,200,1,150,,650,,120,3Slots,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+33reactor,Large Reactor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+lr,Large Reactor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Large Armored Reactor,,23,,140 000,,,,,,,,,,,,,,,,,,,,,,3x3,,400,3,350,35%,400,,60,3Slots,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+lar,Large Armored Reactor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+33areactor,Large Armored Reactor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+33ar,Large Armored Reactor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Grand Reactor,,43,,1 150 000,,,,,,,,,,,,,,,,,,,,,,4x4,,335,1,330,,1300,,350,5Slots,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+44reactor,Grand Reactor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+gr,Grand Reactor,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Repair Bay,,15,,70 000,,,,,,,,,,,,,,,,,,,,,,3x2,40,220,,150,,,,,,,,,,,,,,,,,,2500,9/s,,,,,,,,,,,,,,3
+rb,Repair Bay,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+repair,Repair Bay,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Melee Fusion Turret,,55,,2350000,,,,,,,,,,,,,,,,,,,,,,4x4,300,290,,280,,,,,,180,35Slots,360º,0.5/s,,,,,,,,3s,,,,,,,,,,,,,,,,
+mft,Melee Fusion Turret,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

@@ -1,0 +1,62 @@
+import discord
+import os
+client = discord.Client()
+close = discord.Embed(description='<:zak:704360287750455367> View command list',colour=discord.Colour.from_rgb(47,49,54))
+embed = discord.Embed(description='(flexible)    [optional]',colour=discord.Colour.from_rgb(47,49,54))
+embed.add_field(name='!help [command]',value='This message/command detail',inline=False)
+embed.add_field(name='!w [keyword]',value='Game fandom wiki search',inline=False)
+embed.add_field(name='!code',value='Code of Zak',inline=False)
+embed.add_field(name='!zak',value='Waves at you if online',inline=False)
+embed.add_field(name='!fact',value='Random game fact',inline=False)
+embed.add_field(name='!meme',value='Random game meme',inline=False)
+embed.add_field(name='!invite',value='Zak invite link',inline=False)
+embed.add_field(name='!about',value='About Zak',inline=False)
+embed.add_field(name='!sector (number) (number)',value='Sector enemy information',inline=False)
+embed.add_field(name='!guide',value='Game guide',inline=False)
+embed.add_field(name='!stonk',value='Game Version stonks meme',inline=False)
+embed.add_field(name='!weap',value='Weapon tier list',inline=False)
+embed.add_field(name='!upg',value='Upgrade tier list',inline=False)
+embed.add_field(name='!cou',value='Counter Graph',inline=False)
+embed.add_field(name='!bb',value='Best buys graph',inline=False)
+embed.add_field(name='!combo',value='Weapon combos graph',inline=False)
+embed.add_field(name='!shipupg',value='Ship Upgrade graph',inline=False)
+embed.add_field(name='!ship',value='Ship tier list',inline=False)
+embed.add_field(name='!mod',value='Modification recommend list',inline=False)
+embed.add_field(name='!time',value='Game timers',inline=False)
+embed.add_field(name='!daily',value='Daily quest & Daily Deals countdown',inline=False)
+embed.add_field(name='!cb',value='Class Battle countdown',inline=False)
+embed.add_field(name='!build (ship name)',value='Ship builds',inline=False)
+embed.add_field(name='!explore [galaxy type] [numbers to be open]',value='Galaxy explore simulator',inline=False)
+embed.add_field(name='!index [ship name]',value='Ship build index',inline=False)
+embed.add_field(name='!cell (ship name)',value='Ship cell layout',inline=False)
+embed.add_field(name='!cost (ship/module name)',value='Ship/module cost',inline=False)
+embed.add_field(name='!unlock (ship/module name)',value='Unlock ship/module requirement',inline=False)
+embed.add_field(name='!info (ship/module name)',value='Ship/module informations',inline=False)
+embed.add_field(name='!power (number of module) (module name),[number of module] [module name]',value='Module power calculator',inline=False)
+embed.add_field(name='!shpp (item) x(quanity) (price)celes (image link)',value='Shop meme generator',inline=False)
+embed.add_field(name='!creator [ship name]',value='Build creator',inline=False)
+end=discord.Embed(description='resent `!help`',colour=discord.Colour.from_rgb(47,49,54))
+class MyClient(discord.Client):
+	async def on_ready(self):
+		global guild,zak
+		guild=client.get_guild(486870895978086400)
+		zak=client.get_emoji(704360287750455367)
+		print('Logged in as')
+		print(self.user.name)
+		print('Running '+ os.path.basename(__file__))
+	async def on_message(self, message):
+		if message.content in ['!help','!cmd','!command','!commands','!cmds','<@!563319785811869698> help','<@!563319785811869698> cmd','<@!563319785811869698> command','<@!563319785811869698> commands','<@!563319785811869698> cmds','<@563319785811869698> help','<@563319785811869698> cmd','<@563319785811869698> command','<@563319785811869698> commands','<@563319785811869698> cmds']:
+			message=await message.channel.send(embed=close)
+			await message.add_reaction(zak)
+			def check(reaction,user):return user != self.user and reaction.emoji==zak
+			try:
+				while True:
+					reaction,user = await client.wait_for('reaction_add',timeout=60.0,check=check)
+					await message.edit(embed=embed,delete_after=90)
+					reaction,user = await client.wait_for('reaction_remove',timeout=60.0,check=check)
+					await message.edit(embed=close,delete_after=90)
+			except:
+				await message.edit(embed=end)
+				await message.clear_reactions()
+client = MyClient()
+client.run(open("id.txt", "r").read())

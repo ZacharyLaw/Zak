@@ -1,0 +1,24 @@
+﻿PSS = Pirate States Ship					
+There are 47 Mk1 ships					
+Warp Drive can stack to increase warp frequency					
+SpaceArena birthday is 30 Nov 2016					
+Ship build, player level, player rating, win rate, offline duration does not affect offline battle result, quantity or profit amount. Basically random
+JunkLauncher blocks Ballisitc & Missile					
+PointDefenseTurret range radius is 19 slot					
+Total module mass affect ship mobility					
+RepairBay can self heal					
+PointDefenseTurret fire rate is 10/s					
+Reactor explode in square shape					
+Khonarl ship level is 56, but not locked by level				
+Size of a cell is 1 metre square					
+Space Arena was develop by Epic Owl, named Starship Battle				
+ClassBattle match opponent ±10 player level from you
+All ship blueprint (high&low lv, nonspecial&special) are ~357 credit sell value each in shop					
+When missile hit shield doesn't do area damage
+Small Steel Armor Mk2 & Small Ion Drive Mk2 only obtainable from Wing Special Offer
+Total module bonus affects main & support ship, but independent support ship total module bonus doesnt affect main ship
+Kahje (Khonarl support) have 12 speed, 2.5 turning
+Small Steel Armor Mk2 & Small Ion Drive Mk2 only obtainable from Wing Special Offer
+When Battle Arena Oppoent Rating gap > 45, win/lose wont change your rating
+Ship offline only have mass, health, reflect available, maintain last online momentum
+All damage +3%/s to prevent stalemates
