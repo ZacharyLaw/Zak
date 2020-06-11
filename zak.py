@@ -116,8 +116,6 @@ class MyClient(discord.Client):
 			embed = discord.Embed()
 			embed.add_field(name='Wikia Search result:',value='['+' '.join(map(str, wikia.search('spacearena',' '.join(map(str, arg)),1)))+'](http://spacearena.fandom.com/wiki/'+' '.join(map(str, wikia.search('spacearena',' '.join(map(str, arg)),1))).replace(' ','_')+')')
 			await message.channel.send(embed=embed)
-		elif message.content.startswith('!code'):
-			await message.channel.send(file=discord.File('/home/zak/Zak/zak.txt'))
 		elif message.content.lower()=='!zak':await message.add_reaction('👋')
 		elif message.content.lower()=='!fact':
 			await message.channel.send( ' '.join(random.choice(list(csv.reader(open("fact.txt","r"))))))
@@ -128,7 +126,9 @@ class MyClient(discord.Client):
 		elif message.content.startswith('what') and 'pdt' in message.content:
 			await message.channel.send('<:pdt:563962230278848522> Point Defense Turret')
 		elif message.content.startswith('!about'):
-			await message.channel.send('<@563319785811869698> is made by <@270864978569854976>\nFor the Space Arena Offical Server\nBorn at 10/12/2019\nNice to meet you Senpi!')
+			embed = discord.Embed(description='<@563319785811869698> is made by <@270864978569854976>\nFor the Space Arena Offical Server\nBorn at 10/12/2019\nNice to meet you Senpi!\n[Github](http://github.com/ZacharyLaw/Zak)',colour=discord.Colour.from_rgb(47,49,54))
+			await message.channel.send(embed=embed)
+			#await message.channel.send('<@563319785811869698> is made by <@270864978569854976>\nFor the Space Arena Offical Server\nBorn at 10/12/2019\nNice to meet you Senpi!')
 		elif message.content.startswith('!sector'):
 			data=list(csv.reader(open("sector.csv","r")))
 			await message.channel.send('Sector '+str(arg[1])+'.'+str(arg[2])+' '+data[(int(arg[1])-1)*10+int(arg[2])-1][5]+'\n<:ballistic:570222613180186653>'+data[(int(arg[1])-1)*10+int(arg[2])-1][0]+'/19\n<:missile:570222563779936256>'+data[(int(arg[1])-1)*10+int(arg[2])-1][1]+'/19\n<:laser:570222555802107905>'+data[(int(arg[1])-1)*10+int(arg[2])-1][2]+'/19\n<a:armor:654546483613270017>'+data[(int(arg[1])-1)*10+int(arg[2])-1][3]+'/19\n<a:shield:654546575858860043>'+data[(int(arg[1])-1)*10+int(arg[2])-1][4]+'/19')
@@ -144,7 +144,7 @@ class MyClient(discord.Client):
 			await message.channel.send(file=discord.File('/home/zak/Zak/combo.png'))
 		elif message.content.startswith('!shipupg'):
 			await message.channel.send(file=discord.File('/home/zak/Zak/shipupg3.png'))
-		elif message.content=='!ship':#/home/zak/Zak/ /home/zak/Zak/
+		elif message.content in ['!ship','!ships']:#/home/zak/Zak/ /home/zak/Zak/
 			await message.channel.send(file=discord.File('/home/zak/Zak/ship.png'))
 		elif message.content.startswith('!mod'):await message.channel.send(file=discord.File('/home/zak/Zak/mod.png'))
 		elif message.content.startswith('!event') or message.content.startswith('!grind'):
