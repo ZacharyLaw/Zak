@@ -121,7 +121,7 @@ class MyClient(discord.Client):
 			await message.channel.send( ' '.join(random.choice(list(csv.reader(open("fact.txt","r"))))))
 		elif message.content.startswith('!invite'):
 			embed = discord.Embed()
-			embed.add_field(name="Bucky Invite Link", value='[link](https://discordapp.com/oauth2/authorize?client_id=563319785811869698&scope=bot)')
+			embed.add_field(name="Zak Invite Link", value='[link](https://discordapp.com/oauth2/authorize?client_id=563319785811869698&scope=bot)')
 			await message.channel.send(embed=embed)
 		elif message.content.startswith('what') and 'pdt' in message.content:
 			await message.channel.send('<:pdt:563962230278848522> Point Defense Turret')
