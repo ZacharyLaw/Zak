@@ -47,8 +47,8 @@ class MyClient(discord.Client):
 		elif message.content.startswith('!submit'):
 			sender=message
 			try:
-				if re.findall('https://ptb.discordapp.com/channels/\d+/\d+/\d+',message.content):
-					msglink=re.findall('https://ptb.discordapp.com/channels/\d+/\d+/\d+',message.content)[0]
+				if re.findall('https://p?t?b?.?discordapp.com/channels/\d+/\d+/\d+',message.content):
+					msglink=re.findall('https://p?t?b?.?discordapp.com/channels/\d+/\d+/\d+',message.content)[0]
 					message=await client.get_channel(int(msglink.split('/')[5])).fetch_message(int(msglink.split('/')[6]))
 					shipname=re.sub(r"http\S+", "", sender.content.replace('!submitbuild' ,'',1).replace('!submit' ,'',1))
 					desc='\n'+message.content
