@@ -123,8 +123,8 @@ class MyClient(discord.Client):
 			embed = discord.Embed()
 			embed.add_field(name="Zak Invite Link", value='[link](https://discordapp.com/oauth2/authorize?client_id=563319785811869698&scope=bot)')
 			await message.channel.send(embed=embed)
-		elif message.content.startswith('what') and 'pdt' in message.content:
-			await message.channel.send('<:pdt:563962230278848522> Point Defense Turret')
+		elif message.content.startswith('!friend'):
+			message.channel.send('Facebook friend list which all are space arena players http://m.facebook.com/law.zac.50/friends')
 		elif message.content.startswith('!about'):
 			embed = discord.Embed(description='<@563319785811869698> is made by <@270864978569854976>\nFor the Space Arena Offical Server\nBorn at 10/12/2019\nNice to meet you Senpi!\n[Github](http://github.com/ZacharyLaw/Zak)',colour=discord.Colour.from_rgb(47,49,54))
 			await message.channel.send(embed=embed)

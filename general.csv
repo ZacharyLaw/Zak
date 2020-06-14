@@ -128,12 +128,17 @@ Shield Radius
 Engine Reflect
 Armor Reflect
 Shield Regen Speed",Total Module Mass,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-Orkaan,,0,,1 750 000,,8,5,0.7,76,108,,,,6<:blueprint:568688146683002880> & 180<:celes:570222210476670976>,5<:blueprint:568688146683002880> & 130<:celes:570222210476670976>,6<:blueprint:568688146683002880> & 180<:celes:570222210476670976>,5<:blueprint:568688146683002880> & 180<:celes:570222210476670976>,,,,,,,Armor Armor
-Shield Health
-Power Health
+Orkaan,,0,,1 750 000,,8,5,0.7,76,108,,,,6<:blueprint:568688146683002880> & 180<:celes:570222210476670976>,5<:blueprint:568688146683002880> & 130<:celes:570222210476670976>,6<:blueprint:568688146683002880> & 180<:celes:570222210476670976>,5<:blueprint:568688146683002880> & 180<:celes:570222210476670976>,,,,,,,"Armor Armor
 Armor Mass
 Engine Mass
-Engine Thrust Power,Total Module Reflect,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Engine Thrust Power
+Power Health
+Shield Health",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Shield Health,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Power Health,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Armor Mass,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Engine Mass,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Engine Thrust Power,Total Module Reflect,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Morningstar,,16,,699 000,280,,5,0.6,60,68,,,,112<:celes:570222210476670976>,86<:celes:570222210476670976>,112<:celes:570222210476670976>,,,,,,,,"Missile Fire Cone
 Ballistic Range
 Shield Max Regen
@@ -357,12 +362,13 @@ Engine Armor
 Shield Power Usage
 Power Mass",Total Module Firing Arc,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Mjollnir Mk2,,0,,3 750 000,,10,5.75,0.73,158,194,3 Hammerhead,54,62,8<:blueprint:568688146683002880> & 601<:celes:570222210476670976>,7<:blueprint:568688146683002880> & 462<:celes:570222210476670976>,6<:blueprint:568688146683002880> & 462<:celes:570222210476670976>,5<:blueprint:568688146683002880> & 601<:celes:570222210476670976>,,576<:celes:570222210476670976>,446<:celes:570222210476670976>,576<:celes:570222210476670976>,,,"Laser Range
+Laser Damage
 Laser Health
 Shield Health
 Power Armor
-Engine Reflect
+Armor Reflect
 Armor Mass
-Power Explode Damage
+Shield Power Usage
 Engine Turn Power",Total Module Range,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Revenant,,50,,4 250 000,1 810,,8,0.8,176,186,4 Scythe,32,38,559<:celes:570222210476670976>,430<:celes:570222210476670976>,430<:celes:570222210476670976>,430<:celes:570222210476670976>,559<:celes:570222210476670976>,709<:celes:570222210476670976>,548<:celes:570222210476670976>,548<:celes:570222210476670976>,,,"Ballistic Damage
 Ballistic Penetrating Damage
