@@ -16,7 +16,7 @@ class MyClient(discord.Client):
 	async def on_message(self, message):
 		arg = message.content.split()
 		if message.author.id == self.user.id or not (message.content.startswith('!') or message.content.startswith('+') or message.content.startswith('-')):pass		
-		elif message.content.startswith('!profile'):
+		elif message.content.startswith('!profile'):	
 			if len(arg)==1:
 				try:
 					authorprofile=profile.loc[[message.author.id]]
@@ -35,17 +35,22 @@ class MyClient(discord.Client):
 				os.remove('profile.csv')
 				profile[['IGN','SupportID','Fb']].to_csv('profile.csv')
 				await message.add_reaction('👌')
+			elif re.findall('\S{4,16}',message.content.replace('!profile ','')):
+				if message.author.id==270864978569854976:
+					if re.findall('\d{18}',message.content.replace('!profile ',''))[0] in profile.index:profile.loc[re.findall('\d{18}',message.content.replace('!profile ',''))[0],'IGN']=re.findall('\w{4,16}',message.content.replace('!profile ',''))[0]
+					else:profile.loc[re.findall('\d{18}',message.content.replace('!profile ',''))[0]]=[re.findall('\w{4,16}',message.content.replace('!profile ',''))[0],None,None,None]
+				else:
+					if message.author.id in profile.index:profile.loc[message.author.id,'IGN']=re.findall('\w{4,16}',message.content.replace('!profile ',''))[0]
+					else:profile.loc[message.author.id]=[re.findall('\w{4,16}',message.content.replace('!profile ',''))[0],None,None,None]
+				os.remove('profile.csv')
+				profile[['IGN','SupportID','Fb']].to_csv('profile.csv')
+				await message.add_reaction('👌')
 			elif re.findall('\d{16}',message.content.replace('!profile ','')):
 				if message.author.id in profile.index:profile.loc[message.author.id,'SupportID']=re.findall('\d{16}',message.content.replace('!profile ',''))[0]
 				else:profile.loc[message.author.id]=[None,re.findall('\d{16}',message.content.replace('!profile ',''))[0],None,None]
 				os.remove('profile.csv')
 				profile[['IGN','SupportID','Fb']].to_csv('profile.csv')
 				await message.add_reaction('👌')
-			elif re.findall('\w{4,16}',message.content.replace('!profile ','')):
-				if message.author.id in profile.index:profile.loc[message.author.id,'IGN']=re.findall('\w{4,16}',message.content.replace('!profile ',''))[0]
-				else:profile.loc[message.author.id]=[re.findall('\w{4,16}',message.content.replace('!profile ',''))[0],None,None,None]
-				os.remove('profile.csv')
-				profile[['IGN','SupportID','Fb']].to_csv('profile.csv')
-				await message.add_reaction('👌')
+			
 client = MyClient()
 client.run(open("id.txt", "r").read())
