@@ -315,8 +315,7 @@ async def creator(ctx):
 	await creator.add_reaction('<:null:690865781071675412>')#null
 	await creator.add_reaction('<:base:690840728489820191>')#base
 	hide=usage=energy=lock=0
-	#try:
-	if True:
+	try:
 		while True:
 			add = asyncio.create_task(reactionadd())
 			rem = asyncio.create_task(reactionremove())
@@ -470,8 +469,7 @@ async def creator(ctx):
 		await creator.clear_reactions()
 		embed.set_footer(text='',icon_url='')
 		await creator.edit(embed=embed)
-	
-	#except:await creator.clear_reactions()			
+	except:await creator.clear_reactions()			
 @client.command(aliases=(['submitbuild']))
 async def submit(ctx,*,arg):
 	sender=ctx
@@ -572,8 +570,7 @@ async def build(ctx,*,arg):
 		await msg.add_reaction('◀️')
 		await msg.add_reaction('▶️')
 	def check(reaction,user):return user != client.user and reaction.message.id==msg.id
-	#try:
-	if True:
+	try:
 		while True:
 			reaction,user = await client.wait_for('reaction_add',timeout=180.0,check=check)
 			if reaction.emoji=='◀️':
@@ -616,8 +613,7 @@ async def build(ctx,*,arg):
 					embed.set_image(url='https://cdn.discordapp.com/attachments/674632751390916609/'+str(ship.iloc[page-1,0])+'/'+str(ship.head().index[page-1])+'.png')
 					await msg.edit(embed=embed)
 			await msg.remove_reaction(reaction,user) 
-	#except:
-	if False:
+	except:
 		embed.set_footer(text='')
 		await msg.edit(embed=embed)
 		await msg.clear_reactions()
