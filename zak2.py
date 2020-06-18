@@ -453,10 +453,10 @@ async def creator(ctx):
 				create.save('create.png')
 				create.paste(cursor,((xcoord-1)*100,(ycoord-1)*100),mask=cursor)
 				create.save('cursored.png')       
-				item=''.join(map(str,process.extractOne(message.content.split('+',1)[1],generalpd.index.values,score_cutoff=80)[0])) 
-				if str(generalpd.loc[item,'Alternative'])!='nan': item=str(generalpd.loc[item,'Alternative'])
-				if str(generalpd.loc[item,'Power Use'])!='nan':usage+=int(generalpd.loc[item,'Power Use'])
-				elif str(generalpd.loc[item,'Power Generation'])!='nan':energy+=int(generalpd.loc[item,'Power Generation'])
+				item=''.join(map(str,process.extractOne(message.content.split('+',1)[1],general.index.values,score_cutoff=80)[0])) 
+				if str(general.loc[item,'Alternative'])!='nan': item=str(general.loc[item,'Alternative'])
+				if str(general.loc[item,'Power Use'])!='nan':usage+=int(general.loc[item,'Power Use'])
+				elif str(general.loc[item,'Power Generation'])!='nan':energy+=int(general.loc[item,'Power Generation'])
 				try:
 					if int(energy/usage)*100>100:percent='100%: '
 					else:percent=str(int(energy/usage*100))+'%: '
@@ -535,13 +535,15 @@ async def submit(ctx,*,arg):
 @client.command(aliases=(['b']))
 async def build(ctx,*,arg):
 	message=ctx.message
-	if process.extractOne(message.content,buildcorrect.index.values ,score_cutoff=75) or process.extractOne(arg[1],buildcorrect.index.values ,score_cutoff=80):
+	if process.extractOne(message.content,buildcorrect.index.values ,score_cutoff=75) or process.extractOne(arg,buildcorrect.index.values ,score_cutoff=80):
 		if process.extractOne(message.content,buildcorrect.index.values ,score_cutoff=75):
 			filename=str(buildcorrect.loc[process.extractOne(message.content,buildcorrect.index.values ,score_cutoff=80)[0],'Filename'])
 			index=str(process.extractOne(message.content,buildcorrect.index.values ,score_cutoff=75)[0])
-		elif process.extractOne(arg[1],buildcorrect.index.values ,score_cutoff=75):
-			filename=str(buildcorrect.loc[process.extractOne(arg[1],buildcorrect.index.values ,score_cutoff=80)[0],'Filename'])
-			index=str(process.extractOne(arg[1],buildcorrect.index.values ,score_cutoff=75)[0])
+		elif process.extractOne(arg,buildcorrect.index.values ,score_cutoff=75):
+			filename=str(buildcorrect.loc[process.extractOne(arg,buildcorrect.index.values ,score_cutoff=80)[0],'Filename'])
+			index=str(process.extractOne(arg,buildcorrect.index.values ,score_cutoff=75)[0])
+		print(process.extractOne(arg,buildcorrect.index.values ,score_cutoff=75))
+		print(index)
 		if str(buildcorrect.loc[index,'Alternative'])!='nan':
 			index=str(buildcorrect.loc[index,'Alternative'])
 			filename=str(buildcorrect.loc[index,'Filename'])
@@ -629,4 +631,9 @@ async def index(ctx,*args):
 		for index in column(process.extractBests(ctx.message.content.replace('!index ','').replace('!i ',''),buildcorrect.index.values ,score_cutoff=50),0):
 			msg+='\n'+str(len(buildpd.loc[buildpd.index.str.startswith(buildcorrect.loc[index,'Filename'])]))+'  '+str(index)
 	await ctx.send(msg)
+@client.command()
+async def unlock(ctx,*,arg):
+	index=''.join(map(str,process.extractOne(arg.replace('mkiii','mk3').replace('mkii','mk2'),general.index.values,score_cutoff=80)[0])) 
+	if str(general.loc[index,'Alternative'])!='nan': index=str(general.loc[index,'Alternative'])
+	await ctx.send(str(index)+'\nLevel: '+str(int(general.loc[index,'Level'])))
 client.run(open("id.txt", "r").read())
