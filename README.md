@@ -10,211 +10,211 @@ Zak is a Discord bot made by Zachary#6611 features a veriety untilty for the gam
 <tr style="height: 61px;">
 <td style="width: 152px; height: 61px;">
 !zak
-@Zak zak
+<br>@Zak zak
 </td>
 <td style="width: 152px; height: 61px;">&nbsp;</td>
 </tr>
 <tr style="height: 61px;">
 <td style="width: 152px; height: 61px;">
 !help
-@Zak help
+<br>@Zak help
 </td>
 <td style="width: 152px; height: 61px;">&nbsp;</td>
 </tr>
 <tr style="height: 121px;">
 <td style="width: 152px; height: 121px;">
 !build
-!b
-@Zak build
-@Zak b
+<br>!b
+<br>@Zak build
+<br>@Zak b
 </td>
 <td style="width: 152px; height: 121px;">&nbsp;</td>
 </tr>
 <tr style="height: 121px;">
 <td style="width: 152px; height: 121px;">
 !index
-!i
-@Zak index
-@Zak i
+<br>!i
+<br>@Zak index
+<br>@Zak i
 </td>
 <td style="width: 152px; height: 121px;">&nbsp;</td>
 </tr>
 <tr style="height: 121px;">
 <td style="width: 152px; height: 121px;">
 !submit
-!submitbuild
-@Zak submit
-@Zak submitbuild
+<br>!submitbuild
+<br>@Zak submit
+<br>@Zak submitbuild
 </td>
 <td style="width: 152px; height: 121px;">&nbsp;</td>
 </tr>
 <tr style="height: 61px;">
 <td style="width: 152px; height: 61px;">
 !info
-@Zak info
+<br>@Zak info
 </td>
 <td style="width: 152px; height: 61px;">&nbsp;</td>
 </tr>
 <tr style="height: 61px;">
 <td style="width: 152px; height: 61px;">
 !unlock
-@Zak unlock
+<br>@Zak unlock
 </td>
 <td style="width: 152px; height: 61px;">&nbsp;</td>
 </tr>
 <tr style="height: 61px;">
 <td style="width: 152px; height: 61px;">
 !cost
-@Zak cost
+<br>@Zak cost
 </td>
 <td style="width: 152px; height: 61px;">&nbsp;</td>
 </tr>
 <tr style="height: 121px;">
 <td style="width: 152px; height: 121px;">
 !cell
-!layout
-@Zak cell
-@Zak layout
+<br>!layout
+<br>@Zak cell
+<br>@Zak layout
 </td>
 <td style="width: 152px; height: 121px;">&nbsp;</td>
 </tr>
 <tr style="height: 61px;">
 <td style="width: 152px; height: 61px;">
 !sector
-@Zak sector
+<br>@Zak sector
 </td>
 <td style="width: 152px; height: 61px;">&nbsp;</td>
 </tr>
 <tr style="height: 61px;">
 <td style="width: 152px; height: 61px;">
 !power
-@Zak power
+<br>@Zak power
 </td>
 <td style="width: 152px; height: 61px;">&nbsp;</td>
 </tr>
 <tr style="height: 61px;">
 <td style="width: 152px; height: 61px;">
 !ship
-@Zak ship
+<br>@Zak ship
 </td>
 <td style="width: 152px; height: 61px;">&nbsp;</td>
 </tr>
 <tr style="height: 61px;">
 <td style="width: 152px; height: 61px;">
 !weapon
-!weap
-@Zak weapon
-@Zak weap
+<br>!weap
+<br>@Zak weapon
+<br>@Zak weap
 </td>
 <td style="width: 152px; height: 61px;">&nbsp;</td>
 </tr>
 <tr style="height: 61px;">
 <td style="width: 152px; height: 61px;">
 !guide
-@Zak guide
+<br>@Zak guide
 </td>
 <td style="width: 152px; height: 61px;">&nbsp;</td>
 </tr>
 <tr style="height: 21px;">
 <td style="width: 152px; height: 21px;">
 !upgrade
-!upg
-@Zak upgrade
+<br>!upg
+<br>@Zak upgrade
 </td>
 <td style="width: 152px; height: 21px;">&nbsp;</td>
 </tr>
 <tr style="height: 21px;">
 <td style="width: 152px; height: 21px;">
 !mod
-@Zak mod
+<br>@Zak mod
 </td>
 <td style="width: 152px; height: 21px;">&nbsp;</td>
 </tr>
 <tr style="height: 21px;">
 <td style="width: 152px; height: 21px;">
 !cou
-@Zak cou
+<br>@Zak cou
 </td>
 <td style="width: 152px; height: 21px;">&nbsp;</td>
 </tr>
 <tr style="height: 21px;">
 <td style="width: 152px; height: 21px;">
 !combo
-@Zak combo
+<br>@Zak combo
 </td>
 <td style="width: 152px; height: 21px;">&nbsp;</td>
 </tr>
 <tr style="height: 21px;">
 <td style="width: 152px; height: 21px;">
 !shipupg
-@Zak shipupg
+<br>@Zak shipupg
 </td>
 <td style="width: 152px; height: 21px;">&nbsp;</td>
 </tr>
 <tr style="height: 21px;">
 <td style="width: 152px; height: 21px;">
 !time
-@Zak time
+<br>@Zak time
 </td>
 <td style="width: 152px; height: 21px;">&nbsp;</td>
 </tr>
 <tr style="height: 21px;">
 <td style="width: 152px; height: 21px;">
 !wiki
-!wikia
-!w
-@Zak wiki
-@Zak wikia
-@Zak w
+<br>!wikia
+<br>!w
+<br>@Zak wiki
+<br>@Zak wikia
+<br>@Zak w
 </td>
 <td style="width: 152px; height: 21px;">&nbsp;</td>
 </tr>
 <tr style="height: 21px;">
 <td style="width: 152px; height: 21px;">
 !fact
-@Zak fact
+<br>@Zak fact
 </td>
 <td style="width: 152px; height: 21px;">&nbsp;</td>
 </tr>
 <tr style="height: 21px;">
 <td style="width: 152px; height: 21px;">
 !meme
-@Zak meme
+<br>@Zak meme
 </td>
 <td style="width: 152px; height: 21px;">&nbsp;</td>
 </tr>
 <tr style="height: 21px;">
 <td style="width: 152px; height: 21px;">
 !creator
-@Zak creator
+<br>@Zak creator
 </td>
 <td style="width: 152px; height: 21px;">&nbsp;</td>
 </tr>
 <tr style="height: 21px;">
 <td style="width: 152px; height: 21px;">
 !shop
-@Zak shop
+<br>@Zak shop
 </td>
 <td style="width: 152px; height: 21px;">&nbsp;</td>
 </tr>
 <tr style="height: 21px;">
 <td style="width: 152px; height: 21px;">
 !about
-@Zak about
+<br>@Zak about
 </td>
 <td style="width: 152px; height: 21px;">&nbsp;</td>
 </tr>
 <tr style="height: 21px;">
 <td style="width: 152px; height: 21px;">
 !invite
-@Zak invite
+<br>@Zak invite
 </td>
 <td style="width: 152px; height: 21px;">&nbsp;</td>
 </tr>
 <tr style="height: 21px;">
 <td style="width: 152px; height: 21px;">
 !prefix
-@Zak prefix
+<br>@Zak prefix
 </td>
 <td style="width: 152px; height: 21px;">&nbsp;</td>
 </tr>
