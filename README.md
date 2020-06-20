@@ -2,8 +2,8 @@
 Zak is a Discord bot made by Zachary#6611 features a veriety untilty for the game Space Arena: Build and Fight or Space Arena: Build a spaceship & fight. Born at 10/12/2019. You can contact Zachary#6611 by discord private message or join <a href="http://discord.gg/spacearena">Space Arena: Build and Fight Offical Discord server</a>.
 ## Commands
 Argument keys:
-(flexiable) [optional]
-<table style="height: 316px;" width="478">
+(flexiable) [optional]<br />
+<<table style="height: 316px;" width="478">
 <tbody>
 <tr style="height: 21px;">
 <td style="width: 152px; height: 21px;">Command</td>
@@ -104,6 +104,10 @@ Argument keys:
 <tr style="height: 21px;">
 <td style="width: 152px; height: 21px;">!creator <br />@Zak creator</td>
 <td style="width: 152px; height: 21px;">&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 152px;">!profile [discord user mention / your own ingame name / your own support id / your own facebook link]<br />@Zak profile&nbsp;[discord user mention / your own ingame name / your own support id / your own facebook link]</td>
+<td style="width: 152px;"></td>
 </tr>
 <tr style="height: 21px;">
 <td style="width: 152px; height: 21px;">!shop (item) x(quantity) (price)celes (image url)<br />@Zak shop</td>
