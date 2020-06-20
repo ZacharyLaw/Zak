@@ -11,23 +11,25 @@ Argument keys:<br />
 </tr>
 <tr style="height: 61px;">
 <td style="width: 152px; height: 61px;">!zak <br />@Zak zak</td>
-<td style="width: 152px; height: 61px;">&nbsp;</td>
+<td style="width: 152px; height: 61px;">
+<p>&nbsp;Zak reacts the command with&nbsp;<span>👋, meaning it is online.</span></p>
+</td>
 </tr>
 <tr style="height: 61px;">
 <td style="width: 152px; height: 61px;">!help <br />!cmd<br />!command<br />!commands<br />!cmds<br />@Zak help<br />@Zak cmd<br />@Zak command<br />@Zak commands<br />@Zak cmds</td>
-<td style="width: 152px; height: 61px;">&nbsp;A collaspeable simplified command list.</td>
+<td style="width: 152px; height: 61px;">Collaspeable command list, use reaction emoji to expand list.</td>
 </tr>
 <tr style="height: 121px;">
 <td style="width: 152px; height: 121px;">!build (shipname)<br />!b (shipname)<br />@Zak build (shipname)<br />@Zak b&nbsp;(shipname)</td>
-<td style="width: 152px; height: 121px;">&nbsp;</td>
+<td style="width: 152px; height: 121px;">Shows ship builds include create date, author, description with upvote / downvote likeness, use reaction emoji to upvote / downvote or select different build.</td>
 </tr>
 <tr style="height: 121px;">
 <td style="width: 152px; height: 121px;">!index [shipname]<br />!i [shipname]<br />@Zak index [shipname]<br />@Zak i [shipname]</td>
-<td style="width: 152px; height: 121px;">&nbsp;</td>
+<td style="width: 152px; height: 121px;">Show how many builds for corresponding build, provide ship name for focused search is optional.</td>
 </tr>
 <tr style="height: 121px;">
 <td style="width: 152px; height: 121px;">!submit&nbsp;(shipname) [, description] (1/2 build image url or attachment)<br />!submitbuild (shipname) [, description] (1/2 build image url or attachment)<br />@Zak submit (shipname) [, description] (1/2 build image url or attachment)<br />@Zak submitbuild&nbsp;(shipname) [, description] (1/2 build image url or attachment)</td>
-<td style="width: 152px; height: 121px;">&nbsp;</td>
+<td style="width: 152px; height: 121px;"></td>
 </tr>
 <tr style="height: 61px;">
 <td style="width: 152px; height: 61px;">!info (ship/module name) [vs ship/module name]<br />@Zak info (ship/module name) [vs ship/module name]</td>
