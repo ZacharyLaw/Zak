@@ -14,8 +14,8 @@ Argument keys:<br />
 <td style="width: 152px; height: 61px;">&nbsp;</td>
 </tr>
 <tr style="height: 61px;">
-<td style="width: 152px; height: 61px;">!help <br />@Zak help</td>
-<td style="width: 152px; height: 61px;">&nbsp;</td>
+<td style="width: 152px; height: 61px;">!help <br />!cmd<br />!command<br />!commands<br />!cmds<br />@Zak help<br />@Zak cmd<br />@Zak command<br />@Zak commands<br />@Zak cmds</td>
+<td style="width: 152px; height: 61px;">&nbsp;A collaspeable simplified command list.</td>
 </tr>
 <tr style="height: 121px;">
 <td style="width: 152px; height: 121px;">!build (shipname)<br />!b (shipname)<br />@Zak build (shipname)<br />@Zak b&nbsp;(shipname)</td>
