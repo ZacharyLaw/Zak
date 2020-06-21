@@ -44,4 +44,4 @@ Top to bottom, priority order
  - Creator engine blue cell
  - Creator+, add custom picture as module and circular/diaginal cells
  - Turns png outline to ship grid layout
-- Post game category youtube notification & subreddit
+- Post game category youtube & subreddit notification
