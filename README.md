@@ -15,7 +15,7 @@ Argument keys:<br />
 |!cost (ship/module name)<br />@Zak cost (ship/module name)|Provide information of ship or module cost by credit / celestium / blueprint / Acquisition
 |!cell (shipname)<br />!cells (shipname)<br />!layout (shipname)<br />@Zak cell (shipname)<br />@Zak cells (shipname)<br />@Zak layout (shipname) | Sent a picture of ship cell layout.
 |!sector (number),(number)<br />@Zak sector (number),(number) | Basic information about sector enemy.
-|!power (number of module) (modulename) [, number of module] [modulename]...<br />@Zak power | 
+|!power (number of module) (modulename) [, number of module] [modulename]...<br />@Zak power | Power calculator, can be add endless sets of *, [number of module] [modulename]*.
 |!ship <br />@Zak ship |  Inforgraphic guide for progression route and endgame setup.
 |!weapon <br />!weap <br />@Zak weapon <br />@Zak weap | Inforgraphic guide of Weapon Tier List.
 |!guide <br />@Zak guide | Inforgraphic guide of all guides in gif (outdated).
@@ -25,7 +25,7 @@ Argument keys:<br />
 |!combo <br />@Zak combo | Inforgraphic guide of weapon type combos tier.
 |!shipupg <br />@Zak shipupg | Inforgraphic guide of ship upgrade parameter tier list.
 |!time <br />@Zak time | Display current ingame cycles countdown and game developer Herocraft Headquarters timezone (server time).
-|!wiki (keyword)<br />!wikia (keyword)<br />!w(keyword)<br />@Zak wiki (keyword)<br />@Zak wikia (keyword) <br />@Zak w (keyword) |
+|!wiki (keyword)<br />!wikia (keyword)<br />!w(keyword)<br />@Zak wiki (keyword)<br />@Zak wikia (keyword) <br />@Zak w (keyword) | Search keyword on game famdom wikia.
 |!fact <br />@Zak fact | Random fact about game
 |!meme <br />@Zak meme | Random meme features the game
 |!creator <br />@Zak creator | A ship build creator by layout cells and adding modules to the build with *+(modulename)*.
