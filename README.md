@@ -35,6 +35,7 @@ Argument keys:<br />
 |!invite <br />@Zak invite | Invite link for Zak.
 |!prefix (prefix)<br />@Zak prefix | Change prefix of Zak for your server, reqiure command user have administrator permission, 👌 if work.|
 ## Future
+- Permission error handling
  - Creator can preadd ship layout
  - Creator engine blue cell
  - Creator+, add custom picture as module and circular/diaginal cells
