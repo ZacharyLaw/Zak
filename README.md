@@ -2,7 +2,8 @@
 Zak is a Discord bot made by Zachary#6611 features a veriety untilty for the game Space Arena: Build and Fight or Space Arena: Build a spaceship & fight. Born at 10/12/2019. You can contact Zachary#6611 by discord private message or join <a href="http://discord.gg/spacearena">Space Arena: Build and Fight Offical Discord server</a>.
 ## Commands
 
-| test | test |
+| Plugin | README |
+| ------ | ------ |
 
 Argument keys:<br />
 (flexiable) [optional]
