@@ -39,3 +39,4 @@ Argument keys:<br />
  - Creator engine blue cell
  - Creator+, add custom picture as module and circular/diaginal cells
  - Turns png outline to ship grid layout
+ - !faq, frequent ask question when provide keyword
