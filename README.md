@@ -29,7 +29,7 @@ Argument keys:<br />
 |!fact <br />@Zak fact | Random fact about game
 |!meme <br />@Zak meme | Random meme features the game
 |!creator <br />@Zak creator | A ship build creator by layout cells and adding modules to the build with *+(modulename)*.
-|!profile [discord user mention / your own ingame name / your own support id / your own facebook link]<br />@Zak profile[discord user mention / your own ingame name / your own support id / your own facebook link] | To find discord user's ingame name / support id / facebook if he provided...
+|!profile [discord user mention / your ingame name / support id / facebook link]<br />@Zak profile[discord user mention / your ingame name / support id / facebook link]| To find discord user's ingame name / support id / facebook if he provided...
 |!shop (item) x(quantity) (price)celes (image url)<br />@Zak shop | A meme generator for photoshop a unnatural item into picture.
 |!about <br />@Zak about | Basic information about Zak.
 |!invite <br />@Zak invite | Invite link for Zak.
