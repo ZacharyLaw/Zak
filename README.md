@@ -37,3 +37,4 @@ Argument keys:<br />
 ## Future
  - Creator can preadd ship layout
  - Creator engine blue cell
+ - Creator+, add custom picture and circular/diaginal cells
