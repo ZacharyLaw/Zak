@@ -38,10 +38,10 @@ Argument keys:<br />
 Top to bottom, priority order
 - Permission error handling
 - Release invite link to public
-- Upload to top.gg
+- Advertise to top.gg and subreddit 
  - !faq, frequent ask question when provide keyword
  - Creator can preadd ship layout
  - Creator engine blue cell
  - Creator+, add custom picture as module and circular/diaginal cells
  - Turns png outline to ship grid layout
-
+- Post game category youtube notification & subreddit
