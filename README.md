@@ -38,3 +38,4 @@ Argument keys:<br />
  - Creator can preadd ship layout
  - Creator engine blue cell
  - Creator+, add custom picture and circular/diaginal cells
+ - Turns png outline to ship grid layout
