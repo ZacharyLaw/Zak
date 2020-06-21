@@ -40,6 +40,7 @@ Top to bottom, priority order
 - Release invite link to public
 - Advertise to top.gg and subreddit 
  - !faq, frequent ask question when provide keyword
+ - disable coresponding command per server
  - Creator can preadd ship layout
  - Creator engine blue cell
  - Creator+, add custom picture as module and circular/diaginal cells
