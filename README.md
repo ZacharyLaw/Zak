@@ -39,6 +39,7 @@ Top to bottom, priority order
 - Permission error handling
 - Release invite link to public
 - Advertise to top.gg and subreddit 
+- help 2.0
  - !faq, frequent ask question when provide keyword
  - disable coresponding command per server
  - Creator can preadd ship layout
