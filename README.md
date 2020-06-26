@@ -41,6 +41,7 @@ Top to bottom, priority order
 - Advertise to top.gg and subreddit 
 - help 2.0
  - !faq, frequent ask question when provide keyword
+ - image recongition builds and analysis
  - disable coresponding command per server
  - Creator can preadd ship layout
  - Creator engine blue cell
