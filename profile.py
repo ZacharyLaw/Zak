@@ -41,7 +41,11 @@ async def profile(ctx,*args):
 		except:await message.channel.send('Profile not found')
 	elif message.author.id==270864978569854976:
 		if re.findall('\S{4,16}',' '.join(args))[0] in profilepd.index:profilepd.loc[re.findall('\S{4,16}',' '.join(args))[0],'IGN']=re.findall('\S{4,16}',' '.join(args))[0]
-		else:profilepd.loc[re.findall('\S{4,16}',arg)[0]]=[re.findall('\S{4,16}',arg)[0],None,None,None]
+		else:profilepd.loc[re.findall('\d{18}',message.content)[0]]=[re.findall('\S{4,16}',' '.join(args))[0],None,None,None]
+		
+		os.remove('profile.csv')
+		profilepd[['IGN','SupportID','Fb']].to_csv('profile.csv')
+		await message.add_reaction('👌')
 	else:
 		for arg in args:#ign,support,fb
 			if re.findall('http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+',arg):

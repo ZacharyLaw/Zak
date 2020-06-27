@@ -1,0 +1,30 @@
+zak,"Zak reacts the command with??, meaning it is online."
+help,"Collaspeable command list, use reaction emoji to expand list."
+build (shipname),"Shows ship builds include create date, author, description with upvote / downvote likeness, use reaction emoji to upvote / downvote or select different build."
+index [shipname],"Show how many builds for corresponding build, provide ship name for focused search is optional."
+"submit(shipname) [, description / discord message link] (1/2 build image url or attachment)","Submit your build screenshot to Zak, to be avaliable to view for others by build command."
+info (ship/module name) [vs ship/module name],"Provide information about module or ship, if added ""vs"" into command can compare 2 module or ship."
+unlock (ship/module name),Provide information of ship or module unlock level.
+cost (ship/module name),Provide information of ship or module cost by credit / celestium / blueprint / Acquisition
+cell (shipname),Sent a picture of ship cell layout.
+"sector (number),(number)",Basic information about sector enemy.
+"power (number of module) (modulename) [, number of module] [modulename]...","Power calculator, can be add endless sets of�, [number of module] [modulename]."
+ship,Inforgraphic guide for ship tier list.
+route,Inforgraphic guide for progression route and endgame setup.
+weapon,Inforgraphic guide of Weapon Tier List.
+guide,Inforgraphic guide of all guides in gif (outdated).
+upgrade,Inforgraphic guide of Upgrade worthy list.
+mod,Inforgraphic guide of recommend ship modification order.
+cou,Inforgraphic guide of offense vs defense counter graph.
+combo,Inforgraphic guide of weapon type combos tier.
+shipupg,Inforgraphic guide of ship upgrade parameter tier list.
+time,Display current ingame cycles countdown and game developer Herocraft Headquarters timezone (server time).
+wiki (keyword),Search keyword on game famdom wikia.
+fact,Random fact about game
+meme,Random meme features the game
+creator,A ship build creator by layout cells and adding modules to the build with�+(modulename).
+profile [discord user mention / your ingame name / support id / facebook link],To find discord user's ingame name / support id / facebook if he provided...
+shop (item) x(quantity) (price)celes (image url),A meme generator for photoshop a unnatural item into picture.
+about,Basic information about Zak.
+invite,Invite link for Zak.
+prefix (prefix),"Change prefix of Zak for your server, reqiure command user have administrator permission,�??�if work."

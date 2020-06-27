@@ -135,14 +135,14 @@ async def prefix(ctx,prefix):
 	else:c.execute("""INSERT INTO prefixes VALUES (?,?)""",(ctx.guild.id,prefix))
 	conn.commit()
 	await ctx.message.add_reaction('👌')
-@client.command(aliases=(['w','wiki']))
-async def wikia(ctx,arg):await ctx.send(embed=discord.Embed(description='Wikia Search result:\n['+' '.join(map(str, wikia.search('spacearena',arg,1)))+'](http://spacearena.fandom.com/wiki/'+' '.join(map(str, wikia.search('spacearena',arg,1))).replace(' ','_')+')',colour=discord.Colour.from_rgb(47,49,54)))
+@client.command(aliases=(['w','wikia']))
+async def wiki(ctx,arg):await ctx.send(embed=discord.Embed(description='Wikia Search result:\n['+' '.join(map(str, wikia.search('spacearena',arg,1)))+'](http://spacearena.fandom.com/wiki/'+' '.join(map(str, wikia.search('spacearena',arg,1))).replace(' ','_')+')',colour=discord.Colour.from_rgb(47,49,54)))
 @client.command()
 async def zak(ctx):await ctx.message.add_reaction('👋')
 @client.command()
 async def fact(ctx):await ctx.send(' '.join(random.choice(fact)))
 @client.command()
-async def invite(ctx):await ctx.send(embed =discord.Embed(description='Zak Invite Link\n[link](https://discordapp.com/oauth2/authorize?client_id=563319785811869698&scope=bot)'))
+async def invite(ctx):await ctx.send(embed =discord.Embed(description='Zak Invite Link\n[link](https://discordapp.com/oauth2/authorize?client_id=563319785811869698&scope=bot&permissions=314432)'))
 @client.command()
 async def about(ctx):await ctx.send(embed =discord.Embed(description='<@563319785811869698> is made by <@270864978569854976>\nFor the Space Arena Offical Server\nBorn at 10/12/2019\nNice to meet you Senpi!\n[Github](http://github.com/ZacharyLaw/Zak)',colour=discord.Colour.from_rgb(47,49,54)))
 @client.command()
@@ -167,10 +167,12 @@ async def shipupg(ctx):await ctx.send(file=discord.File('shipupg3.png'))
 @client.command(aliases=(['ships']))
 async def ship(ctx):await ctx.send(file=discord.File('ship.png'))
 @client.command()
+async def route(ctx):await ctx.send(file=discord.File('route.png'))
+@client.command()
 async def mod(ctx):await ctx.send(file=discord.File('mod.png'))
 @client.command()
 async def time(ctx):await ctx.send('Daily quest & Daily Deals countdown: '+strfdelta(datetime(2011, 5, 5,13) - datetime.now(),'{hours}h {minutes}m')+'\nClass Battle countdown: '+strfdelta(datetime(2020, 6, 15,12) - datetime.now(),'{days}d {hours}h {minutes}m')+'\nHeroCraft HQ Time: '+(datetime.today()).strftime("%H:%M"))
-@client.command()
+@client.command(aliases=(['layout','cells']))
 async def cell(ctx,*,arg):
 	filename=str(buildcorrect.loc[str(process.extractOne(arg,buildcorrect.index.values ,score_cutoff=80)[0]),'Filename'])
 	if filename=='nan':filename=str(buildcorrect.loc[str(buildcorrect.loc[str(process.extractOne(arg,buildcorrect.index.values ,score_cutoff=80)[0]),'Alternative']),'Filename'])
@@ -181,7 +183,7 @@ async def cost(ctx,*,arg):
 	if str(general.loc[index,'Alternative'])!='nan': index=str(general.loc[index,'Alternative'])
 	msg=str(index)+'\n'
 	if str(general.loc[index,'Acquisition'])!='nan':msg+='Acquisition: '+str(general.loc[index,'Acquisition'])
-	if str(general.loc[index,'Cost'])!='nan':msg+='Cost: ' +str(general.loc[index,'Cost'])
+	if str(general.loc[index,'Cost'])!='nan':msg+='Cost: ' +str(general.loc[index,'Cost'].replace('celes','<:celes:570222210476670976>').replace('cred','<:credit:570222178348564481>').replace('bp','<:bp:568688146683002880>'))
 	await ctx.send(msg)		
 @client.command()
 async def meme(ctx):await ctx.send(file=discord.File('/home/zak/Zak/meme/'+str(random.choice([f for f in listdir('C:\$Zac\spacearena\Zak\meme') if isfile(join('C:\$Zac\spacearena\Zak\meme', f))]))))
@@ -479,6 +481,7 @@ async def submit(ctx,*,arg):
 			message=await client.get_channel(int(msglink.split('/')[5])).fetch_message(int(msglink.split('/')[6]))
 			shipname=re.sub(r"http\S+", "", arg)
 			desc='\n'+message.content
+			urls = re.findall('http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+', message.content)
 		else:
 			message=ctx.message
 			urls = re.findall('http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+', arg)
@@ -486,12 +489,12 @@ async def submit(ctx,*,arg):
 			elif ',' not in arg:shipname=re.sub(r"http\S+", "",  arg)				
 			if ',' not in arg:desc=''
 			else:desc=re.sub(r"http\S+", "",  arg.split(',',1)[1])			
-		if len(ctx.message.attachments)==0 and len(urls)==0:await sender.send('No image recieved')
+		if len(message.attachments)==0 and len(urls)==0:await sender.send('No image recieved')
 		elif shipname=='':await sender.send('No shipname received')
 		elif not (process.extractOne(shipname,buildcorrect.index.values ,score_cutoff=80) or process.extractOne(shipname,buildcorrect.index.values ,score_cutoff=80)):await sender.channel.send('Shipname not found')
 		else:
-			if len(urls)==0 and len(ctx.message.attachments)==2:urls=[ctx.message.attachments[0].url,ctx.message.attachments[1].url]
-			elif len(urls)==0 and len(ctx.message.attachments)==1:urls=[ctx.message.attachments[0].url]
+			if len(urls)==0 and len(message.attachments)>1:urls=[message.attachments[0].url,message.attachments[1].url]
+			elif len(urls)==0 and len(message.attachments)==1:urls=[message.attachments[0].url]
 			if process.extractOne(shipname,buildcorrect.index.values ,score_cutoff=80):
 				filename=str(buildcorrect.loc[process.extractOne(shipname,buildcorrect.index.values ,score_cutoff=80)[0],'Filename'])
 				index=str(process.extractOne(shipname,buildcorrect.index.values ,score_cutoff=80)[0])
@@ -636,4 +639,11 @@ async def unlock(ctx,*,arg):
 	index=''.join(map(str,process.extractOne(arg.replace('mkiii','mk3').replace('mkii','mk2'),general.index.values,score_cutoff=80)[0])) 
 	if str(general.loc[index,'Alternative'])!='nan': index=str(general.loc[index,'Alternative'])
 	await ctx.send(str(index)+'\nLevel: '+str(int(general.loc[index,'Level'])))
+@client.event
+async def on_command_error(ctx,error):
+	if str(getattr(error, 'original', error))=='403 Forbidden (error code: 50013): Missing Permissions':
+		try:await ctx.send('Permission error')
+		except:
+			channel=await ctx.message.author.create_dm()
+			await channel.send('<#'+str(ctx.message.channel.id)+'>: Permission error')
 client.run(open("id.txt", "r").read())
