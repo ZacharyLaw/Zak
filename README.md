@@ -36,7 +36,6 @@ Argument keys:<br />
 |!prefix (prefix)<br />@Zak prefix | Change prefix of Zak for your server, reqiure command user have administrator permission, 👌 if work.|
 ## Future
 Top to bottom, priority order
-- update !help
 - Release invite link to public
 - Advertise to top.gg and subreddit 
 - help 2.0
