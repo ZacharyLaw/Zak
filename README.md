@@ -16,7 +16,8 @@ Argument keys:<br />
 |!cell (shipname)<br />!cells (shipname)<br />!layout (shipname)<br />@Zak cell (shipname)<br />@Zak cells (shipname)<br />@Zak layout (shipname) | Sent a picture of ship cell layout.
 |!sector (number),(number)<br />@Zak sector (number),(number) | Basic information about sector enemy.
 |!power (number of module) (modulename) [, number of module] [modulename]...<br />@Zak power | Power calculator, can be add endless sets of *, [number of module] [modulename]*.
-|!ship <br />@Zak ship |  Inforgraphic guide for progression route and endgame setup.
+|!ship <br />@Zak ship | Inforgraphic guide for ship tier list.
+|!route<br/>@Zak route | Inforgraphic guide for progression route and endgame setup.
 |!weapon <br />!weap <br />@Zak weapon <br />@Zak weap | Inforgraphic guide of Weapon Tier List.
 |!guide <br />@Zak guide | Inforgraphic guide of all guides in gif (outdated).
 |!upgrade <br />!upg <br />@Zak upgrade | Inforgraphic guide of Upgrade worthy list.
