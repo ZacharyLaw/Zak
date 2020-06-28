@@ -52,6 +52,7 @@ Top to bottom, priority order
  - disable coresponding command per server
  - Creator can preadd ship layout
  - Creator engine blue cell
+ - reskin ship
  - Creator+, add custom picture as module and circular/diaginal cells
  - Turns png outline to ship grid layout
 - Post game category youtube & subreddit notification
