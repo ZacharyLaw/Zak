@@ -48,8 +48,6 @@ Chaingun, cg, Chaingun Mk2, cgmk2, cg2, Vulcan Cannon, vc, Vulcan Turret, vt, Vu
 ## Future Plans
 Top to bottom, priority order
 - Advertise to top.gg and subreddit 
-- help 2.0
- - !faq, frequent ask question when provide keyword
  - image recongition builds and analysis
  - disable coresponding command per server
  - Creator can preadd ship layout
