@@ -25,10 +25,10 @@ from os.path import isfile, join
 import sqlite3
 from tabulate import tabulate
 import requests
-fact = [(line.strip()).split() for line in open("fact.txt", "r")]
+factlist = [(line.strip()).split() for line in open("fact.txt", "r")]
 ship=list(csv.reader(open("ship.csv","r")))
 galaxy=list(csv.reader(open("galaxy.csv","r")))
-sector=list(csv.reader(open("sector.csv","r")))
+sectorcsv=list(csv.reader(open("sector.csv","r")))
 general= pd.read_csv('general.csv', index_col=0)
 modulepd= pd.read_csv('module.csv', index_col=0)
 buildpd=pd.read_csv('build.csv', index_col=0,dtype=str).fillna('')
@@ -140,16 +140,14 @@ async def wiki(ctx,arg):await ctx.send(embed=discord.Embed(description='Wikia Se
 @client.command()
 async def zak(ctx):await ctx.message.add_reaction('👋')
 @client.command()
-async def fact(ctx):await ctx.send(' '.join(random.choice(fact)))
+async def fact(ctx):await ctx.send(' '.join(random.choice(factlist)))
 @client.command()
-async def invite(ctx):await ctx.send(embed =discord.Embed(description='Zak Invite Link\n[link](https://discordapp.com/oauth2/authorize?client_id=563319785811869698&scope=bot&permissions=314432)'))
-@client.command()
-async def about(ctx):await ctx.send(embed =discord.Embed(description='<@563319785811869698> is made by <@270864978569854976>\nFor the Space Arena Offical Server\nBorn at 10/12/2019\nNice to meet you Senpi!\n[Github](http://github.com/ZacharyLaw/Zak)',colour=discord.Colour.from_rgb(47,49,54)))
+async def about(ctx):await ctx.send(embed =discord.Embed(description='<@563319785811869698> is made by <@270864978569854976>\nFor the Space Arena Offical Server\nBorn at 10/12/2019\nNice to meet you Senpi!\n__[Invite link](https://discordapp.com/oauth2/authorize?client_id=563319785811869698&scope=bot&permissions=314432)__\n__[Github](http://github.com/ZacharyLaw/Zak)__',colour=discord.Colour.from_rgb(47,49,54)))
 @client.command()
 async def sector(ctx,*,arg):
 	args=arg.split(' ')
 	if '.' in args[0]:args=arg.split(' ')[0].split('.')
-	await ctx.send('Sector '+str(args[1])+'.'+str(args[2])+' '+data[(int(args[1])-1)*10+int(args[2])-1][5]+'\n<:ballistic:570222613180186653>'+data[(int(args[1])-1)*10+int(args[2])-1][0]+'/19\n<:missile:570222563779936256>'+data[(int(args[1])-1)*10+int(args[2])-1][1]+'/19\n<:laser:570222555802107905>'+data[(int(args[1])-1)*10+int(args[2])-1][2]+'/19\n<a:armor:654546483613270017>'+data[(int(args[1])-1)*10+int(args[2])-1][3]+'/19\n<a:shield:654546575858860043>'+data[(int(args[1])-1)*10+int(args[2])-1][4]+'/19')
+	await ctx.send('Sector '+str(args[0])+'.'+str(args[1])+' '+sectorcsv[(int(args[0])-1)*10+int(args[1])-1][5]+'\n<:ballistic:570222613180186653>'+sectorcsv[(int(args[0])-1)*10+int(args[1])-1][0]+'/19\n<:missile:570222563779936256>'+sectorcsv[(int(args[0])-1)*10+int(args[1])-1][1]+'/19\n<:laser:570222555802107905>'+sectorcsv[(int(args[0])-1)*10+int(args[1])-1][2]+'/19\n<a:armor:654546483613270017>'+sectorcsv[(int(args[0])-1)*10+int(args[1])-1][3]+'/19\n<a:shield:654546575858860043>'+sectorcsv[(int(args[0])-1)*10+int(args[1])-1][4]+'/19')
 @client.command()
 async def guide(ctx):await ctx.send('https://cdn.discordapp.com/attachments/566268214514941952/684388364337676516/guide.gif')
 @client.command()
@@ -639,11 +637,14 @@ async def unlock(ctx,*,arg):
 	index=''.join(map(str,process.extractOne(arg.replace('mkiii','mk3').replace('mkii','mk2'),general.index.values,score_cutoff=80)[0])) 
 	if str(general.loc[index,'Alternative'])!='nan': index=str(general.loc[index,'Alternative'])
 	await ctx.send(str(index)+'\nLevel: '+str(int(general.loc[index,'Level'])))
-@client.event
+"""@client.event
 async def on_command_error(ctx,error):
 	if str(getattr(error, 'original', error))=='403 Forbidden (error code: 50013): Missing Permissions':
 		try:await ctx.send('Permission error')
 		except:
 			channel=await ctx.message.author.create_dm()
 			await channel.send('<#'+str(ctx.message.channel.id)+'>: Permission error')
+	else:print(error)"""
+@client.command()
+async def faq(ctx,*,arg):await ctx.send(' '.join(process.extractOne(arg,factlist,score_cutoff=50)[0]))
 client.run(open("id.txt", "r").read())

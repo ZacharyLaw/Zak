@@ -40,11 +40,10 @@ async def help(ctx):
 	try:
 		while True:
 			reaction,user = await client.wait_for('reaction_add',timeout=60.0,check=check)
-			await message.channel.send(embed=commands)
-			await message.edit(embed=commands)
+			await helpmessage.edit(embed=commands)
 			reaction,user = await client.wait_for('reaction_remove',timeout=60.0,check=check)
-			await message.edit(embed=close)
+			await helpmessage.edit(embed=close)
 	except:
-		await message.edit(embed=end)
-		await message.clear_reactions()
+		await helpmessage.edit(embed=end)
+		await helpmessage.clear_reactions()
 client.run(open("id.txt", "r").read())
