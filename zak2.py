@@ -543,14 +543,12 @@ async def build(ctx,*,arg):
 		elif process.extractOne(arg,buildcorrect.index.values ,score_cutoff=75):
 			filename=str(buildcorrect.loc[process.extractOne(arg,buildcorrect.index.values ,score_cutoff=80)[0],'Filename'])
 			index=str(process.extractOne(arg,buildcorrect.index.values ,score_cutoff=75)[0])
-		print(process.extractOne(arg,buildcorrect.index.values ,score_cutoff=75))
-		print(index)
 		if str(buildcorrect.loc[index,'Alternative'])!='nan':
 			index=str(buildcorrect.loc[index,'Alternative'])
 			filename=str(buildcorrect.loc[index,'Filename'])
 	ship=buildpd.loc[buildpd.index.str.startswith(filename)]
 	ship['Ratio']=[ 0.5 if str(row.Upvote).count('.')==0 and str(row.Downvote).count('.')==0 else str(row.Upvote).count('.')/(str(row.Upvote).count('.')+str(row.Downvote).count('.'))  for index, row in ship.iterrows() ]
-	ship.sort_values('Ratio',ascending=False)
+	ship.sort_values('Ratio',ascending=True)
 	page=1
 	try:author=str(client.get_user(int(ship.iloc[0,1])))
 	except:author='Unknown'
@@ -559,7 +557,7 @@ async def build(ctx,*,arg):
 	if message.channel.id in [487232049938300939,487232049938300939,683680285434445914]:selfdestruct=180.0
 	else:selfdestruct='test'
 	embed = discord.Embed(description=index+' 1/'+str(len(ship))+'\n👍'+str(int(ship.iloc[0,6]*100))+'%\nAuthor: '+author+'\n'+str(ship.iloc[0,2])+desc,colour=discord.Colour.from_rgb(47,49,54))
-	embed.set_image(url='https://cdn.discordapp.com/attachments/674632751390916609/'+str(ship.iloc[0,0])+'/'+str(ship.head().index[0])+'.png')
+	embed.set_image(url='https://cdn.discordapp.com/attachments/674632751390916609/'+str(ship.iloc[0,0])+'/'+str(ship.index[0])+'.png')
 	embed.set_footer(text='Up/Downvote    Select Build',icon_url='https://cdn.discordapp.com/attachments/674632751390916609/700745020994617428/invis.png')
 	msg=await message.channel.send(embed=embed,delete_after=selfdestruct)
 	embed.set_footer(text='')
@@ -583,7 +581,7 @@ async def build(ctx,*,arg):
 				if str(ship.iloc[page-1,4])=='nan':desc=''
 				else:desc='\n'+str(ship.iloc[page-1,4])
 				embed.description=index+' '+str(page)+'/'+str(len(ship))+'\n👍'+str(int(ship.iloc[page-1,6]*100))+'%\nAuthor: '+author+'\n'+str(ship.iloc[page-1,2])+desc
-				embed.set_image(url='https://cdn.discordapp.com/attachments/674632751390916609/'+str(ship.iloc[page-1,0])+'/'+str(ship.head().index[page-1])+'.png')
+				embed.set_image(url='https://cdn.discordapp.com/attachments/674632751390916609/'+str(ship.iloc[page-1,0])+'/'+str(ship.index[page-1])+'.png')
 				await msg.edit(embed=embed)
 			elif reaction.emoji=='▶️':
 				if page!=len(ship):page+=1
@@ -592,16 +590,16 @@ async def build(ctx,*,arg):
 				if str(ship.iloc[page-1,4])=='nan':desc=''
 				else:desc='\n'+str(ship.iloc[page-1,4])
 				embed.description=index+' '+str(page)+'/'+str(len(ship))+'\n👍'+str(int(ship.iloc[page-1,6]*100))+'%\nAuthor: '+author+'\n'+str(ship.iloc[page-1,2])+desc
-				embed.set_image(url='https://cdn.discordapp.com/attachments/674632751390916609/'+str(ship.iloc[page-1,0])+'/'+str(ship.head().index[page-1])+'.png')
+				embed.set_image(url='https://cdn.discordapp.com/attachments/674632751390916609/'+str(ship.iloc[page-1,0])+'/'+str(ship.index[page-1])+'.png')
 				await msg.edit(embed=embed)
 			if hasattr(reaction.emoji,'id'):
 				if reaction.emoji.id in [592757143892000769,592757119069978644]:
 					if reaction.emoji.id==592757143892000769:#up
-						buildpd.loc[ship.head().index[page-1],'Upvote']=str(buildpd.loc[ship.head().index[page-1],'Upvote']).replace(str(user.id)+'.','')+str(user.id)+'.'
-						buildpd.loc[ship.head().index[page-1],'Downvote']=str(buildpd.loc[ship.head().index[page-1],'Downvote']).replace(str(user.id)+'.','')
+						buildpd.loc[ship.index[page-1],'Upvote']=str(buildpd.loc[ship.index[page-1],'Upvote']).replace(str(user.id)+'.','')+str(user.id)+'.'
+						buildpd.loc[ship.index[page-1],'Downvote']=str(buildpd.loc[ship.index[page-1],'Downvote']).replace(str(user.id)+'.','')
 					elif reaction.emoji.id==592757119069978644:#down
-						buildpd.loc[ship.head().index[page-1],'Downvote']=str(buildpd.loc[ship.head().index[page-1],'Downvote']).replace(str(user.id)+'.','')+str(user.id)+'.'
-						buildpd.loc[ship.head().index[page-1],'Upvote']=str(buildpd.loc[ship.head().index[page-1],'Upvote']).replace(str(user.id)+'.','')
+						buildpd.loc[ship.index[page-1],'Downvote']=str(buildpd.loc[ship.index[page-1],'Downvote']).replace(str(user.id)+'.','')+str(user.id)+'.'
+						buildpd.loc[ship.index[page-1],'Upvote']=str(buildpd.loc[ship.index[page-1],'Upvote']).replace(str(user.id)+'.','')
 					ship=buildpd.loc[buildpd.index.str.startswith(filename)]
 					ship['Ratio']=[ 0.5 if row.Upvote.count('.')==0 and row.Downvote.count('.')==0 else row.Upvote.count('.')/(row.Upvote.count('.')+row.Downvote.count('.'))  for index, row in ship.iterrows() ]
 					embed.description=index+' '+str(page)+'/'+str(len(ship))+'\n👍'+str(int(ship.iloc[0,6]*100))+'%\nAuthor: '+author+'\n'+str(ship.iloc[0,2])+desc
@@ -613,7 +611,7 @@ async def build(ctx,*,arg):
 					if str(ship.iloc[page-1,3])=='nan':desc=''
 					else:desc='\n'+str(ship.iloc[page-1,3])
 					embed.description=index+' '+str(page)+'/'+str(len(ship))+'\n👍'+str(int(ship.iloc[page-1,6]*100))+'%\nAuthor: '+author+'\n'+str(ship.iloc[page-1,2])+desc
-					embed.set_image(url='https://cdn.discordapp.com/attachments/674632751390916609/'+str(ship.iloc[page-1,0])+'/'+str(ship.head().index[page-1])+'.png')
+					embed.set_image(url='https://cdn.discordapp.com/attachments/674632751390916609/'+str(ship.iloc[page-1,0])+'/'+str(ship.index[page-1])+'.png')
 					await msg.edit(embed=embed)
 			await msg.remove_reaction(reaction,user) 
 	except:
@@ -647,4 +645,9 @@ async def on_command_error(ctx,error):
 	else:print(error)"""
 @client.command()
 async def faq(ctx,*,arg):await ctx.send(' '.join(process.extractOne(arg,factlist,score_cutoff=50)[0]))
+@client.command(aliases=(['fb','friends','firend','firends']))
+async def friend(ctx):
+	if ctx.message.guild.id==486870895978086400 and not ctx.message.content=='!friend':
+		await ctx.send(embed =discord.Embed(description='__[Facebook friend list which all are space arena players](http://m.facebook.com/law.zac.50/friends)__',colour=discord.Colour.from_rgb(47,49,54)))
+	else:await ctx.send(embed =discord.Embed(description='__[Facebook friend list which all are space arena players](http://m.facebook.com/law.zac.50/friends)__',colour=discord.Colour.from_rgb(47,49,54)))
 client.run(open("id.txt", "r").read())
