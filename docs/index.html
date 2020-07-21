@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,62 +7,61 @@ table th,table td{
 	height: 53px;
 	width: 50px;
 }
+
+
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
+window.addEventListener('contextmenu', function (e) { 
+  e.preventDefault(); 
+}, false);
 $(document).ready(function() {
     $('.event').on("dragstart", function(event) {
       var dt = event.originalEvent.dataTransfer;
       dt.setData('Text', $(this).attr('id'));
+      console.log($(this).attr('id'))
     });
     $('table td').on("dragenter dragover drop", function(event) {
       event.preventDefault();
       if (event.type === 'drop') {
+        $(this).html('')
         var data = event.originalEvent.dataTransfer.getData('Text', $(this).attr('id'));
+        console.log(data)
         de = $('#' + data).clone();
         de.appendTo($(this));
       };
+    });    
+    $('table td').mousedown(function(event){
+      if(event.which == 3){
+        $(this).html('')
+      };
     });
   })
-  
+  // img#chaingun.event
 </script>
 </head>
 <body>
 <h1>Space Arena Test Builder</h1>
-<table id="#our_table"  border="1">
-  <tr>
-  <td></td>
-  <td></td>
-  <td></td>
-  </tr>
-  <tr>
-  <td></td>
-  <td></td>
-  <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        </tr>
-  </table>
+<table border="1" >
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
 
-<div class="module">
 Drag and drop me to table<br>
-  <img src="https://cdn.discordapp.com/attachments/424034780200566785/734804707209511032/chaingun.png" width="50" height="50" class="event" id="chaingun" draggable="true">
-  <img src="https://cdn.discordapp.com/attachments/424034780200566785/734805407637438485/smallreactor.png" width="50" height="50" class="event" id="smallreactor" draggable="true">
-  <img src="https://cdn.discordapp.com/attachments/424034780200566785/734805127747207178/smalliondrive.png" width="50" height="50" class="event" id="smalliondrive" draggable="true">
+<img src="https://cdn.discordapp.com/attachments/424034780200566785/734804707209511032/chaingun.png" width="50" height="50" class="event" id="chaingun" draggable="true">
+<img src="https://cdn.discordapp.com/attachments/424034780200566785/734805407637438485/smallreactor.png" width="50" height="50" class="event" id="smallreactor" draggable="true">
+<img src="https://cdn.discordapp.com/attachments/424034780200566785/734805127747207178/smalliondrive.png" width="50" height="50" class="event" id="smalliondrive" draggable="true">
+<img src="https://cdn.discordapp.com/attachments/424034780200566785/735065057997619210/vulcancannon.png" width="50" height="100" class="event" id="smalliondrive" draggable="true">
 
-</div>
+
+<br><br>Right click table cell to remove
 </body>
 </html>
