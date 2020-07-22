@@ -1,2 +1,131 @@
-<p>test</p>
-<p>test</p>
+<!doctype html>
+<html>
+<head>
+  <style>
+  .dragable {padding: 0px; float: left; margin: 0 0px 0px 0;}
+  #footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color:white
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  #header {
+    position: fixed;
+    width: 100%;
+    color:white;
+    padding: 10px;
+
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "img" ).each( function() {
+      var $img = $( this );
+      $img.width( $img.width() * .5 );
+      $img.addClass("inventory")
+    });
+    $( ".inventory" ).click( function(event) {$(this).clone().appendTo("body").draggable({grid:[50,50]}); ;});
+
+
+  } );
+  </script>
+</head>
+<body style="background-color:#36393F;">
+<div id="header" style="background-color:#2F3136;">
+  Space Arena Builder debug
+</div>
+<div><br><br></div>
+<div id="footer" style="background-color:#2F3136;">
+  Inventory: Click to clone
+  <br>
+  <img src="/module/afterburner.png" >
+  <img src="/module/arcfusionarray.png" >
+  <img src="/module/aresenalwall.png" >
+  <img src="/module/ballisticarmor.png" >
+  <img src="/module/battleshield.png" >
+  <img src="/module/bunkershield.png" >
+  <img src="/module/bunkershieldmk2.png" >
+  <img src="/module/capitalcannon.png" >
+  <img src="/module/capitalcannonmk2.png" >
+  <img src="/module//module/chaingun.png" >
+  <img src="/module/chaingunmk2.png" >
+  <img src="/module/combatshield.png" >
+  <img src="/module/combatshieldmk2.png" >
+  <img src="/module/flakrocketturret.png" >
+  <img src="/module/flakrocketturretmk2.png" >
+  <img src="/module/fusionray.png" >
+  <img src="/module/fusionturret.png" >
+  <img src="/module/gaussianshotgun.png" >
+  <img src="/module/gaussianwarshotgun.png" >
+  <img src="/module/grandiondrive.png" >
+  <img src="/module/grandiondrivemk2.png" >
+  <img src="/module/grandreactor.png" >
+  <img src="/module/hydraturret.png" >
+  <img src="/module/hydraturretmk2.png" >
+  <img src="/module/hyperionchaingun.png" >
+  <img src="/module/impactmissile.png" >
+  <img src="/module/largearmoredreactor.png" >
+  <img src="/module/largereactivearmor.png" >
+  <img src="/module/largereactor.png" >
+  <img src="/module/laserbeam.png" >
+  <img src="/module/laserbeammk2.png" >
+  <img src="/module/laserbeammk3.png" >
+  <img src="/module/laserturret.png" >
+  <img src="/module/massdriver.png" >
+  <img src="/module/massdrivermk2.png" >
+  <img src="/module/mediiumsteelarmor.png" >
+  <img src="/module/mediumarmoredreactor.png" >
+  <img src="/module/mediumarmoredreactormk2.png" >
+  <img src="/module/mediumiondrive.png" >
+  <img src="/module/mediumreactivearmor.png" >
+  <img src="/module/mediumreactor.png" >
+  <img src="/module/mediumsolararmor.png" >
+  <img src="/module/mediumsolararmormk2.png" >
+  <img src="/module/minelayer.png" >
+  <img src="/module/missilelauncher.png" >
+  <img src="/module/plasmaarmor.png" >
+  <img src="/module/pointdefenseturret.png" >
+  <img src="/module/pointdefenseturretmk2.png" >
+  <img src="/module/pointdefenseturretmk3.png" >
+  <img src="/module/pulselaser.png" >
+  <img src="/module/pulselasermk2.png" >
+  <img src="/module/pulselasermk3.png" >
+  <img src="/module/quantumrifle.png" >
+  <img src="/module/railgun.png" >
+  <img src="/module/railgunmk2.png" >
+  <img src="/module/railturret.png" >
+  <img src="/module/railturretmk2.png" >
+  <img src="/module/repairbay.png" >
+  <img src="/module/rocketlauncher.png" >
+  <img src="/module/rocketturret.png" >
+  <img src="/module/rocketturretmk2.png" >
+  <img src="/module/rocketturretmk3.png" >
+  <img src="/module/scorpionlauncher.png" >
+  <img src="/module/scorpionlaunchermk2.png" >
+  <img src="/module/scorpionlaunchermk3.png" >
+  <img src="/module/smalliondrive.png" >
+  <img src="/module/smalliondrivemk2.png" >
+  <img src="/module/smalllaser.png" >
+  <img src="/module/smalllasermk2.png" >
+  <img src="/module/smallreactivearmor.png" >
+  <img src="/module/smallreactor.png" >
+  <img src="/module/smallsolararmor.png" >
+  <img src="/module/smallsteelarmor.png" >
+  <img src="/module/torpedolauncher.png" >
+  <img src="/module/vectoredthruster.png" >
+  <img src="/module/vectoredthrustermk2.png" >
+  <img src="/module/vulcancannon.png" >
+  <img src="/module/vulcanturret.png" >
+  <img src="/module/vulcanturretmk2.png" >
+  <img src="/module/vulcanturretmk3.png" >
+  <img src="/module/warheadlauncher.png" >
+  <img src="/module/warpdrive.png" >
+  <img src="/module/warshield.png" >
+  
+</div>
+</body>
+</html>
