@@ -16,25 +16,19 @@
     width: 100%;
     color:white;
     padding: 10px;
-    
+
   }
   </style>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
-  $( function() {
-    $( "img" ).each( function() {
-      var $img = $( this );
-      $img.width( $img.width() * .5 );
-      $img.addClass("inventory")
+  $( document ).ready( function() {
+    $( 'img' ).each( function() {
+      $(this).width *= 0.5;
+      $(this).addClass("inventory");
     });
     $( ".inventory" ).click( function(event) {$(this).clone().appendTo("body").draggable({grid:[50,50]}); ;});
   } );
-  $().ready(function(){
-$( window ).resize(function() {
-  $("img").removeAttr("style");
-});
-});
   </script>
 </head>
 <body style="background-color:#36393F;">
@@ -128,6 +122,7 @@ $( window ).resize(function() {
   <img src="warheadlauncher.png" >
   <img src="warpdrive.png" >
   <img src="warshield.png" >
+
   
 </div>
 </body>
