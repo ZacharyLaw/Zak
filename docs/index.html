@@ -24,7 +24,7 @@
   <script>
   $( document ).ready( function() {
     $( 'img' ).each( function() {
-      $(this).width *= 0.5;
+      $(this).width($(this).width()*0.5);
       $(this).addClass("inventory");
     });
     $( ".inventory" ).click( function(event) {$(this).clone().appendTo("body").draggable({grid:[50,50]}); ;});
