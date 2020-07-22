@@ -447,7 +447,7 @@ async def creator(ctx):
 				await creator.edit(embed=embed)
 			elif action==-1 and reaction.emoji.id==690840728489820191:lock=0#base
 			elif action==1:
-				module=Image.open(str(pathlib.Path().absolute())+'/module/'+str(modulepd.loc[str(process.extractOne(message.content.split('+',1)[1],modulepd.index.values ,score_cutoff=80)[0]),'Filename'])+'.png')
+				module=Image.open(str(pathlib.Path().absolute())+'/docs/'+str(modulepd.loc[str(process.extractOne(message.content.split('+',1)[1],modulepd.index.values ,score_cutoff=80)[0]),'Filename'])+'.png')
 				create=Image.open('create.png').convert("RGBA")
 				create.paste(module,((xcoord-1)*100,(ycoord-1)*100)) 
 				create.save('create.png')
