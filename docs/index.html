@@ -7,25 +7,125 @@
     position: fixed;
     bottom: 0;
     width: 100%;
+    color:white
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  #header {
+    position: fixed;
+    width: 100%;
+    color:white;
+    padding: 10px;
+
   }
   </style>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
   $( function() {
-    $( ".dragable" ).draggable({ grid:[50,50]});
-    $( ".inventory" ).click( function(event) {
-      $(this).clone().appendTo("body").draggable({grid:[50,50]}); ;
+    $( "img" ).each( function() {
+      var $img = $( this );
+      $img.width( $img.width() * .5 );
+      $img.addClass("inventory")
     });
+    $( ".inventory" ).click( function(event) {$(this).clone().appendTo("body").draggable({grid:[50,50]}); ;});
+
+
   } );
   </script>
 </head>
-<body>
-<div id="footer">
+<body style="background-color:#36393F;">
+<div id="header" style="background-color:#2F3136;">
+  Space Arena Builder
+</div>
+<div><br><br></div>
+<div id="footer" style="background-color:#2F3136;">
   Inventory: Click to clone
   <br>
-  <img src="https://cdn.discordapp.com/attachments/424034780200566785/734804707209511032/chaingun.png" style="width: 50px; height: 50px;"  class="inventory">
-  <img src="https://cdn.discordapp.com/attachments/424034780200566785/734805127747207178/smalliondrive.png"  style="width: 50px; height: 50px;"  class="inventory">
+  <img src="afterburner.png" >
+  <img src="arcfusionarray.png" >
+  <img src="aresenalwall.png" >
+  <img src="ballisticarmor.png" >
+  <img src="battleshield.png" >
+  <img src="bunkershield.png" >
+  <img src="bunkershieldmk2.png" >
+  <img src="capitalcannon.png" >
+  <img src="capitalcannonmk2.png" >
+  <img src="chaingun.png" >
+  <img src="chaingunmk2.png" >
+  <img src="combatshield.png" >
+  <img src="combatshieldmk2.png" >
+  <img src="flakrocketturret.png" >
+  <img src="flakrocketturretmk2.png" >
+  <img src="fusionray.png" >
+  <img src="fusionturret.png" >
+  <img src="gaussianshotgun.png" >
+  <img src="gaussianwarshotgun.png" >
+  <img src="grandiondrive.png" >
+  <img src="grandiondrivemk2.png" >
+  <img src="grandreactor.png" >
+  <img src="hydraturret.png" >
+  <img src="hydraturretmk2.png" >
+  <img src="hyperionchaingun.png" >
+  <img src="impactmissile.png" >
+  <img src="largearmoredreactor.png" >
+  <img src="largereactivearmor.png" >
+  <img src="largereactor.png" >
+  <img src="laserbeam.png" >
+  <img src="laserbeammk2.png" >
+  <img src="laserbeammk3.png" >
+  <img src="laserturret.png" >
+  <img src="massdriver.png" >
+  <img src="massdrivermk2.png" >
+  <img src="mediiumsteelarmor.png" >
+  <img src="mediumarmoredreactor.png" >
+  <img src="mediumarmoredreactormk2.png" >
+  <img src="mediumiondrive.png" >
+  <img src="mediumreactivearmor.png" >
+  <img src="mediumreactor.png" >
+  <img src="mediumsolararmor.png" >
+  <img src="mediumsolararmormk2.png" >
+  <img src="minelayer.png" >
+  <img src="missilelauncher.png" >
+  <img src="plasmaarmor.png" >
+  <img src="pointdefenseturret.png" >
+  <img src="pointdefenseturretmk2.png" >
+  <img src="pointdefenseturretmk3.png" >
+  <img src="pulselaser.png" >
+  <img src="pulselasermk2.png" >
+  <img src="pulselasermk3.png" >
+  <img src="quantumrifle.png" >
+  <img src="railgun.png" >
+  <img src="railgunmk2.png" >
+  <img src="railturret.png" >
+  <img src="railturretmk2.png" >
+  <img src="repairbay.png" >
+  <img src="rocketlauncher.png" >
+  <img src="rocketturret.png" >
+  <img src="rocketturretmk2.png" >
+  <img src="rocketturretmk3.png" >
+  <img src="scorpionlauncher.png" >
+  <img src="scorpionlaunchermk2.png" >
+  <img src="scorpionlaunchermk3.png" >
+  <img src="smalliondrive.png" >
+  <img src="smalliondrivemk2.png" >
+  <img src="smalllaser.png" >
+  <img src="smalllasermk2.png" >
+  <img src="smallreactivearmor.png" >
+  <img src="smallreactor.png" >
+  <img src="smallsolararmor.png" >
+  <img src="smallsteelarmor.png" >
+  <img src="torpedolauncher.png" >
+  <img src="vectoredthruster.png" >
+  <img src="vectoredthrustermk2.png" >
+  <img src="vulcancannon.png" >
+  <img src="vulcanturret.png" >
+  <img src="vulcanturretmk2.png" >
+  <img src="vulcanturretmk3.png" >
+  <img src="warheadlauncher.png" >
+  <img src="warpdrive.png" >
+  <img src="warshield.png" >
+  
 </div>
 </body>
 </html>
