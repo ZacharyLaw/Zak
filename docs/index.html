@@ -19,13 +19,14 @@
   body{
     color:white;
   }
+
   
   </style>
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
   document.addEventListener('contextmenu', event => event.preventDefault());
-  function search() {
+  function myFunction() {
     var  li, a, i, txtValue;
     list = document.getElementById("footer").getElementsByTagName("img");
     for (i = 0; i < list.length; i++) {
@@ -39,26 +40,27 @@
   }
   $( document ).ready( function() {
     $( 'img' ).each( function() {
-      $(this).width($(this).width()*0.5);
+      $(this).width($(this).width()*0.25);
       $(this).addClass("inventory");
     });
-    $( ".inventory" ).click( function(event) {$(this).clone().removeClass("inventory").appendTo("body").draggable({grid:[50,50]}).mousedown(function(event) {
+    $( ".inventory" ).click( function(event) {$(this).clone().removeClass("inventory").width($(this).width()*2).appendTo("body").draggable({grid:[50,50]}).mousedown(function(event) {
       if (event.which==3){
         $(this).remove();
       };
       ;});});
 
   } );
+  
   </script>
   
 </head>
 <body style="background-color:#36393F;">
 <div id="header" style="background-color:#2F3136;">
-  Space Arena Builder
+  Space Arena Builder   
 </div>
-<br><br>Right click to remove
+<br><br> Right click to remove<br>
 <div id="footer" style="background-color:#2F3136;">
-  Inventory: Click to clone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="myInput" onkeyup="search()" placeholder="Search module.." >
+  Inventory: Click to clone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search module.." >
   <br>
   <img src="afterburner.png" >
   <img src="arcfusionarray.png" >
