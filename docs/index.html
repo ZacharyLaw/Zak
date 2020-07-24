@@ -1,58 +1,76 @@
 <!doctype html>
 <html>
 <head>
-  <style>
+<style>
   #header {
-    position: fixed;
-    width: 100%;
-    color:white;
-    padding: 10px;
+  position: fixed;
+  width: 100%;
+  color:white;
+  padding: 10px;
   }
   #footer {
-    position: fixed;
-    bottom: 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color:white;
+  overflow-x: auto;
+  white-space: nowrap;
+  }
+  #inventory{
     width: 100%;
-    color:white;
     overflow-x: auto;
     white-space: nowrap;
+
   }
   body{
-    color:white;
+  color:white;
+  }
+  button {
+  background-color: inherit;
+  border: none;
+  outline: none;
   }
 
-  
-  </style>
-  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-  document.addEventListener('contextmenu', event => event.preventDefault());
-  function myFunction() {
-    var  li, a, i, txtValue;
-    list = document.getElementById("footer").getElementsByTagName("img");
-    for (i = 0; i < list.length; i++) {
-        txtValue = list[i].src.replace(".png","");
-        if (txtValue.toUpperCase().indexOf(document.getElementById("myInput").value.toUpperCase()) > -1) {
-          list[i].style.display = "";
-        } else {
-          list[i].style.display = "none";
-        }
+  button:hover {
+  background-color: #ddd;
+  }
+</style>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+document.addEventListener('contextmenu', event => event.preventDefault());
+function search() {
+  var  li, a, i, txtValue;
+  list = document.getElementById("tabcontent").getElementsByTagName("img");
+  for (i = 0; i < list.length; i++) {
+    txtValue = list[i].src.replace(".png","");
+    if (txtValue.toUpperCase().indexOf(document.getElementById("myInput").value.toUpperCase()) > -1) {
+      list[i].style.display = "";
+    } else {
+      list[i].style.display = "none";
     }
   }
-  $( document ).ready( function() {
-    $( 'img' ).each( function() {
-      $(this).width($(this).width()*0.25);
-      $(this).addClass("inventory");
-    });
-    $( ".inventory" ).click( function(event) {$(this).clone().removeClass("inventory").width($(this).width()*2).appendTo("body").draggable({grid:[50,50]}).mousedown(function(event) {
-      if (event.which==3){
-        $(this).remove();
-      };
-      ;});});
-
-  } );
-  
-  </script>
-  
+}
+$( document ).ready( function() {
+  $( '.inven' ).each( function() {
+    $(this).width($(this).width()*0.25);
+  });
+  $( ".inven" ).click( function(event) {$(this).clone().removeClass("inven").width($(this).width()*2).appendTo("body").draggable({grid:[50,50]}).mousedown(function(event) {
+    if (event.which==3){
+    $(this).remove();
+    };
+});
+;});
+$('button').click( function(event) {
+  if ($(this).attr('id')=="all"){
+    $(".weap, .def, .util").show();
+  }else{
+  $(".weap, .def, .util").hide();
+  $("."+$(this).attr('id')).show();
+  }
+});
+});
+</script>
 </head>
 <body style="background-color:#36393F;">
 <div id="header" style="background-color:#2F3136;">
@@ -60,101 +78,107 @@
 </div>
 <br><br> Right click to remove<br>
 <div id="footer" style="background-color:#2F3136;">
-  Inventory: Click to clone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search module.." >
-  <br>
-<img src="chaingun.png">
-<img src="chaingunmk2.png">
-<img src="vulcancannon.png">
-<img src="vulcanturret.png">
-<img src="vulcanturretmk2.png">
-<img src="vulcanturretmk3.png">
-<img src="railgun.png">
-<img src="railgunmk2.png">
-<img src="quantumrifle.png">
-<img src="gaussianshotgun.png">
-<img src="massdriver.png">
-<img src="massdrivermk2.png">
-<img src="railturret.png">
-<img src="railturretmk2.png">
-<img src="gaussrifle.png">
-<img src="quantumturret.png">
-<img src="quantumturretmk2.png">
-<img src="hyperionchaingun.png">
-<img src="gaussianwarshotgun.png">
-<img src="capitalcannon.png">
-<img src="capitalcannonmk2.png">
-<img src="rocketlauncher.png">
-<img src="rocketlaunchermk2.png">
-<img src="rocketturret.png">
-<img src="rocketturretmk2.png">
-<img src="rocketturretmk3.png">
-<img src="missilelauncher.png">
-<img src="minelauncher.png">
-<img src="minelaunchermk2.png">
-<img src="torpedolauncher.png">
-<img src="arsenalwall.png">
-<img src="scorpionlauncher.png">
-<img src="scorpionlaunchermk2.png">
-<img src="scorpionlaunchermk3.png">
-<img src="impactmissile.png">
-<img src="flakrocketturret.png">
-<img src="flakrocketturretmk2.png">
-<img src="warheadlauncher.png">
-<img src="hydraturret.png">
-<img src="hydraturretmk2.png">
-<img src="smalllaser.png">
-<img src="smalllasermk2.png">
-<img src="laserbeam.png">
-<img src="laserbeammk2.png">
-<img src="laserbeammk3.png">
-<img src="laserturret.png">
-<img src="fusionray.png">
-<img src="pulselasermk2.png">
-<img src="fusionturret.png">
-<img src="pulselasermk3.png">
-<img src="arcfusionarray.png">
-<img src="smallsteelarmor.png">
-<img src="smallsteelarmormk2.png">
-<img src="smallsolararmor.png">
-<img src="mediumsteelarmor.png">
-<img src="mediumsolararmor.png">
-<img src="mediumsolararmormk2.png">
-<img src="plasmaarmor.png">
-<img src="smallreactivearmor.png">
-<img src="largesteelarmor.png">
-<img src="largesolararmor.png">
-<img src="mediumreactivearmor.png">
-<img src="largereactivearmor.png">
-<img src="ballisticarmor.png">
-<img src="combatshield.png">
-<img src="combatshieldmk2.png">
-<img src="bunkershield.png">
-<img src="bunkershieldmk2.png">
-<img src="battleshield.png">
-<img src="warshield.png">
-<img src="warshieldmk2.png">
-<img src="junklauncher.png">
-<img src="pointdefenseturret.png">
-<img src="pointdefenseturretmk2.png">
-<img src="pointdefenseturretmk3.png">
-<img src="smalliondrive.png">
-<img src="smalliondrivemk2.png">
-<img src="warpdrive.png">
-<img src="vectoredthruster.png">
-<img src="vectoredthrustermk2.png">
-<img src="afterburner.png">
-<img src="largeiondrive.png">
-<img src="grandiondrive.png">
-<img src="grandiondrivemk2.png">
-<img src="smallreactor.png">
-<img src="mediumreactor.png">
-<img src="mediumarmoredreactor.png">
-<img src="mediumarmoredreactormk2.png">
-<img src="largereactor.png">
-<img src="largearmoredreactor.png">
-<img src="grandreactor.png">
-<img src="repairbay.png">
-<img src="meleefusionturret.png">  
+Inventory: Click to clone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="myInput" onkeyup="search()" placeholder="Search module.." >
+<button id="util" style="float: right;"><img src="utility.png" width="30" height="30"></button>
+<button id="def" style="float: right;"><img src="defense.png" width="30" height="30"></button>
+<button id="weap" style="float: right;"><img src="weapon.png"  width="30" height="30"></button><!--style="width: 25;"-->
+<button id="all" style="float: right; color: white;">ALL</button>
+<button  style="float: right; color: white;   background-color: #2F3136;">Category: </button>
+<div id="inventory" style="background-color:#2F3136;">
+<img class="inven weap"src="chaingun.png">
+<img class="inven weap"src="chaingunmk2.png">
+<img class="inven weap"src="vulcancannon.png">
+<img class="inven weap"src="vulcanturret.png">
+<img class="inven weap"src="vulcanturretmk2.png">
+<img class="inven weap"src="vulcanturretmk3.png">
+<img class="inven weap"src="railgun.png">
+<img class="inven weap"src="railgunmk2.png">
+<img class="inven weap"src="quantumrifle.png">
+<img class="inven weap"src="gaussianshotgun.png">
+<img class="inven weap"src="massdriver.png">
+<img class="inven weap"src="massdrivermk2.png">
+<img class="inven weap"src="railturret.png">
+<img class="inven weap"src="railturretmk2.png">
+<img class="inven weap"src="gaussrifle.png">
+<img class="inven weap"src="quantumturret.png">
+<img class="inven weap"src="quantumturretmk2.png">
+<img class="inven weap"src="hyperionchaingun.png">
+<img class="inven weap"src="gaussianwarshotgun.png">
+<img class="inven weap"src="capitalcannon.png">
+<img class="inven weap"src="capitalcannonmk2.png">
+<img class="inven weap"src="rocketlauncher.png">
+<img class="inven weap"src="rocketlaunchermk2.png">
+<img class="inven weap"src="rocketturret.png">
+<img class="inven weap"src="rocketturretmk2.png">
+<img class="inven weap"src="rocketturretmk3.png">
+<img class="inven weap"src="missilelauncher.png">
+<img class="inven weap"src="minelauncher.png">
+<img class="inven weap"src="minelaunchermk2.png">
+<img class="inven weap"src="torpedolauncher.png">
+<img class="inven weap"src="arsenalwall.png">
+<img class="inven weap"src="scorpionlauncher.png">
+<img class="inven weap"src="scorpionlaunchermk2.png">
+<img class="inven weap"src="scorpionlaunchermk3.png">
+<img class="inven weap"src="impactmissile.png">
+<img class="inven weap"src="flakrocketturret.png">
+<img class="inven weap"src="flakrocketturretmk2.png">
+<img class="inven weap"src="warheadlauncher.png">
+<img class="inven weap"src="hydraturret.png">
+<img class="inven weap"src="hydraturretmk2.png">
+<img class="inven weap"src="smalllaser.png">
+<img class="inven weap"src="smalllasermk2.png">
+<img class="inven weap"src="laserbeam.png">
+<img class="inven weap"src="laserbeammk2.png">
+<img class="inven weap"src="laserbeammk3.png">
+<img class="inven weap"src="laserturret.png">
+<img class="inven weap"src="fusionray.png">
+<img class="inven weap"src="pulselasermk2.png">
+<img class="inven weap"src="fusionturret.png">
+<img class="inven weap"src="pulselasermk3.png">
+<img class="inven weap"src="arcfusionarray.png">
+<img class="inven weap"src="meleefusionturret.png">
+<img class="inven def"src="smallsteelarmor.png">
+<img class="inven def"src="smallsteelarmormk2.png">
+<img class="inven def"src="smallsolararmor.png">
+<img class="inven def"src="mediumsteelarmor.png">
+<img class="inven def"src="mediumsolararmor.png">
+<img class="inven def"src="mediumsolararmormk2.png">
+<img class="inven def"src="plasmaarmor.png">
+<img class="inven def"src="smallreactivearmor.png">
+<img class="inven def"src="largesteelarmor.png">
+<img class="inven def"src="largesolararmor.png">
+<img class="inven def"src="mediumreactivearmor.png">
+<img class="inven def"src="largereactivearmor.png">
+<img class="inven def"src="ballisticarmor.png">
+<img class="inven def"src="combatshield.png">
+<img class="inven def"src="combatshieldmk2.png">
+<img class="inven def"src="bunkershield.png">
+<img class="inven def"src="bunkershieldmk2.png">
+<img class="inven def"src="battleshield.png">
+<img class="inven def"src="warshield.png">
+<img class="inven def"src="warshieldmk2.png">
+<img class="inven def"src="junklauncher.png">
+<img class="inven def"src="pointdefenseturret.png">
+<img class="inven def"src="pointdefenseturretmk2.png">
+<img class="inven def"src="pointdefenseturretmk3.png">
+<img class="inven util"src="smalliondrive.png">
+<img class="inven util"src="smalliondrivemk2.png">
+<img class="inven util"src="warpdrive.png">
+<img class="inven util"src="vectoredthruster.png">
+<img class="inven util"src="vectoredthrustermk2.png">
+<img class="inven util"src="afterburner.png">
+<img class="inven util"src="largeiondrive.png">
+<img class="inven util"src="grandiondrive.png">
+<img class="inven util"src="grandiondrivemk2.png">
+<img class="inven util"src="smallreactor.png">
+<img class="inven util"src="mediumreactor.png">
+<img class="inven util"src="mediumarmoredreactor.png">
+<img class="inven util"src="mediumarmoredreactormk2.png">
+<img class="inven util"src="largereactor.png">
+<img class="inven util"src="largearmoredreactor.png">
+<img class="inven util"src="grandreactor.png">
+<img class="inven util"src="repairbay.png">
+</div>
 </div>
 </body>
 </html>
