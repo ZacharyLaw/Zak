@@ -19,21 +19,7 @@
   body{
     color:white;
   }
-  .tab button {
-  background-color: inherit;
-  border: none;
-  outline: none;
-  }
 
-  .tab button:hover {
-  background-color: #ddd;
-  }
-
-  .tabcontent {
-  display: none;
-  border: 1px solid #ccc;
-  border-top: none;
-  }
   
   </style>
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -52,17 +38,8 @@
         }
     }
   }
- function tab(evt, tabName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-    $( document ).ready( function() {
-  $( '.tabcontent img' ).each( function() {
+  $( document ).ready( function() {
+    $( 'img' ).each( function() {
       $(this).width($(this).width()*0.25);
       $(this).addClass("inventory");
     });
@@ -83,16 +60,8 @@
 </div>
 <br><br> Right click to remove<br>
 <div id="footer" style="background-color:#2F3136;">
-<div class="tab">
-Inventory: Click to clone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search module.." >
-<button onclick="tab(event,'utility')" style="float: right;"><img src="utility.png" width="30" height="30"></button>
-<button onclick="tab(event,'defense')" style="float: right;"><img src="defense.png" width="30" height="30"></button>
-<button onclick="tab(event,'weapon')" style="float: right;"><img src="weapon.png"  width="30" height="30"></button><!--style="width: 25;"-->
-<button onclick="tab(event,'all')" style="float: right; color: white;">ALL</button>
-
-</div>
+  Inventory: Click to clone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search module.." >
   <br>
-  <div id="all" class="tabcontent" style="display: block;">
 <img src="chaingun.png">
 <img src="chaingunmk2.png">
 <img src="vulcancannon.png">
@@ -144,7 +113,6 @@ Inventory: Click to clone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="
 <img src="fusionturret.png">
 <img src="pulselasermk3.png">
 <img src="arcfusionarray.png">
-<img src="meleefusionturret.png">  
 <img src="smallsteelarmor.png">
 <img src="smallsteelarmormk2.png">
 <img src="smallsolararmor.png">
@@ -186,114 +154,7 @@ Inventory: Click to clone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="
 <img src="largearmoredreactor.png">
 <img src="grandreactor.png">
 <img src="repairbay.png">
-
-</div>
-  <div id="weapon" class="tabcontent">
-<img src="chaingun.png">
-<img src="chaingunmk2.png">
-<img src="vulcancannon.png">
-<img src="vulcanturret.png">
-<img src="vulcanturretmk2.png">
-<img src="vulcanturretmk3.png">
-<img src="railgun.png">
-<img src="railgunmk2.png">
-<img src="quantumrifle.png">
-<img src="gaussianshotgun.png">
-<img src="massdriver.png">
-<img src="massdrivermk2.png">
-<img src="railturret.png">
-<img src="railturretmk2.png">
-<img src="gaussrifle.png">
-<img src="quantumturret.png">
-<img src="quantumturretmk2.png">
-<img src="hyperionchaingun.png">
-<img src="gaussianwarshotgun.png">
-<img src="capitalcannon.png">
-<img src="capitalcannonmk2.png">
-<img src="rocketlauncher.png">
-<img src="rocketlaunchermk2.png">
-<img src="rocketturret.png">
-<img src="rocketturretmk2.png">
-<img src="rocketturretmk3.png">
-<img src="missilelauncher.png">
-<img src="minelauncher.png">
-<img src="minelaunchermk2.png">
-<img src="torpedolauncher.png">
-<img src="arsenalwall.png">
-<img src="scorpionlauncher.png">
-<img src="scorpionlaunchermk2.png">
-<img src="scorpionlaunchermk3.png">
-<img src="impactmissile.png">
-<img src="flakrocketturret.png">
-<img src="flakrocketturretmk2.png">
-<img src="warheadlauncher.png">
-<img src="hydraturret.png">
-<img src="hydraturretmk2.png">
-<img src="smalllaser.png">
-<img src="smalllasermk2.png">
-<img src="laserbeam.png">
-<img src="laserbeammk2.png">
-<img src="laserbeammk3.png">
-<img src="laserturret.png">
-<img src="fusionray.png">
-<img src="pulselasermk2.png">
-<img src="fusionturret.png">
-<img src="pulselasermk3.png">
-<img src="arcfusionarray.png">
-<img src="meleefusionturret.png">
-</div>
-  
-  <div id="defense" class="tabcontent">
-<img src="smallsteelarmor.png">
-<img src="smallsteelarmormk2.png">
-<img src="smallsolararmor.png">
-<img src="mediumsteelarmor.png">
-<img src="mediumsolararmor.png">
-<img src="mediumsolararmormk2.png">
-<img src="plasmaarmor.png">
-<img src="smallreactivearmor.png">
-<img src="largesteelarmor.png">
-<img src="largesolararmor.png">
-<img src="mediumreactivearmor.png">
-<img src="largereactivearmor.png">
-<img src="ballisticarmor.png">
-<img src="combatshield.png">
-<img src="combatshieldmk2.png">
-<img src="bunkershield.png">
-<img src="bunkershieldmk2.png">
-<img src="battleshield.png">
-<img src="warshield.png">
-<img src="warshieldmk2.png">
-<img src="junklauncher.png">
-<img src="pointdefenseturret.png">
-<img src="pointdefenseturretmk2.png">
-<img src="pointdefenseturretmk3.png">
-</div>
-  
-  
-  <div id="utility" class="tabcontent">
-
-  <img src="smalliondrive.png">
-<img src="smalliondrivemk2.png">
-<img src="warpdrive.png">
-<img src="vectoredthruster.png">
-<img src="vectoredthrustermk2.png">
-<img src="afterburner.png">
-<img src="largeiondrive.png">
-<img src="grandiondrive.png">
-<img src="grandiondrivemk2.png">
-<img src="smallreactor.png">
-<img src="mediumreactor.png">
-<img src="mediumarmoredreactor.png">
-<img src="mediumarmoredreactormk2.png">
-<img src="largereactor.png">
-<img src="largearmoredreactor.png">
-<img src="grandreactor.png">
-<img src="repairbay.png">
-
-  </div>
-
-  
+<img src="meleefusionturret.png">  
 </div>
 </body>
 </html>
