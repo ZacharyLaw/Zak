@@ -144,6 +144,8 @@ async def fact(ctx):await ctx.send(' '.join(random.choice(factlist)))
 @client.command()
 async def about(ctx):await ctx.send(embed =discord.Embed(description='<@563319785811869698> is made by <@270864978569854976>\nFor the Space Arena Offical Server\nBorn at 10/12/2019\nNice to meet you Senpi!\n__[Invite link](https://discordapp.com/oauth2/authorize?client_id=563319785811869698&scope=bot&permissions=314432)__\n__[Github](http://github.com/ZacharyLaw/Zak)__',colour=discord.Colour.from_rgb(47,49,54)))
 @client.command()
+async def about(ctx):await ctx.send(embed =discord.Embed(description='[Builder PC Only](http://zacharylaw.github.io/Zak)',colour=discord.Colour.from_rgb(47,49,54)))
+@client.command()
 async def sector(ctx,*,arg):
 	args=arg.split(' ')
 	if '.' in args[0]:args=arg.split(' ')[0].split('.')
