@@ -48,7 +48,7 @@
     </tbody>
     </table>
 </div>
-<br><br><br>Right click to remove<br>
+<br><br><br>Drag to move<br>Right click to remove<br>
 <div id="footer" style="background-color:#2F3136;">
 Inventory: Click to clone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="myInput" onkeyup="search()" placeholder="Search module.." >
 <button id="util" style="float: right;"><img src="utility.png" width="30" height="30"></button>
@@ -157,11 +157,14 @@ Inventory: Click to clone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="
 <script>
 document.addEventListener('contextmenu', event => event.preventDefault());
 function search() {
+  if (document.getElementById("myInput").value==""){
+    $("img").show();
+  }
   var  li, a, i, txtValue;
-  list = document.getElementsByClassName("inven").getElementsByTagName("img");
+  list = document.getElementsByClassName("inven");
   for (i = 0; i < list.length; i++) {
     txtValue = list[i].src.replace(".png","");
-    if (txtValue.toUpperCase().indexOf(document.getElementById("myInput").value.toUpperCase()) > -1) {
+    if (txtValue.toUpperCase().indexOf(document.getElementById("myInput").value.toUpperCase()) > -1 && list[i].style.display == "") {
       list[i].style.display = "";
     } else {
       list[i].style.display = "none";
@@ -172,9 +175,7 @@ $( document ).ready( function() {
   var usage=0;
   var energy=0;
   var percent=0;
-  $( '.inven' ).each( function() {
-    $(this).width($(this).width()*0.25);
-  });
+
   $( ".inven" ).click( function(event) {
     $(this).clone().removeClass("inven").width($(this).width()*2).appendTo("body").removeClass("weap").removeClass("def").removeClass("util").draggable({grid:[50,50]}).mousedown(function(event) {
     if (event.which==3){
@@ -222,8 +223,11 @@ $('button').click( function(event) {
   $("."+$(this).attr('id')).show();
   }
 });
+$( '.inven' ).each( function() {
+    $(this).width($(this).width()*0.25);
+  });
+
 });
 </script>
 </body>
-
 </html>
