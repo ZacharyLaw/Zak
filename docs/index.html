@@ -223,11 +223,14 @@ $('button').click( function(event) {
   $("."+$(this).attr('id')).show();
   }
 });
-$('img').promise().done(function() {
-  $('.inven').delay(5000);
 $( '.inven' ).each( function() {
+  while(true){
+    if ($(this).width()!=0){
     $(this).width($(this).width()*0.25);
-  });});
+    break;
+    }
+  }
+  });
 
 });
 </script>
