@@ -223,8 +223,8 @@ $('button').click( function(event) {
   $("."+$(this).attr('id')).show();
   }
 });
-  $('.inven').promise().done(function() {
-    
+$('.inven').promise().done(function() {
+  $('.inven').delay(1000);
 $( '.inven' ).each( function() {
     $(this).width($(this).width()*0.25);
   });});
