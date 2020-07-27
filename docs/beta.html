@@ -200,6 +200,8 @@ $( document ).ready( function() {
 
     };
 }).doubletap(function(event) {
+  $("output").html("doubletab");
+
   $(this).remove();
     if ($(this).attr("eng")<0){
   usage-=$(this).attr("eng")*(-1);
