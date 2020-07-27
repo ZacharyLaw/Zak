@@ -7,26 +7,23 @@
   width: 100%;
   color:white;
   padding: 10px;
-  z-index: 1;
   }
   #footer {
   position: fixed;
   bottom: 0;
   width: 100%;
   color:white;
+  overflow-x: auto;
   white-space: nowrap;
-  z-index: 1;
-
   }
   #inventory{
     width: 100%;
     overflow-x: auto;
     white-space: nowrap;
-    padding: 10px;
+
   }
   body{
   color:white;
-
   }
   button {
   background-color: inherit;
@@ -41,18 +38,17 @@
 </head>
 <body style="background-color:#36393F;">
 <div id="header" style="background-color:#2F3136;">
-  <table style="width: 99%;" >
+  <table style="width: 100%;" >
     <tbody>
       <tr>
         <td style="text-align: left;width: 33%;"><output>0% 0/0</output></td>
-        <td style="text-align: center;width: 33%;">Space Arena Builder</td>
-        <td style="text-align: right;width: 33%;"><button style="color:white;">Export as image</button></td>
+        <td style="text-align: center;width: 33%;">Space Arena Builder&nbsp;&nbsp;&nbsp;<a href="beta.html">Beta</a></td>
+        <td style="text-align: right;width: 33%;">May require refresh to load modules&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
       </tr>
     </tbody>
     </table>
 </div>
-<br><br><br>Drag to move<br>Right click to remove
-<div id="sandbox"></div>
+<br><br><br>Drag to move<br>Right click to remove<br>
 <div id="footer" style="background-color:#2F3136;">
 Inventory: Click to clone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="myInput" onkeyup="search()" placeholder="Search module.." >
 <button id="util" style="float: right;"><img src="utility.png" width="30" height="30"></button>
@@ -157,13 +153,10 @@ Inventory: Click to clone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="
 </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script src="html2canvas.min.js" type="text/javascript"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="draganddrop.js"></script>
-
+<script src="jquery.mobile-monkey.js"></script>
 <script>
 document.addEventListener('contextmenu', event => event.preventDefault());
-
 function search() {
   if (document.getElementById("myInput").value==""){
     $("img").show();
@@ -184,42 +177,16 @@ $( document ).ready( function() {
   var energy=0;
   var percent=0;
 
-//$("body").mousewheel(function(event, delta) {
-//this.scrollLeft -= (delta * 30);
-//event.preventDefault();
-//});
-
-    $("#header button").on('click', function () {
-         html2canvas( $(".inven"), {
-         onrendered: function (canvas) {
-          var getCanvas = canvas;
-
-
-          var imgageData = getCanvas.toDataURL("image/png");
-    var newData = imgageData.replace(/^data:image\/png/, "data:application/octet-stream");
-    $(this).attr("download", "build.png").attr("href", newData);
-
-
-             }
-         });
-        
-        });
-
-
-
-
-
   $( ".inven" ).click( function(event) {
-    $(this).clone().removeClass("inven").width($(this).width()*2).appendTo("#sandbox").css( "zIndex", 0 ).removeClass("weap").removeClass("def").removeClass("util").draggable({grid:[50,50]}).mousedown(function(event) {
-    //$(this).clone().removeClass("inven").width($(this).width()*2).appendTo("#sandbox").css( "zIndex", 0 ).removeClass("weap").removeClass("def").removeClass("util").draggable({grid:[50,50]}).mousedown(function(event) {
-
-      if (event.which==3){
+    $(this).clone().removeClass("inven").width($(this).width()*2).appendTo("body").removeClass("weap").removeClass("def").removeClass("util").draggable({grid:[50,50]}).mousedown(function(event) {
+    if (event.which==3){
     $(this).remove();
     if ($(this).attr("eng")<0){
   usage-=$(this).attr("eng")*(-1);
 }else{
   energy-=$(this).attr("eng")*(1);
 }
+
     if(usage==0){
         percent=0;
       }else if(energy/usage*100>100){
@@ -241,12 +208,15 @@ if(usage==0){
   percent=0;
 }else if(energy/usage*100>100){
   percent=100;
-}else{
+}
+else{
   percent=Math.round(energy/usage*100);
 }
+
 $("output").html(percent+"% "+usage+"/"+energy);
+
 });
-$('#footer button').click( function(event) {
+$('button').click( function(event) {
   if ($(this).attr('id')=="all"){
     $(".weap, .def, .util").show();
   }else{
@@ -259,10 +229,11 @@ $( '.inven' ).each( function() {
     if ($(this).width()!=0){
     $(this).width($(this).width()*0.25);
     break;
-    }}});
+    }
+  }
+  });
 
 });
 </script>
 </body>
-
 </html>
