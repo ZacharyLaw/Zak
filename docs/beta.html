@@ -184,10 +184,10 @@ $( document ).ready( function() {
   var percent=0;
 
   $("#download").hover(function () {
-    console.log("debug");
     var getCanvas=document.getElementById("myCanvas");
     var ctx=getCanvas.getContext("2d");
     $('#sandbox img').each(function(){
+        console.log("debug image")
         const image = new Image();
         image.onload = () => ctx.drawImage(image, $(this).attr('left'), $(this).attr('top'));
         image.src = $(this).attr('src');
