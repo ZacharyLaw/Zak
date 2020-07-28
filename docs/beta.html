@@ -51,7 +51,7 @@
     </table>
 </div>
 <br><br><br>Drag to move<br>Right click/double tap to remove<div id="sandbox" style="z-index: -1;"></div>
-  <canvas id="myCanvas" style="display: none;"></canvas>
+<canvas id="myCanvas" style="display: none;"></canvas>
 <div id="footer" style="background-color:#2F3136;">
 Inventory: Click to clone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="myInput" onkeyup="search()" placeholder="Search module.." >
 <button id="util" style="float: right;"><img src="utility.png" width="30" height="30"></button>
@@ -60,7 +60,7 @@ Inventory: Click to clone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="
 <button id="all" style="float: right; color: white;">ALL</button>
 <button  style="float: right; color: white;   background-color: #2F3136;">Category: </button>
 <div id="inventory" style="background-color:#2F3136;">
-<img async class="inven  weap" src="chaingun.png" eng="-10">
+<img async class="inven  weap" src="chaingun.png" eng="-10" alt="Please refresh this page">
 <img async class="inven  weap" src="chaingunmk2.png" eng="-10">
 <img async class="inven  weap" src="vulcancannon.png" eng="-20">
 <img async class="inven  weap" src="vulcanturret.png" eng="-45">
@@ -184,6 +184,7 @@ $( document ).ready( function() {
   var percent=0;
 
   $("#download").hover(function () {
+    console.log("debug");
     var getCanvas=document.getElementById("myCanvas");
     var ctx=getCanvas.getContext("2d");
     $('#sandbox img').each(function(){
