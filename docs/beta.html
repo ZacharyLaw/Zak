@@ -183,15 +183,14 @@ $( document ).ready( function() {
   var energy=0;
   var percent=0;
 
-  $("#preview").click(function () {
-    console.log("debug");
+   $("#preview").click(function () {
     var getCanvas=document.getElementById("myCanvas");
     var ctx=getCanvas.getContext("2d");
     $('#sandbox img').each(function(){
-            console.log("debug img")
         const image = new Image();
         image.onload = () => ctx.drawImage(image, $(this).attr('left'), $(this).attr('top'));
         image.src = $(this).attr('src');
+        console.log(image.src);
     }); 
     
 });
