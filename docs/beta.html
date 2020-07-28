@@ -1,260 +1,43 @@
 <!doctype html>
-<html>
-<head>
-<style>
-  #header {
-  position: fixed;
-  width: 100%;
-  color:white;
-  padding: 10px;
-  }
-  #footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  color:white;
-  overflow-x: auto;
-  white-space: nowrap;
-  }
-  #inventory{
-    width: 100%;
-    overflow-x: auto;
-    white-space: nowrap;
 
-  }
-  body{
-  color:white;
-  }
-  button {
-  background-color: inherit;
-  border: none;
-  outline: none;
-  }
-
-  button:hover {
-  background-color: #ddd;
-  }
-</style>
+<html><head>
+<script src="./0test_files/jquery.min.js.download"></script>
+<script src="./0test_files/html2canvas.js.download"></script>
 </head>
-<body style="background-color:#36393F;">
-<div id="header" style="background-color:#2F3136;">
-  <table style="width: 100%;" >
-    <tbody>
-      <tr>
-        <td style="text-align: left;width: 33%;"><output>0% 0/0</output></td>
-        <td style="text-align: center;width: 33%;">Space Arena Builder</td>
-        <td style="text-align: right;width: 33%;">May require refresh to load modules&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-      </tr>
-    </tbody>
-    </table>
+<body>
+<div id="sandbox">
+<img left="0" top="0" src="chaingun.png">  
 </div>
-<br><br><br>Drag to move<br>Right click to remove<br>
-<div id="footer" style="background-color:#2F3136;">
-Inventory: Click to clone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="myInput" onkeyup="search()" placeholder="Search module.." >
-<button id="util" style="float: right;"><img src="utility.png" width="30" height="30"></button>
-<button id="def" style="float: right;"><img src="defense.png" width="30" height="30"></button>
-<button id="weap" style="float: right;"><img src="weapon.png"  width="30" height="30"></button>
-<button id="all" style="float: right; color: white;">ALL</button>
-<button  style="float: right; color: white;   background-color: #2F3136;">Category: </button>
-<div id="inventory" style="background-color:#2F3136;">
-  <img async class="inven  weap" src="chaingun.png" eng="-10">
-<img async class="inven  weap" src="chaingunmk2.png" eng="-10">
-<img async class="inven  weap" src="vulcancannon.png" eng="-20">
-<img async class="inven  weap" src="vulcanturret.png" eng="-45">
-<img async class="inven  weap" src="vulcanturretmk2.png" eng="-30">
-<img async class="inven  weap" src="vulcanturretmk3.png" eng="-55">
-<img async class="inven  weap" src="railgun.png" eng="-30">
-<img async class="inven  weap" src="railgunmk2.png" eng="-25">
-<img async class="inven  weap" src="quantumrifle.png" eng="-70">
-<img async class="inven  weap" src="gaussianshotgun.png" eng="-70">
-<img async class="inven  weap" src="massdriver.png" eng="-70">
-<img async class="inven  weap" src="massdrivermk2.png" eng="-70">
-<img async class="inven  weap" src="railturret.png" eng="-110">
-<img async class="inven  weap" src="railturretmk2.png" eng="-110">
-<img async class="inven  weap" src="gaussrifle.png" eng="-60">
-<img async class="inven  weap" src="quantumturret.png" eng="-150">
-<img async class="inven  weap" src="quantumturretmk2.png" eng="-150">
-<img async class="inven  weap" src="hyperionchaingun.png" eng="-90">
-<img async class="inven  weap" src="gaussianwarshotgun.png" eng="-155">
-<img async class="inven  weap" src="capitalcannon.png" eng="-280">
-<img async class="inven  weap" src="capitalcannonmk2.png" eng="-280">
-<img async class="inven  weap" src="rocketlauncher.png" eng="-30">
-<img async class="inven  weap" src="rocketlaunchermk2.png" eng="-100">
-<img async class="inven  weap" src="rocketturret.png" eng="-60">
-<img async class="inven  weap" src="rocketturretmk2.png" eng="-60">
-<img async class="inven  weap" src="rocketturretmk3.png" eng="-60">
-<img async class="inven  weap" src="missilelauncher.png" eng="-50">
-<img async class="inven  weap" src="minelauncher.png" eng="-70">
-<img async class="inven  weap" src="minelaunchermk2.png" eng="-170">
-<img async class="inven  weap" src="torpedolauncher.png" eng="-85">
-<img async class="inven  weap" src="arsenalwall.png" eng="-140">
-<img async class="inven  weap" src="scorpionlauncher.png" eng="-110">
-<img async class="inven  weap" src="scorpionlaunchermk2.png" eng="-110">
-<img async class="inven  weap" src="scorpionlaunchermk3.png" eng="-365">
-<img async class="inven  weap" src="impactmissile.png" eng="-80">
-<img async class="inven  weap" src="flakrocketturret.png" eng="-155">
-<img async class="inven  weap" src="flakrocketturretmk2.png" eng="-155">
-<img async class="inven  weap" src="warheadlauncher.png" eng="-160">
-<img async class="inven  weap" src="hydraturret.png" eng="-195">
-<img async class="inven  weap" src="hydraturretmk2.png" eng="-195">
-<img async class="inven  weap" src="smalllaser.png" eng="-20">
-<img async class="inven  weap" src="smalllasermk2.png" eng="25">
-<img async class="inven  weap" src="laserbeam.png" eng="-40">
-<img async class="inven  weap" src="laserbeammk2.png" eng="-30">
-<img async class="inven  weap" src="laserbeammk3.png" eng="-40">
-<img async class="inven  weap" src="laserturret.png" eng="-70">
-<img async class="inven  weap" src="fusionray.png" eng="-65">
-<img async class="inven  weap" src="pulselasermk2.png" eng="-100">
-<img async class="inven  weap" src="fusionturret.png" eng="-200">
-<img async class="inven  weap" src="pulselasermk3.png" eng="-150">
-<img async class="inven  weap" src="arcfusionarray.png" eng="-180">
-<img async class="inven  weap" src="meleefusionturret.png" eng="-300">
-<img async class="inven  def" src="smallsteelarmor.png" eng="0">
-<img async class="inven  def" src="smallsteelarmormk2.png" eng="0">
-<img async class="inven  def" src="smallsolararmor.png" eng="10">
-<img async class="inven  def" src="mediumsteelarmor.png" eng="0">
-<img async class="inven  def" src="mediumsolararmor.png" eng="50">
-<img async class="inven  def" src="mediumsolararmormk2.png" eng="65">
-<img async class="inven  def" src="plasmaarmor.png" eng="-15">
-<img async class="inven  def" src="smallreactivearmor.png" eng="-5">
-<img async class="inven  def" src="largesteelarmor.png" eng="0">
-<img async class="inven  def" src="largesolararmor.png" eng="125">
-<img async class="inven  def" src="mediumreactivearmor.png" eng="-25">
-<img async class="inven  def" src="largereactivearmor.png" eng="-60">
-<img async class="inven  def" src="ballisticarmor.png" eng="0">
-<img async class="inven  def" src="combatshield.png" eng="-60">
-<img async class="inven  def" src="combatshieldmk2.png" eng="-70">
-<img async class="inven  def" src="bunkershield.png" eng="-80">
-<img async class="inven  def" src="bunkershieldmk2.png" eng="-20">
-<img async class="inven  def" src="battleshield.png" eng="-135">
-<img async class="inven  def" src="warshield.png" eng="-280">
-<img async class="inven  def" src="warshieldmk2.png" eng="-350">
-<img async class="inven  def" src="junklauncher.png" eng="-35">
-<img async class="inven  def" src="pointdefenseturret.png" eng="-35">
-<img async class="inven  def" src="pointdefenseturretmk2.png" eng="-25">
-<img async class="inven  def" src="pointdefenseturretmk3.png" eng="-35">
-<img async class="inven  util" src="smalliondrive.png" eng="-5">
-<img async class="inven  util" src="smalliondrivemk2.png" eng="-5">
-<img async class="inven  util" src="warpdrive.png" eng="-45">
-<img async class="inven  util" src="vectoredthruster.png" eng="-30">
-<img async class="inven  util" src="vectoredthrustermk2.png" eng="-40">
-<img async class="inven  util" src="afterburner.png" eng="-30">
-<img async class="inven  util" src="largeiondrive.png" eng="-25">
-<img async class="inven  util" src="grandiondrive.png" eng="-40">
-<img async class="inven  util" src="grandiondrivemk2.png" eng="-60">
-<img async class="inven  util" src="smallreactor.png" eng="50">
-<img async class="inven  util" src="mediumreactor.png" eng="250">
-<img async class="inven  util" src="mediumarmoredreactor.png" eng="160">
-<img async class="inven  util" src="mediumarmoredreactormk2.png" eng="200">
-<img async class="inven  util" src="largereactor.png" eng="650">
-<img async class="inven  util" src="largearmoredreactor.png" eng="400">
-<img async class="inven  util" src="grandreactor.png" eng="1300">
-<img async class="inven  util" src="repairbay.png" eng="-40">  
-</div>
-</div>
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="jquery.mobile-monkey.js"></script>
-<script src="jquery-doubletap.js"></script>
+
+<input id="preview" type="button" value="Preview">
+<a id="download" href="#">Download</a>
+<br>
+<canvas id="myCanvas" style="border:1px solid #000000;">
+</canvas>
 <script>
-document.addEventListener('contextmenu', event => event.preventDefault());
-function search() {
-  if (document.getElementById("myInput").value==""){
-    $("img").show();
-  }
-  var  li, a, i, txtValue;
-  list = document.getElementsByClassName("inven");
-  for (i = 0; i < list.length; i++) {
-    txtValue = list[i].src.replace(".png","");
-    if (txtValue.toUpperCase().indexOf(document.getElementById("myInput").value.toUpperCase()) > -1 && list[i].style.display == "") {
-      list[i].style.display = "";
-    } else {
-      list[i].style.display = "none";
-    }
-  }
-}
-$( document ).ready( function() {
-  var usage=0;
-  var energy=0;
-  var percent=0;
+$(document).ready(function(){
+$("#preview").on('click', function () {
 
-  $( ".inven" ).click( function(event) {
-    $(this).clone().removeClass("inven").width($(this).width()*2).appendTo("body").removeClass("weap").removeClass("def").removeClass("util").draggable({grid:[50,50]}).mousedown(function(event) {
-    if (event.which==3){
-    $(this).remove();
-    if ($(this).attr("eng")<0){
-  usage-=$(this).attr("eng")*(-1);
-}else{
-  energy-=$(this).attr("eng")*(1);
-}
-
-    if(usage==0){
-        percent=0;
-      }else if(energy/usage*100>100){
-        percent=100;
-      }
-      else{
-        percent=Math.round(energy/usage*100);
-      }
-      $("output").html(percent+"% "+usage+"/"+energy);
-
-    };
-}).doubletap(function(event) {
-  $("output").html("doubletab");
-
-  $(this).remove();
-    if ($(this).attr("eng")<0){
-  usage-=$(this).attr("eng")*(-1);
-}else{
-  energy-=$(this).attr("eng")*(1);
-}
-
-    if(usage==0){
-        percent=0;
-      }else if(energy/usage*100>100){
-        percent=100;
-      }
-      else{
-        percent=Math.round(energy/usage*100);
-      }
-      //$("output").html(percent+"% "+usage+"/"+energy);
-
+    var getCanvas=document.getElementById("myCanvas");
+    var ctx=getCanvas.getContext("2d");
+    $('#sandbox img').each(function(){
+        const image = new Image();
+        const top = $(this).attr('top');
+        const left = $(this).attr('left');
+        image.onload = () => ctx.drawImage(image, left, top);
+        image.src = $(this).attr('src');
     });
-if ($(this).attr("eng")<0){
-  usage+=$(this).attr("eng")*(-1);
-}else{
-  energy+=$(this).attr("eng")*(1);
-}
-if(usage==0){
-  percent=0;
-}else if(energy/usage*100>100){
-  percent=100;
-}
-else{
-  percent=Math.round(energy/usage*100);
-}
+});
 
-$("output").html(percent+"% "+usage+"/"+energy);
+
+$("#download").on('click', function () {
+    var imgageData = getCanvas.toDataURL("image/png");
+    var newData = imgageData.replace(/^data:image\/png/, "data:application/octet-stream");
+    $("#download").attr("download", "your_pic_name.png").attr("href", newData);
+});
 
 });
-$('button').click( function(event) {
-  if ($(this).attr('id')=="all"){
-    $(".weap, .def, .util").show();
-  }else{
-  $(".weap, .def, .util").hide();
-  $("."+$(this).attr('id')).show();
-  }
-});
-$( '.inven' ).each( function() {
-  while(true){
-    if ($(this).width()!=0){
-    $(this).width($(this).width()*0.25);
-    break;
-    }
-  }
-  });
 
-});
 </script>
 </body>
 </html>
