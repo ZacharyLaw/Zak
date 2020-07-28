@@ -51,7 +51,7 @@
     </table>
 </div>
 <br><br><br>Drag to move<br>Right click/double tap to remove<div id="sandbox" style="z-index: -1;"></div>
-<canvas id="myCanvas" style="display: none;"></canvas>
+<canvas id="myCanvas"></canvas>
 <div id="footer" style="background-color:#2F3136;">
 Inventory: Click to clone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="myInput" onkeyup="search()" placeholder="Search module.." >
 <button id="util" style="float: right;"><img src="utility.png" width="30" height="30"></button>
@@ -187,7 +187,6 @@ $( document ).ready( function() {
     var getCanvas=document.getElementById("myCanvas");
     var ctx=getCanvas.getContext("2d");
     $('#sandbox img').each(function(){
-        console.log("debug image")
         const image = new Image();
         image.onload = () => ctx.drawImage(image, $(this).attr('left'), $(this).attr('top'));
         image.src = $(this).attr('src');
