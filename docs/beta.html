@@ -20,18 +20,12 @@ $("#download").on('click', function () {
         image.onload = () => ctx.drawImage(image, $(this).attr('left'), $(this).attr('top'));
         image.src = $(this).attr('src');
     });
-    var imgageData = getCanvas.toDataURL("image/png");
+    var imgageData = getCanvas.delay(5000).toDataURL("image/png");
     var newData = imgageData.replace(/^data:image\/png/, "data:application/octet-stream");
     $("#download").attr("download", "your_pic_name.png").attr("href", newData);
 });
 
-
-$("#download").on('click', function () {
-  
 });
-
-});
-
 </script>
 </body>
 </html>
