@@ -10,7 +10,7 @@
 <input id="preview" type="button" value="Preview">
 <a id="download" href="#">Download</a>
 <br>
-<canvas id="myCanvas" style="border:1px solid #000000;display: none;">
+<canvas id="myCanvas" style="display: none;">
 <script>
 $(document).ready(function(){
 var getCanvas;
@@ -19,9 +19,7 @@ $("#preview").on('click', function () {
     var ctx=getCanvas.getContext("2d");
     $('#sandbox img').each(function(){
         const image = new Image();
-        const top = $(this).attr('top');
-        const left = $(this).attr('left');
-        image.onload = () => ctx.drawImage(image, left, top);
+        image.onload = () => ctx.drawImage(image, $(this).attr('left'), $(this).attr('top'));
         image.src = $(this).attr('src');
     });
 });
