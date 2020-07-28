@@ -6,23 +6,24 @@
 <div id="sandbox">
 <img left="0" top="0" src="chaingun.png">  
 </div>
+<input id="preview" type="button" value="Preview">
 <a id="download" href="#">Download</a>
 <br>
 <canvas id="myCanvas" style="display: none;">
 <script>
 $(document).ready(function(){
-var getCanvas;
-$("#download").on('click', function () {
-    getCanvas=document.getElementById("myCanvas");
+$("#download").hover(function () {
+    console.log("debug");
+    var getCanvas=document.getElementById("myCanvas");
     var ctx=getCanvas.getContext("2d");
     $('#sandbox img').each(function(){
         const image = new Image();
         image.onload = () => ctx.drawImage(image, $(this).attr('left'), $(this).attr('top'));
         image.src = $(this).attr('src');
-    });
-    var imgageData = getCanvas.delay(5000).toDataURL("image/png");
-    var newData = imgageData.replace(/^data:image\/png/, "data:application/octet-stream");
-    $("#download").attr("download", "your_pic_name.png").attr("href", newData);
+    }); 
+    
+}).on('click', function () {
+    $("#download").attr("download", "your_pic_name.png").attr("href", document.getElementById("myCanvas").toDataURL("image/png").replace(/^data:image\/png/, "data:application/octet-stream"));
 });
 
 });
