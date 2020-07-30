@@ -5,7 +5,7 @@
 <body>
 <div id="sandbox">
     <img class="ui-draggable ui-draggable-handle" src="chaingun.png" eng="-10" width="25" style="width: 50px; position: relative;left: 0px; top: 0px;">
-    <img class="ui-draggable ui-draggable-handle" src="chaingunmk2.png" eng="-10" width="25" style="width: 50px; position: relative; left:-50px; top: 50px;">
+    <img class="ui-draggable ui-draggable-handle" src="chaingunmk2.png" eng="-10" width="25" style="width: 50px; position: relative; left:0px; top: 0px;">
 
 </div>
 <input id="preview" type="button" value="Preview">
@@ -14,29 +14,34 @@
 <script>
 $(document).ready(function(){
 $("#preview").click(function () {
-    var getCanvas=$('<canvas id="myCanvas" style="border:dotted;" height="'+window.innerHeight+'" width="'+window.innerHeight+'">');//style="display: none;"
-    getCanvas.insertAfter("br");
-    var ctx=$("#myCanvas")[0].getContext("2d");
+    var getCanvas = document.createElement('canvas');
+    getCanvas.id = "myCanvas";
+    getCanvas.width = window.innerHeight;
+    getCanvas.height = window.innerHeight;
+    getCanvas.style.position = "absolute";
+    getCanvas.style.border = "dotted";
+    var ctx=getCanvas.getContext("2d");
     var relativel=0;
     var image,l,t;
     $('#sandbox img').each(function(){
-        var image = new Image();
-        image.src = $(this).attr('src');
-        if ($(this).css("left")){
-            l=$(this).css("left").replace("px","");
-        }else{
-            l=0;
-        }
-        if ($(this).css("top")){
-            t=$(this).css("top").replace("px","");
-        }else{
-            t=0;
-        }
-        ctx.drawImage(image, relativel*1+l*1,t);
-        relativel+=l*1+$(this).width()*1;
+    var image = new Image();
+    image.src = $(this).attr('src');
+    if ($(this).css("left")){
+    l=$(this).css("left").replace("px","");
+    }else{
+    l=0;
+    }
+    if ($(this).css("top")){
+    t=$(this).css("top").replace("px","");
+    }else{  
+    t=0;
+    }
+    ctx.drawImage(image, relativel*1+l*1,t);
+    relativel+=l*1+$(this).width()*1;
     }); 
-    trimCanvas($("#myCanvas")[0]);
-})
+    var trim=trimCanvas(getCanvas);
+    trim.insertAfter("br");
+});
 
 $("#download").click(function () {    $("#download").attr("download", "your_pic_name.png").attr("href", document.getElementById("myCanvas").toDataURL("image/png").replace(/^data:image\/png/, "data:application/octet-stream"));
 });
