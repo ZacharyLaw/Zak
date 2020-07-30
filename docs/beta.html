@@ -10,7 +10,7 @@
 </div>
 <input id="preview" type="button" value="Preview">
 <a id="download" href="#">Download</a>
-<br>
+<div id="canvas"></div>
 <script>
 $(document).ready(function(){
 $("#preview").click(function () {
@@ -40,7 +40,7 @@ $("#preview").click(function () {
     relativel+=l*1+$(this).width()*1;
     }); 
     var trim=trimCanvas(getCanvas);
-    trim.insertAfter("br");
+    document.getElementById("canvas").appendChild(trim);
 });
 
 $("#download").click(function () {    $("#download").attr("download", "your_pic_name.png").attr("href", document.getElementById("myCanvas").toDataURL("image/png").replace(/^data:image\/png/, "data:application/octet-stream"));
