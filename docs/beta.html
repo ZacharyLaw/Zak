@@ -275,11 +275,8 @@ $("#preview").click(function () {
     var trim=trimCanvas(getCanvas);
     trim.id = "myCanvas";
     document.getElementById("canvas").appendChild(trim);
+    $("#download").attr("download","beta.png").attr("href",document.getElementById("myCanvas").toDataURL("image/png").replace(/^data:image\/png/,"data:application/octet-stream"));
 });
-
-$("#download").click(function () {    $("#download").attr("download", "beta.png").attr("href", document.getElementById("myCanvas").toDataURL("image/png").replace(/^data:image\/png/, "data:application/octet-stream"));
-});
-
 
 
 
@@ -298,9 +295,6 @@ function trimCanvas(c) {
             bottom: null
         },
         x, y;
-    
-    // Iterate over every pixel to find the highest
-    // and where it ends on every axis ()
     for (i = 0; i < l; i += 4) {
         if (pixels.data[i + 3] !== 0) {
             x = (i / 4) % c.width;
@@ -329,17 +323,12 @@ function trimCanvas(c) {
             }
         }
     }
-    
-    // Calculate the height and width of the content
     var trimHeight = bound.bottom - bound.top,
         trimWidth = bound.right - bound.left,
         trimmed = ctx.getImageData(bound.left, bound.top, trimWidth, trimHeight);
-
     copy.canvas.width = trimWidth+1*1;
     copy.canvas.height = trimHeight+1*1;
     copy.putImageData(trimmed, 0, 0);
-
-    // Return trimmed canvas
     return copy.canvas;
 }
 </script>
