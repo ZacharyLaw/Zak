@@ -275,7 +275,7 @@ $("#download").click(function () {
     var trim=trimCanvas(getCanvas);
     trim.id = "myCanvas";
     document.getElementById("canvas").appendChild(trim);
-    $("#download").attr("download","beta.png").attr("href",document.getElementById("myCanvas").toDataURL("image/png").replace(/^data:image\/png/,"data:application/octet-stream"));
+    $("#download").attr("download","build.png").attr("href",document.getElementById("myCanvas").toDataURL("image/png").replace(/^data:image\/png/,"data:application/octet-stream"));
 });
 
 
