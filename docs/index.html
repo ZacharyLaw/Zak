@@ -24,6 +24,7 @@
   }
   body{
   color:white;
+  position:static !important;
   }
   button {
   background-color: inherit;
@@ -38,17 +39,17 @@
 </head>
 <body style="background-color:#36393F;">
 <div id="header" style="background-color:#2F3136;">
-  <table style="width: 100%;" >
+  <table style="width: 95%;" >
     <tbody>
       <tr>
-        <td style="text-align: left;width: 33%;"><output>0% 0/0</output></td>
-        <td style="text-align: center;width: 33%;">Space Arena Builder</td>
-        <td style="text-align: right;width: 33%;">May require refresh to load modules&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td style="text-align: left;width: 30%;"><output>0% 0/0</output></td>
+        <td style="text-align: center;width: 30%;">Space Arena Builder</td>
+        <td style="text-align: right;width: 30%;"><a id="download" href="#" style="color:white;">Download</a></td>
       </tr>
     </tbody>
     </table>
 </div>
-<br><br><br>Drag to move<br>Right click/double tap to remove<br>
+<br><br><br>Drag to move<br>Right click/double tap to remove<div id="sandbox"></div> <div id="canvas" style="display: none;"></div>  <!--style="display: none;"-->
 <div id="footer" style="background-color:#2F3136;">
 Inventory: Click to clone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="myInput" onkeyup="search()" placeholder="Search module.." >
 <button id="util" style="float: right;"><img src="utility.png" width="30" height="30"></button>
@@ -88,17 +89,17 @@ Inventory: Click to clone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="
 <img class="inven weap" src="minelaunchermk2.png" eng="-170" width="75">
 <img class="inven weap" src="torpedolauncher.png" eng="-85" width="25">
 <img class="inven weap" src="arsenalwall.png" eng="-140" width="100">
-<img class="inven weap" src=" scorpionlauncher.png" eng="-110" width="50">
-<img class="inven weap" src=" scorpionlaunchermk2.png" eng="-110" width="50">
-<img class="inven weap" src=" scorpionlaunchermk3.png" eng="-365" width="50">
+<img class="inven weap" src="scorpionlauncher.png" eng="-110" width="50">
+<img class="inven weap" src="scorpionlaunchermk2.png" eng="-110" width="50">
+<img class="inven weap" src="scorpionlaunchermk3.png" eng="-365" width="50">
 <img class="inven weap" src="impactmissile.png" eng="-80" width="25">
 <img class="inven weap" src="flakrocketturret.png" eng="-155" width="75">
 <img class="inven weap" src="flakrocketturretmk2.png" eng="-155" width="75">
 <img class="inven weap" src="warheadlauncher.png" eng="-160" width="50">
 <img class="inven weap" src="hydraturret.png" eng="-195" width="75">
 <img class="inven weap" src="hydraturretmk2.png" eng="-195" width="75">
-<img class="inven weap" src=" smalllaser.png" eng="-20" width="25">
-<img class="inven weap" src=" smalllasermk2.png" eng="25" width="25">
+<img class="inven weap" src="smalllaser.png" eng="-20" width="25">
+<img class="inven weap" src="smalllasermk2.png" eng="25" width="25">
 <img class="inven weap" src="laserbeam.png" eng="-40" width="25">
 <img class="inven weap" src="laserbeammk2.png" eng="-30" width="25">
 <img class="inven weap" src="laserbeammk3.png" eng="-40" width="25">
@@ -134,8 +135,8 @@ Inventory: Click to clone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="
 <img class="inven def" src="pointdefenseturret.png" eng="-35" width="50">
 <img class="inven def" src="pointdefenseturretmk2.png" eng="-25" width="50">
 <img class="inven def" src="pointdefenseturretmk3.png" eng="-35" width="50">
-<img class="inven util" src=" smalliondrive.png" eng="-5" width="25">
-<img class="inven util" src=" smalliondrivemk2.png" eng="-5" width="25">
+<img class="inven util" src="smalliondrive.png" eng="-5" width="25">
+<img class="inven util" src="smalliondrivemk2.png" eng="-5" width="25">
 <img class="inven util" src="warpdrive.png" eng="-45" width="25">
 <img class="inven util" src="vectoredthruster.png" eng="-30" width="50">
 <img class="inven util" src="vectoredthrustermk2.png" eng="-40" width="50">
@@ -182,7 +183,7 @@ $( document ).ready( function() {
   var percent=0;
 
   $( ".inven" ).click( function(event) {
-    $(this).clone().removeClass("inven").width($(this).width()*2).appendTo("body").removeClass("weap").removeClass("def").removeClass("util").draggable({grid:[50,50]}).mousedown(function(event) {
+    $(this).clone().removeClass("inven").width($(this).width()*2).appendTo("#sandbox").removeClass("weap").removeClass("def").removeClass("util").draggable({grid:[50,50], snap: true}).mousedown(function(event) {
     if (event.which==3){
     $(this).remove();
     if ($(this).attr("eng")<0){
@@ -246,8 +247,90 @@ $('button').click( function(event) {
   }
 });
 
-
+$("#download").click(function () {
+    var getCanvas = document.createElement('canvas');
+    getCanvas.width = window.innerHeight;
+    getCanvas.height = window.innerHeight;
+    getCanvas.style.position = "absolute";
+    getCanvas.style.border = "dotted";
+    var ctx=getCanvas.getContext("2d");
+    var relativel=0;
+    var image,l,t;
+    $('#sandbox img').each(function(){
+      var image = new Image();
+      image.src = $(this).attr('src');
+      if ($(this).css("left")){
+      l=$(this).css("left").replace("px","");
+      }else{
+      l=0;
+      }
+      if ($(this).css("top")){
+      t=$(this).css("top").replace("px","");
+      }else{  
+      t=0;
+      }
+      ctx.drawImage(image, relativel*1+l*1,t);
+      relativel+=l*1+$(this).width()*1;
+    }); 
+    var trim=trimCanvas(getCanvas);
+    trim.id = "myCanvas";
+    document.getElementById("canvas").appendChild(trim);
+    $("#download").attr("download","beta.png").attr("href",document.getElementById("myCanvas").toDataURL("image/png").replace(/^data:image\/png/,"data:application/octet-stream"));
 });
+
+
+
+});//ready
+
+function trimCanvas(c) {
+    var ctx = c.getContext('2d'),
+        copy = document.createElement('canvas').getContext('2d'),
+        pixels = ctx.getImageData(0, 0, c.width, c.height),
+        l = pixels.data.length,
+        i,
+        bound = {
+            top: null,
+            left: null,
+            right: null,
+            bottom: null
+        },
+        x, y;
+    for (i = 0; i < l; i += 4) {
+        if (pixels.data[i + 3] !== 0) {
+            x = (i / 4) % c.width;
+            y = ~~((i / 4) / c.width);
+
+            if (bound.top === null) {
+                bound.top = y;
+            }
+
+            if (bound.left === null) {
+                bound.left = x;
+            } else if (x < bound.left) {
+                bound.left = x;
+            }
+
+            if (bound.right === null) {
+                bound.right = x;
+            } else if (bound.right < x) {
+                bound.right = x;
+            }
+
+            if (bound.bottom === null) {
+                bound.bottom = y;
+            } else if (bound.bottom < y) {
+                bound.bottom = y;
+            }
+        }
+    }
+    var trimHeight = bound.bottom - bound.top,
+        trimWidth = bound.right - bound.left,
+        trimmed = ctx.getImageData(bound.left, bound.top, trimWidth, trimHeight);
+    copy.canvas.width = trimWidth+1*1;
+    copy.canvas.height = trimHeight+1*1;
+    copy.putImageData(trimmed, 0, 0);
+    return copy.canvas;
+}
 </script>
 </body>
 </html>
