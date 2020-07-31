@@ -49,7 +49,7 @@
     </tbody>
     </table>
 </div>
-<br><br><br>Drag to move<br>Right click/double tap to remove<div id="sandbox"></div> <div id="canvas" style="display: none;"></div>  <!--style="display: none;"-->
+<br><br><br>Drag to move<br>Right click (mobile double tap) to remove<div id="sandbox"></div> <div id="canvas" style="display: none;"></div>  <!--style="display: none;"-->
 <div id="footer" style="background-color:#2F3136;">
 Inventory: Click to clone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="myInput" onkeyup="search()" placeholder="Search module.." >
 <button id="util" style="float: right;"><img src="utility.png" width="30" height="30"></button>
@@ -276,6 +276,7 @@ $("#download").click(function () {
     trim.id = "myCanvas";
     document.getElementById("canvas").appendChild(trim);
     $("#download").attr("download","build.png").attr("href",document.getElementById("myCanvas").toDataURL("image/png").replace(/^data:image\/png/,"data:application/octet-stream"));
+    document.getElementById("canvas").innerHTML = "";
 });
 
 
