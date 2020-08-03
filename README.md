@@ -47,7 +47,6 @@ Chaingun, cg, Chaingun Mk2, cgmk2, cg2, Vulcan Cannon, vc, Vulcan Turret, vt, Vu
 
 ## Future Plans
 Top to bottom, priority order
-- Advertise to top.gg and subreddit 
  - image recongition builds and analysis
  - disable coresponding command per server
  - Creator can preadd ship layout
@@ -56,3 +55,11 @@ Top to bottom, priority order
  - Creator+, add custom picture as module and circular/diaginal cells
  - Turns png outline to ship grid layout
 - Post game category youtube & subreddit notification
+
+For website builder
+- Export/import build
+- Weapon firecone + shield range filter
+- Ship outline
+- select multi
+- copy/cut and paste
+- undo
