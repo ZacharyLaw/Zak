@@ -66,6 +66,7 @@ Inventory: Click to insert&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type=
 <button id="all" style="float: right; color: white;">ALL</button>
 <button  style="float: right; color: white;   background-color: #2F3136;">Category: </button>
 <div id="inventory" style="position: absolute; bottom: 0%;">
+  &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
 <img class="inven weap" src="chaingun.png" eng="-10" width="25">
 <img class="inven weap" src="chaingunmk2.png" eng="-10" width="25">
 <img class="inven weap" src="vulcancannon.png" eng="-20" width="25">
@@ -301,7 +302,7 @@ $('button').click( function(event) {
 });
 
 $("#download").click(function () {
-    var trim=trimCanvas($('canvas')[0]);
+    var trim=trimCanvas($('canvas')[1]);
     $("#download").attr("download","build.png").attr("href",trim.toDataURL("image/png").replace(/^data:image\/png/,"data:application/octet-stream"));
 });
 
