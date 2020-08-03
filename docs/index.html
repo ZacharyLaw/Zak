@@ -166,7 +166,6 @@ Inventory: Click to insert&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type=
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="jquery.mobile-monkey.js"></script>
 <script src="jquery-doubletap.js"></script>
 <script src="https://unpkg.com/konva@7.0.4/konva.min.js"></script>
 
@@ -219,7 +218,7 @@ stage.on('dragend ', () => {
   document.body.style.cursor = 'default';
 
 });
-var scaleBy = 1.4;
+var scaleBy = 1.1;
 
 stage.on('wheel', (e) => {
         e.evt.preventDefault();
@@ -233,7 +232,7 @@ stage.on('wheel', (e) => {
         };
 
         var newScale =
-          e.evt.deltaY > 0 ? oldScale * scaleBy : oldScale / scaleBy;
+          e.evt.deltaY > 0 ?  oldScale / scaleBy: oldScale * scaleBy;
 
         stage.scale({ x: newScale, y: newScale });
 
