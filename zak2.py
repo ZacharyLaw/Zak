@@ -144,7 +144,7 @@ async def fact(ctx):await ctx.send(' '.join(random.choice(factlist)))
 @client.command()
 async def about(ctx):await ctx.send(embed =discord.Embed(description='<@563319785811869698> is made by <@270864978569854976>\nFor the Space Arena Offical Server\nBorn at 10/12/2019\nNice to meet you Senpi!\n__[Invite link](https://discordapp.com/oauth2/authorize?client_id=563319785811869698&scope=bot&permissions=314432)__\n__[Github](http://github.com/ZacharyLaw/Zak)__',colour=discord.Colour.from_rgb(47,49,54)))
 @client.command()
-async def builder(ctx):await ctx.send(embed =discord.Embed(description='[Builder PC Only](http://zacharylaw.github.io/Zak)',colour=discord.Colour.from_rgb(47,49,54)))
+async def builder(ctx):await ctx.send(embed =discord.Embed(description='[Website Ship Builder](http://zacharylaw.github.io/Zak)',colour=discord.Colour.from_rgb(47,49,54)))
 @client.command()
 async def sector(ctx,*,arg):
 	args=arg.split(' ')
@@ -192,9 +192,9 @@ async def info(ctx,*,arg):
 	if ' vs ' in arg:
 		indexs=[''.join(map(str,process.extractOne(arg.replace('mkiii','mk3').replace('mkii','mk2').split(' vs ')[0],general.index.values,score_cutoff=80)[0])) , ''.join(map(str,process.extractOne(arg.replace('mkiii','mk3').replace('mkii','mk2').split(' vs ')[1],general.index.values,score_cutoff=80)[0]))]
 		indexs=[ str(general.loc[index,'Alternative']) if str(general.loc[index,'Alternative'])!='nan' else index for index in indexs]
-		try:await ctx.send('```'+general.loc[indexs].transpose().dropna(how='all').fillna('').replace(to_replace=r'<:celes:570222210476670976\S',value='celes',regex=True).replace(to_replace=r'<:bp:568688146683002880\S',value='bp',regex=True).replace(to_replace=r'Total Module',value='',regex=True).to_string().replace('Index','	 ')+'```')
+		try:await ctx.send('```'+general.loc[indexs].transpose().dropna(how='all').fillna('').replace(to_replace=r'<:celes:570222210476670976\S',value='celes',regex=True).replace(to_replace=r'<:blueprint:568688146683002880\S',value='bp',regex=True).replace(to_replace=r'Total Module',value='',regex=True).to_string().replace('Index','	 ')+'```')
 		except:
-			page1='```'+general.loc[indexs].transpose().drop('Upgradeable Bonus').dropna(how='all').fillna('').replace(to_replace=r'<:celes:570222210476670976\S',value='celes',regex=True).replace(to_replace=r'<:bp:568688146683002880\S',value='bp',regex=True).replace(to_replace=r'Total Module',value='',regex=True).to_string().replace('Index','	 ')+'```'
+			page1='```'+general.loc[indexs].transpose().drop('Upgradeable Bonus').dropna(how='all').fillna('').replace(to_replace=r'<:celes:570222210476670976\S',value='celes',regex=True).replace(to_replace=r'<:blueprint:568688146683002880\S',value='bp',regex=True).replace(to_replace=r'Total Module',value='',regex=True).to_string().replace('Index','	 ')+'```'
 			page2='```Upgradeable Bonus\n'+tabulate([indexs,[general.loc[indexs[0],'Upgradeable Bonus'],general.loc[indexs[1],'Upgradeable Bonus']]],tablefmt="plain")+'```'
 			message=await ctx.channel.send(page1)
 			await message.add_reaction('<1one:714760225466482689>')
@@ -647,7 +647,7 @@ async def on_command_error(ctx,error):
 	else:print(error)"""
 @client.command()
 async def faq(ctx,*,arg):await ctx.send(' '.join(process.extractOne(arg,factlist,score_cutoff=50)[0]))
-@client.command(aliases=(['fb','friends','firend','firends']))
+@client.command(aliases=(['fb','facebook','friends','firend','firends']))
 async def friend(ctx):
 	if ctx.message.guild.id==486870895978086400 and not ctx.message.content=='!friend':
 		await ctx.send(embed =discord.Embed(description='__[Facebook friend list which all are space arena players](http://m.facebook.com/law.zac.50/friends)__',colour=discord.Colour.from_rgb(47,49,54)))

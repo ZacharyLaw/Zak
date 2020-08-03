@@ -1,4 +1,5 @@
-﻿PSS = Pirate States Ship					
+﻿PSS = Pirate States Ship	
+There are 5 ways to lose the battle: 0 reactors / 0 weapons / Lost 75% modules / Top right surrender flag / Disconnect from internet 
 Warp Drive can stack to increase warp frequency.				
 SpaceArena birthday is 30 Nov 2016					
 Ship build, player level, player rating, win rate, offline duration does not affect offline battle result, quantity or profit amount. Basically random
@@ -26,8 +27,10 @@ Warp time calculation: Fixed number + (Ship cells sum / Sum of Warp Power) + A s
 Using multiple Warp Drives increases the warp frequency. The number of cells affect warp frequency, a ship's total mass does not.
 In Gaussian War Shotgun, the number of pellet in the queue is 3, each pellet is 12 bullets, so 36 bullets are fired in one turn 
 If you hit two (or more) shields at the same time, only one of the shields will receive damage.
-For farming experience mainly, there are few requirements needed: Every ally ship needs to be destroyed for more experience; should to destroy some enemy ships for extra experience; Low budget to maximize efficiency. So the most efficient experience farm: 1 most expensive ship + 8 Heavy Fighter
+For fleet arena farming experience mainly, there are few requirements needed: Every ally ship needs to be destroyed for more experience; should to destroy some enemy ships for extra experience; Low budget to maximize efficiency. So the most efficient experience farm: 1 most expensive ship + 8 Heavy Fighter
 To restart game progress use a new google account or contact support@herocraft.com or private message @Kos.
 You can only get special ships standard version Mk1 (Wing, PSS Sparrow, PSS Miran, PSS EL-K) by randomly apears special offers with the cost of real life money.
 Max galaxy slot is 40
 Oversized shield would catch enemy misfire shots, thus would be not recommend to do so.
+The greater Warp Force, the less time between jumps.
+Maximum Laser DPS = ((Laser Damage(100-Reflect)%)-Armour)Laser Duration÷(Laser Duration + 1/Fire Rate)
