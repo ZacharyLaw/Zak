@@ -1,6 +1,8 @@
 <!doctype html>
 <html>
 <head>
+<title>Zak SA Builder</title>
+<link rel="icon" href="zak.png">
 <style>
   #header {
   position: fixed;
@@ -9,13 +11,14 @@
   padding: 10px;
   }
   #footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
   color:white;
   overflow-x: auto;
   white-space: nowrap;
   z-index: 2;
+  min-height: 22%;
   }
   #inventory{
   width: 100%;
@@ -34,6 +37,7 @@
   background-color: inherit;
   border: none;
   outline: none;
+  z-index: 2;
   }
 
   button:hover {
@@ -46,25 +50,26 @@
 </head>
 <body style="background-color:#36393F;">
 <div id="header" style="background-color:#2F3136;">
-  <table style="width: 95%;" >
+  <table style="width: 98%;" >
     <tbody>
       <tr>
-        <td style="text-align: left;width: 30%;"><output>0% 0/0</output></td>
-        <td style="text-align: center;width: 30%;">Space Arena Builder</td>
-        <td style="text-align: right;width: 30%;"><a id="download" href="#" style="color:white;">Download</a></td>
+        <td style="text-align: left;width: 33%;"><output>0% 0/0</output></td>
+        <td style="text-align: center;width: 33%;">Space Arena Builder</td>
+        <td style="text-align: right;width: 30%;"><a id="download" href="#" style="color:white;">DOWNLOAD</a></td>
       </tr>
     </tbody>
     </table>
 </div>
-<br><br><br>Drag to move<br>Double tap to remove<div id="c"></div>  <!--style="display: none;"-->
+<br><br><br>    <div id="stage-parent" >  <div id="c" style="position: fixed"></div></div>Drag to move<br>Double tap to remove<br>Drag and zoom background like map<!--style="display: none;"-->
 <div id="footer" style="background-color:#2F3136;">
-Inventory: Click to clone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="myInput" onkeyup="search()" placeholder="Search module.." >
+Inventory: Click to insert&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="myInput" onkeyup="search()" placeholder="Search module.." >
 <button id="util" style="float: right;"><img src="utility.png" width="30" height="30"></button>
 <button id="def" style="float: right;"><img src="defense.png" width="30" height="30"></button>
 <button id="weap" style="float: right;"><img src="weapon.png"  width="30" height="30"></button>
 <button id="all" style="float: right; color: white;">ALL</button>
 <button  style="float: right; color: white;   background-color: #2F3136;">Category: </button>
-<div id="inventory" style="background-color:#2F3136;">
+<div id="inventory" style="position: absolute; bottom: 0%;">
+  &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
 <img class="inven weap" src="chaingun.png" eng="-10" width="25">
 <img class="inven weap" src="chaingunmk2.png" eng="-10" width="25">
 <img class="inven weap" src="vulcancannon.png" eng="-20" width="25">
@@ -131,13 +136,13 @@ Inventory: Click to clone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="
 <img class="inven def" src="mediumreactivearmor.png" eng="-25" width="50">
 <img class="inven def" src="largereactivearmor.png" eng="-60" width="75">
 <img class="inven def" src="ballisticarmor.png" eng="0" width="75">
-<img class="inven def" src="combatshield.png" eng="-60" width="25">
-<img class="inven def" src="combatshieldmk2.png" eng="-70" width="25">
-<img class="inven def" src="bunkershield.png" eng="-80" width="25">
-<img class="inven def" src="bunkershieldmk2.png" eng="-20" width="25">
-<img class="inven def" src="battleshield.png" eng="-135" width="25">
-<img class="inven def" src="warshield.png" eng="-280" width="50">
-<img class="inven def" src="warshieldmk2.png" eng="-350" width="50">
+<img class="inven def" src="combatshield.png" eng="-60" width="25" rad="305" color="Aqua">
+<img class="inven def" src="combatshieldmk2.png" eng="-70" width="25" rad="305" color="Aqua">
+<img class="inven def" src="bunkershield.png" eng="-80" width="25"  rad="180" color="Blue">
+<img class="inven def" src="bunkershieldmk2.png" eng="-20" width="25"  rad="180" color="Blue">
+<img class="inven def" src="battleshield.png" eng="-135" width="25" rad="455" color="Red">
+<img class="inven def" src="warshield.png" eng="-280" width="50" rad="655" color="Orange">
+<img class="inven def" src="warshieldmk2.png" eng="-350" width="50" rad="655" color="Blue">
 <img class="inven def" src="junklauncher.png" eng="-35" width="50">
 <img class="inven def" src="pointdefenseturret.png" eng="-35" width="50">
 <img class="inven def" src="pointdefenseturretmk2.png" eng="-25" width="50">
@@ -165,7 +170,6 @@ Inventory: Click to clone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="jquery.mobile-monkey.js"></script>
 <script src="jquery-doubletap.js"></script>
 <script src="https://unpkg.com/konva@7.0.4/konva.min.js"></script>
 
@@ -180,6 +184,21 @@ var stage = new Konva.Stage({
   height: window.innerHeight,
 });
 var layer = new Konva.Layer();
+
+function fitStageIntoParentContainer() {
+  stage.width(window.innerWidth)
+  stage.height(window.innerHeight)
+}
+fitStageIntoParentContainer();
+
+window.addEventListener('resize', fitStageIntoParentContainer);
+
+let backgroundLayer = new Konva.Layer();
+
+stage.add(backgroundLayer);
+backgroundLayer.draw();
+stage.draggable(true);
+
 function search() {
   if (document.getElementById("myInput").value==""){
     $("img").show();
@@ -195,6 +214,38 @@ function search() {
     }
   }
 }
+stage.on('dragmove', () => {
+  document.body.style.cursor = 'move';
+
+});
+stage.on('dragend ', () => {
+  document.body.style.cursor = 'default';
+
+});
+var scaleBy = 1.1;
+
+stage.on('wheel', (e) => {
+        e.evt.preventDefault();
+        var oldScale = stage.scaleX();
+
+        var pointer = stage.getPointerPosition();
+
+        var mousePointTo = {
+          x: (pointer.x - stage.x()) / oldScale,
+          y: (pointer.y - stage.y()) / oldScale,
+        };
+
+        var newScale =
+          e.evt.deltaY > 0 ?  oldScale / scaleBy: oldScale * scaleBy;
+        stage.scale({ x: newScale, y: newScale });
+
+        var newPos = {
+          x: pointer.x - mousePointTo.x * newScale,
+          y: pointer.y - mousePointTo.y * newScale,
+        };
+        stage.position(newPos);
+        stage.batchDraw();
+      });
 $( document ).ready( function() {
 
 
@@ -202,6 +253,11 @@ $( document ).ready( function() {
     var imageObj = new Image();
       imageObj.src = $(this).attr("src");
       imageObj.eng = $(this).attr("eng");
+      imageObj.rad = $(this).attr("rad");
+      imageObj.color = $(this).attr("color");
+      imageObj.w = $(this).attr("width");
+      imageObj.h = $(this).attr("width");
+
       imageObj.onload = function () {
         drawImage(imageObj);
       };
@@ -225,22 +281,6 @@ $( document ).ready( function() {
       $("output").html(percent+"% "+usage+"/"+energy);
 
     };
-});
-$("img").doubletap(function(event) {
-event.target.remove();
-if (event.target.getAttribute("eng")<0){
-usage-=event.target.getAttribute("eng")*(-1);
-}else{
-energy-=event.target.getAttribute("eng")*(1);
-}
-if(usage==0){
-percent=0;
-}else if(energy/usage*100>100){
-percent=100;
-}else{
-percent=Math.round(energy/usage*100);
-}
-$("output").html(percent+"% "+usage+"/"+energy);
 });
 if ($(this).attr("eng")<0){
   usage+=$(this).attr("eng")*(-1);
@@ -269,60 +309,83 @@ $('button').click( function(event) {
 });
 
 $("#download").click(function () {
-    var trim=trimCanvas($('canvas')[0]);
+  stage.scale({ x: 1, y: 1 });
+    var trim=trimCanvas($('canvas')[1]);
     $("#download").attr("download","build.png").attr("href",trim.toDataURL("image/png").replace(/^data:image\/png/,"data:application/octet-stream"));
 });
 
-
-
 });//ready
 function drawImage(imageObj) {
+var img = new Konva.Image({
+image: imageObj,
+draggable: true,
+eng: imageObj.eng,
 
-        var img = new Konva.Image({
-          image: imageObj,
-          draggable: true,
-          eng: imageObj.eng
-        });
-        img.on('mouseover', function () {
-          document.body.style.cursor = 'move';
-        });
-        img.on('mouseout', function () {
-          document.body.style.cursor = 'default';
-        });
-        img.on('dblclick', function () {
-          img.destroy();
-          layer.batchDraw();
-          document.body.style.cursor = 'default';
-          if (img.attrs.eng<0){
-usage-=img.attrs.eng*(-1);
-}else{
-energy-=img.attrs.eng;
+});
+if (imageObj.rad){
+  var circle = new Konva.Circle({
+  x:imageObj.w,
+  y:imageObj.h,
+  radius: imageObj.rad,
+  fill: imageObj.color,
+  opacity: 0.2,});
+  var hitbox = new Konva.Image({
+  image: imageObj,
+  draggable: true,});
+  hitbox.on('mouseover',function(){document.body.style.cursor='move';});
+  hitbox.on('mouseout',function(){document.body.style.cursor='default';});
+  hitbox.on('dragmove', (e) => {
+  hitbox.position({
+  x: Math.round(hitbox.x() / blockSize) * blockSize,
+  y: Math.round(hitbox.y() / blockSize) * blockSize});
+  img.position({x: hitbox.x(),y: hitbox.y()});
+  circle.position({x: hitbox.x()+imageObj.w*1,y: hitbox.y()+imageObj.h*1,});
+  layer.batchDraw();});
+  img.on('mouseover', function () {
+  layer.add(circle);
+  layer.add(hitbox);
+  layer.batchDraw();
+  });
+  hitbox.on('mouseout', function () {
+  circle.remove();
+  hitbox.remove();
+  layer.batchDraw();
+  });
+  hitbox.on('dblclick dbltap',function () {
+  img.destroy();
+  circle.destroy();
+  hitbox.destroy();
+  layer.batchDraw();
+  document.body.style.cursor = 'default';
+  if (img.attrs.eng<0){usage-=img.attrs.eng*(-1);
+  }else{energy-=img.attrs.eng;}
+  if(usage==0){percent=0;
+  }else if(energy/usage*100>100){percent=100;
+  }else{percent=Math.round(energy/usage*100);}
+  $("output").html(percent+"% "+usage+"/"+energy);
+  });
 }
-if(usage==0){
-percent=0;
-}else if(energy/usage*100>100){
-percent=100;
-}else{
-percent=Math.round(energy/usage*100);
-}
+img.on('mouseover',function(){document.body.style.cursor='move';});
+img.on('mouseout',function(){document.body.style.cursor='default';});
+img.on('dblclick dbltap',function () {
+img.destroy();
+layer.batchDraw();
+document.body.style.cursor = 'default';
+if (img.attrs.eng<0){usage-=img.attrs.eng*(-1);
+}else{energy-=img.attrs.eng;}
+if(usage==0){percent=0;
+}else if(energy/usage*100>100){percent=100;
+}else{percent=Math.round(energy/usage*100);}
 $("output").html(percent+"% "+usage+"/"+energy);
-
-        });
-        img.on('dbltap', function () {
-          img.destroy();
-          layer.batchDraw();
-          document.body.style.cursor = 'default';
-        });
-        img.on('dragmove', (e) => {
-          img.position({
-              x: Math.round(img.x() / blockSize) * blockSize,
-              y: Math.round(img.y() / blockSize) * blockSize
-            });
-            layer.batchDraw();
-        });
-        layer.add(img);
-        stage.add(layer);
-      }
+});
+img.on('dragmove', (e) => {
+img.position({
+x: Math.round(img.x() / blockSize) * blockSize,
+y: Math.round(img.y() / blockSize) * blockSize});
+layer.batchDraw();});
+layer.add(img);
+stage.add(layer);
+}
 function trimCanvas(c) {
     var ctx = c.getContext('2d'),
         copy = document.createElement('canvas').getContext('2d'),
