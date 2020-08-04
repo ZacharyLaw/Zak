@@ -310,7 +310,9 @@ $('button').click( function(event) {
 });
 
 $("#download").click(function () {
-    var trim=trimCanvas($('canvas')[1]);
+  var canvas=$('canvas')[1].getContext('2d');
+  var scaledcanvas=canvas.scale(1,1);
+    var trim=trimCanvas(canvas);
     $("#download").attr("download","build.png").attr("href",trim.toDataURL("image/png").replace(/^data:image\/png/,"data:application/octet-stream"));
 });
 
@@ -387,8 +389,7 @@ layer.add(img);
 stage.add(layer);
 }
 function trimCanvas(c) {
-    var prectx = c.getContext('2d').scale(1,1),
-        ctx = prectx.scale(1,1),
+    var ctx = c.getContext('2d'),
         copy =  document.createElement('canvas').getContext('2d'),
         pixels = ctx.getImageData(0, 0, c.width, c.height),
         l = pixels.data.length,
