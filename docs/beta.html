@@ -300,7 +300,7 @@ $('button').click( function(event) {
 $("#download").click(function () {
   stage.scale({ x: 1, y: 1 });
   layer.batchDraw();
-    var trim=trimCanvas($('canvas')[1]);
+    var trim=trimCanvas($('canvas')[0]);
     $("#download").attr("download","build.png").attr("href",trim.toDataURL("image/png").replace(/^data:image\/png/,"data:application/octet-stream"));
 });
 
