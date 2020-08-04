@@ -298,9 +298,7 @@ $('button').click( function(event) {
   $("."+$(this).attr('id')).show();}
 });
 $("#download").click(function () {
-  stage.scale({ x: 1, y: 1 });
-  layer.batchDraw();
-    var trim=trimCanvas($('canvas')[0]);
+    var trim=trimCanvas($('canvas')[1]);
     $("#download").attr("download","build.png").attr("href",trim.toDataURL("image/png").replace(/^data:image\/png/,"data:application/octet-stream"));
 });
 
@@ -379,7 +377,7 @@ stage.add(layer);
 function trimCanvas(c) {
 
     var ctx = c.getContext('2d');
-    
+    ctx.restore()
     var copy =  document.createElement('canvas').getContext('2d');
     var    pixels = ctx.getImageData(0, 0, c.width, c.height);
         var    l = pixels.data.length;
