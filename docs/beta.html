@@ -388,7 +388,8 @@ stage.add(layer);
 }
 function trimCanvas(c) {
     var ctx = c.getContext('2d'),
-        copy = document.createElement('canvas').getContext('2d').scale(1,1),
+        precopy = document.createElement('canvas').getContext('2d'),
+        copy = precopy.scale(1,1),
         pixels = ctx.getImageData(0, 0, c.width, c.height),
         l = pixels.data.length,
         i,
