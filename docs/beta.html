@@ -323,12 +323,12 @@ if (imageObj.rad){
   hitbox.on('mouseover',function(){document.body.style.cursor='move';});
   hitbox.on('mouseout',function(){document.body.style.cursor='default';});
   hitbox.on('dragmove', (e) => {
-  hitbox.position({
-  x: Math.round(hitbox.x() / blockSize) * blockSize,
-  y: Math.round(hitbox.y() / blockSize) * blockSize});
-  img.position({x: hitbox.x(),y: hitbox.y()});
-  circle.position({x: hitbox.x()+imageObj.w*1,y: hitbox.y()+imageObj.h*1,});
-  layer.batchDraw();});
+    hitbox.position({
+    x: Math.round(hitbox.x() / blockSize) * blockSize,
+    y: Math.round(hitbox.y() / blockSize) * blockSize});
+    img.position({x: hitbox.x(),y: hitbox.y()});
+    circle.position({x: hitbox.x()+imageObj.w*1,y: hitbox.y()+imageObj.h*1,});
+    layer.batchDraw();});
   img.on('mouseover', function () {
   layer.add(circle);
   layer.add(hitbox);
@@ -376,6 +376,7 @@ stage.add(layer);
 }
 function trimCanvas(c) {
   stage.scale({ x: 1, y: 1 });
+  layer.batchDraw();
     var ctx = c.getContext('2d');
     
     var copy =  document.createElement('canvas').getContext('2d');
