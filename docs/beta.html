@@ -298,7 +298,7 @@ $('button').click( function(event) {
   $("."+$(this).attr('id')).show();}
 });
 $("#download").click(function () {
-  $('canvas')[1].getContext('2d').restore()
+  $('canvas')[1].getContext('2d').setTransform(1, 0, 0, 1, 0, 0);
 
     var trim=trimCanvas($('canvas')[1]);
     $("#download").attr("download","build.png").attr("href",trim.toDataURL("image/png").replace(/^data:image\/png/,"data:application/octet-stream"));
