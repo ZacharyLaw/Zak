@@ -57,9 +57,5 @@ Top to bottom, priority order
 - Post game category youtube & subreddit notification
 
 For website builder
-- Export/import build
-- Weapon firecone + shield range filter
 - Ship outline
-- select multi
-- copy/cut and paste
 - undo
