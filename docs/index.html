@@ -57,7 +57,7 @@
         <td style="text-align: left;width: 20%;"><output>0% 0/0</output></td>
         <td style="text-align: center;width: 30%;">Space Arena Builder</td>
         <td style="text-align: center;width: 16%;"><button id="json">DOWNLOAD PROJECT</button></td>
-        <td style="text-align: right;width: 16%;"><button id="download">DOWNLOAD IMAGE</button><a id="download" href="#" style="display: none;">Download</a></td>
+        <td style="text-align: right;width: 16%;"><a id="download" href="#" style="color:white">Download</a></td>
       </tr>
     </tbody>
     </table>
@@ -215,8 +215,7 @@ $('.category').click( function(event) {
 
 $("#download").click(function () {
     var trim=trimCanvas($('canvas')[0]);
-    $("a").attr("download","build.png").attr("href",trim.toDataURL("image/png").replace(/^data:image\/png/,"data:application/octet-stream"));
-    $("a").click();
+    $("#download").attr("download","build.png").attr("href",trim.toDataURL("image/png").replace(/^data:image\/png/,"data:application/octet-stream"));
 });
 
 $("#json").click(function(){downloadString(stage.toJSON()+"#"+usage+"#"+energy+"#"+percent,"text/txt", "build.project")});
