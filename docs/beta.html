@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<title>Beta Zak SA Builder</title>
+<title>Zak SA Builder</title>
 <link rel="icon" href="zak.png">
 <style>
   #header {
@@ -57,12 +57,12 @@
         <td style="text-align: left;width: 20%;"><output>0% 0/0</output></td>
         <td style="text-align: center;width: 30%;">Space Arena Builder</td>
         <td style="text-align: center;width: 16%;"><button id="json">DOWNLOAD PROJECT</button></td>
-        <td style="text-align: right;width: 16%;"><button id="download">DOWNLOAD IMAGE</button><a id="download" href="#" style="color:white; ">Download</a></td><!--<a id="download" href="#" style="color:white;">Download</a>-->
+        <td style="text-align: right;width: 16%;"><a id="download" href="#" style="color:white">DOWNLOAD IMAGE</a></td>
       </tr>
     </tbody>
     </table>
 </div>
-<br><br><br><div id="c" style="position: fixed" ondrop="json(event);" ondragover="dragOverHandler(event);"></div>Drag to move<br>Double tap to remove<br>Drag and zoom background like map<!--style="display: none;"-->
+<br><br><br><div id="c" style="position: fixed" ondrop="json(event);" ondragover="dragOverHandler(event);"></div>Drag to move<br>Double tap to remove<br>Drag and zoom background like map<br>Drop project file here to import
 <div id="footer" style="background-color:#2F3136;">
 Inventory: Click to insert&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="myInput" onkeyup="search()" placeholder="Search module.." >
 <button class="category" id="util" style="float: right;"><img src="utility.png" width="30" height="30"></button>
@@ -215,6 +215,7 @@ $('.category').click( function(event) {
 
 $("#download").click(function () {
     var trim=trimCanvas($('canvas')[0]);
+    trim.setAttribute("description","test");
     $("#download").attr("download","build.png").attr("href",trim.toDataURL("image/png").replace(/^data:image\/png/,"data:application/octet-stream"));
 });
 
@@ -368,6 +369,8 @@ switch(e.type) {
   case 'dbltap':
     img.destroy();
     layer.batchDraw();
+    stage.draw();
+
     document.body.style.cursor = 'default';
     engremove(img.attrs.eng);
     break;
