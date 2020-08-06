@@ -215,8 +215,8 @@ $('.category').click( function(event) {
 
 $("#download").click(function () {
     var trim=trimCanvas($('canvas')[0]);
-    $("#download")[1].attr("download","build.png").attr("href",trim.toDataURL("image/png").replace(/^data:image\/png/,"data:application/octet-stream"));
-    $("#download")[1].click();
+    $("a").attr("download","build.png").attr("href",trim.toDataURL("image/png").replace(/^data:image\/png/,"data:application/octet-stream"));
+    $("a").click();
 });
 
 $("#json").click(function(){downloadString(stage.toJSON()+"#"+usage+"#"+energy+"#"+percent,"text/txt", "build.project")});
