@@ -62,7 +62,7 @@
     </tbody>
     </table>
 </div>
-<br><br><br><div id="c" style="position: fixed" ondrop="json(event);" ondragover="dragOverHandler(event);"></div>Drag to move<br>Double tap to remove<br>Drag and zoom background like map<br>Drop project file here to import
+<br><br><br><div id="c" style="position: fixed" ondrop="json(event);" ondragover="dragOverHandler(event);"></div>Drag to move<br>Double tap to remove<br>Drag and zoom background like map<br>Drop project file here to import<br>Hold right mouse to draw box select module<br>Ctrl C to clone selected module
 <div id="footer" style="background-color:#2F3136;">
 Inventory: Click to insert&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="myInput" onkeyup="search()" placeholder="Search module.." >
 <button class="category" id="util" style="float: right;"><img src="utility.png" width="30" height="30"></button>
@@ -174,6 +174,8 @@ Inventory: Click to insert&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type=
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="jquery-doubletap.js"></script>
 <script src="https://unpkg.com/konva@7.0.4/konva.min.js"></script>
+<script src="https://unpkg.com/filepond-plugin-file-metadata/dist/filepond-plugin-file-metadata.js"></script>
+<script src="https://unpkg.com/filepond/dist/filepond.js"></script>
 
 <script>
 var blockSize = 50;
@@ -185,10 +187,22 @@ var stage = new Konva.Stage({
   width: window.innerWidth,
   height: window.innerHeight,
 });
+var tr = new Konva.Transformer({
+    enabledAnchors: [],
+    rotateEnabled: false,
+    borderStroke:'lightblue',
+    padding:10,
+  });
 var layer = new Konva.Layer();
+var group = new Konva.Group({});
+layer.add(group);
 stage.draggable(true);
-window.addEventListener('resize', fitStageIntoParentContainer);
 stagesetup(stage)
+window.addEventListener('resize', fitStageIntoParentContainer);
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+FilePond.registerPlugin(FilePondPluginFileMetadata);
+
 $( document ).ready( function() {
   $( ".inven" ).click( function(event) {
     var imageObj = new Image();
@@ -202,10 +216,6 @@ $( document ).ready( function() {
       imageObj.onload = function () {
         drawImage(imageObj);
       };
-    $(this).mousedown(function(event) {
-    if (event.which==3){
-    $(this).remove();
-    engremove($(this).attr("eng"));};});
     engadd($(this).attr("eng"));
 });
 $('.category').click( function(event) {
@@ -219,8 +229,115 @@ $("#download").click(function () {
 });
 
 $("#json").click(function(){downloadString(stage.toJSON()+"#"+usage+"#"+energy+"#"+percent,"text/txt", "build.project")});
+
+
+
 });//ready
+function getRelativePointerPosition(node) {
+        var transform = node.getAbsoluteTransform().copy();
+        transform.invert();
+        var pos = node.getStage().getPointerPosition();
+        return transform.point(pos);
+      }
 function stagesetup(stage){
+  var tr = new Konva.Transformer({
+    enabledAnchors: [],
+    rotateEnabled: false,
+    borderStroke:'lightblue',
+    padding:10,
+  });
+      layer.add(tr);
+      layer.draw();
+      var selectionRectangle = new Konva.Rect({
+        fill: 'lightblue',
+        opacity: 0.2,
+      });
+      layer.add(selectionRectangle);
+      var x1, y1, x2, y2;
+      stage.on('mousedown touchstart', (e) => {
+        if (event.which!=3){
+          return;
+          }else if (e.target !== stage) {
+          return;
+        }
+        x1 = getRelativePointerPosition(group).x;
+        y1 = getRelativePointerPosition(group).y;
+        x2 = getRelativePointerPosition(group).x;
+        y2 = getRelativePointerPosition(group).y;
+        selectionRectangle.visible(true);
+        selectionRectangle.width(0);
+        selectionRectangle.height(0);
+        layer.draw();
+      });
+      stage.on('mousemove touchmove', () => {
+        if (event.which!=3){
+          return;
+          }else if (!selectionRectangle.visible()) {
+          return;
+        }
+        x2 = getRelativePointerPosition(group).x;
+        y2 = getRelativePointerPosition(group).y;
+        selectionRectangle.setAttrs({
+          x: Math.min(x1, x2),
+          y: Math.min(y1, y2),
+          width: Math.abs(x2 - x1),
+          height: Math.abs(y2 - y1),
+        });
+        layer.batchDraw();
+      });
+      stage.on('mouseup touchend', () => {
+        if (event.which!=3){
+          return;
+          }else if (!selectionRectangle.visible()) {
+          return;
+        }
+        setTimeout(() => {
+          selectionRectangle.visible(false);
+          layer.batchDraw();
+        });
+
+        var shapes = stage.find('Image').toArray();
+        var box = selectionRectangle.getClientRect();
+        var selected = shapes.filter((shape) =>
+          Konva.Util.haveIntersection(box, shape.getClientRect())
+        );
+        tr.nodes(selected);
+        layer.batchDraw();
+      });
+      stage.on('click tap', function (e) {
+if (selectionRectangle.visible()) {
+          return;
+        }
+        if (e.target === stage) {
+          tr.nodes([]);
+          layer.draw();
+          return;        }
+        if (!e.target.hasName('Image')) {
+          return;}
+        const metaPressed = e.evt.shiftKey || e.evt.ctrlKey || e.evt.metaKey;
+        const isSelected = tr.nodes().indexOf(e.target) >= 0;
+
+        if (!metaPressed && !isSelected) {
+          tr.nodes([e.target]);
+        } else if (metaPressed && isSelected) {
+          const nodes = tr.nodes().slice(); // use slice to have new copy of array
+          nodes.splice(nodes.indexOf(e.target), 1);
+          tr.nodes(nodes);
+        } else if (metaPressed && !isSelected) {
+          const nodes = tr.nodes().concat([e.target]);
+          tr.nodes(nodes);
+        }
+        layer.draw();
+      });
+
+$(document).keydown(function(e) {
+if (e.keyCode == 67 && e.ctrlKey) {
+tr.nodes().forEach(function(entry) {
+var clone=entry.clone();
+moduleimage(clone);
+layer.add(clone);
+engadd(clone.attrs.eng)});}})
+
 stage.on('dragmove',()=>{document.body.style.cursor='move'});
 stage.on('dragend',()=>{document.body.style.cursor='default'});
 stage.on('wheel', (e) => {
@@ -233,7 +350,6 @@ stage.scale({ x: newScale, y: newScale });
 var newPos = {x: pointer.x - mousePointTo.x * newScale,y: pointer.y - mousePointTo.y * newScale,};
 stage.position(newPos);
 stage.batchDraw();
-console.log("stage");
 });}
 function json(ev) {
 ev.preventDefault();
@@ -351,6 +467,8 @@ if (json){layer=img.getLayer()};
 
 }else{
   img.on('dragmove mouseover mouseout dblclick dbltap', (e) => {
+  layer=img.getLayer()
+
 switch(e.type) {
   case 'dragmove':
     img.position({
