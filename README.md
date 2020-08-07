@@ -65,3 +65,8 @@ For website builder
 - Tab scroll switch favorite
 - Resource page
 - Dev leaks
+- Info tab
+- Estimate winrate
+- Weapon count + percentage
+- Edit stat
+
