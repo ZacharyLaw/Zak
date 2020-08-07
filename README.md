@@ -58,4 +58,10 @@ Top to bottom, priority order
 
 For website builder
 - Ship outline
-- undo
+- undo/redo
+- Favorite category
+- Ship layout
+- Cell builder
+- Tab scroll switch favorite
+- Resource page
+- Dev leaks
