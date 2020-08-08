@@ -38,6 +38,7 @@
   border: none;
   outline: none;
   z-index: 2;
+  color:white;
   }
 
   button:hover {
@@ -62,7 +63,7 @@
     </tbody>
     </table>
 </div>
-<br><br><br><div id="c" style="position: fixed" ondrop="json(event);" ondragover="dragOverHandler(event);"></div>Drag to move<br>Double tap to remove<br>Drag and zoom background like map<br>Drop project file here to import
+<br><br><br><div id="c" style="position: fixed" ondrop="json(event);" ondragover="dragOverHandler(event);"></div>Drag to move<br>Double tap to remove<br>Drag and zoom background like map<br>Drop project file here to import<br>Hold right mouse button to draw cursor box select module<br>Ctrl C to clone selected module
 <div id="footer" style="background-color:#2F3136;">
 Inventory: Click to insert&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="myInput" onkeyup="search()" placeholder="Search module.." >
 <button class="category" id="util" style="float: right;"><img src="utility.png" width="30" height="30"></button>
@@ -174,21 +175,36 @@ Inventory: Click to insert&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type=
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="jquery-doubletap.js"></script>
 <script src="https://unpkg.com/konva@7.0.4/konva.min.js"></script>
+<script src="https://unpkg.com/filepond-plugin-file-metadata/dist/filepond-plugin-file-metadata.js"></script>
+<script src="https://unpkg.com/filepond/dist/filepond.js"></script>
 
 <script>
 var blockSize = 50;
 var usage=0;
 var energy=0;
 var percent=0;
+var jsoned;
 var stage = new Konva.Stage({
   container: 'c',
   width: window.innerWidth,
   height: window.innerHeight,
 });
+var tr = new Konva.Transformer({
+    enabledAnchors: [],
+    rotateEnabled: false,
+    borderStroke:'lightblue',
+    padding:10,
+  });
 var layer = new Konva.Layer();
+var group = new Konva.Group({});
+layer.add(group);
 stage.draggable(true);
-window.addEventListener('resize', fitStageIntoParentContainer);
 stagesetup(stage)
+window.addEventListener('resize', fitStageIntoParentContainer);
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+FilePond.registerPlugin(FilePondPluginFileMetadata);
+
 $( document ).ready( function() {
   $( ".inven" ).click( function(event) {
     var imageObj = new Image();
@@ -199,13 +215,12 @@ $( document ).ready( function() {
       imageObj.w = $(this).attr("width");
       imageObj.h = $(this).attr("width");
       imageObj.source = $(this).attr("src");
+      console.log($("canvas"));
       imageObj.onload = function () {
         drawImage(imageObj);
+    save()
+
       };
-    $(this).mousedown(function(event) {
-    if (event.which==3){
-    $(this).remove();
-    engremove($(this).attr("eng"));};});
     engadd($(this).attr("eng"));
 });
 $('.category').click( function(event) {
@@ -215,13 +230,154 @@ $('.category').click( function(event) {
 
 $("#download").click(function () {
     var trim=trimCanvas($('canvas')[0]);
-    trim.setAttribute("description","test");
     $("#download").attr("download","build.png").attr("href",trim.toDataURL("image/png").replace(/^data:image\/png/,"data:application/octet-stream"));
 });
 
 $("#json").click(function(){downloadString(stage.toJSON()+"#"+usage+"#"+energy+"#"+percent,"text/txt", "build.project")});
+
+$(document).keydown(function(e){
+  if (e.which === 90 && e.ctrlKey && e.shiftKey){undo(1)
+  }else if (e.which === 90 && e.ctrlKey){undo()}})
 });//ready
+const history=[];
+let ver=0
+function save(){
+  ver+=1;
+  history.splice(ver-1,history.length-ver,stage.toJSON()+"#"+usage+"#"+energy+"#"+percent)
+}
+function undo(redo){
+jsoned=1
+if (!redo && ver!=1){ver-=1}
+else if (redo && ver!=history.length){ver+=1}
+version=history[ver-1];
+var string=version.split("#");
+stage.destroyChildren();
+layer.destroyChildren();
+$("canvas").remove();
+window.stage = Konva.Node.create(string[0], 'c');
+stage.find('Image').forEach(imageNode => {
+const nativeImage = new window.Image();
+nativeImage.onload = () => {
+imageNode.image(nativeImage);
+stagesetup(stage);
+moduleimage(imageNode,1);
+usage=parseInt(string[1]);
+energy=parseInt(string[2]);
+percent=parseInt(string[3]);
+$("output").html(percent+"% "+usage+"/"+energy);
+imageNode.getLayer().batchDraw();}
+nativeImage.src = imageNode.getAttr('source');})
+stage.batchDraw();
+}
+
+function getRelativePointerPosition(node) {
+        var transform = node.getAbsoluteTransform().copy();
+        transform.invert();
+        var pos = node.getStage().getPointerPosition();
+        return transform.point(pos);
+      }
 function stagesetup(stage){
+  var tr = new Konva.Transformer({
+    enabledAnchors: [],
+    rotateEnabled: false,
+    borderStroke:'lightblue',
+    padding:10,
+  });
+      layer.add(tr);
+      layer.draw();
+      var selectionRectangle = new Konva.Rect({
+        fill: 'lightblue',
+        opacity: 0.2,
+      });
+      layer.add(selectionRectangle);
+      var x1, y1, x2, y2;
+      stage.on('mousedown touchstart', (e) => {
+        if (event.which!=3){
+          return;
+          }else if (e.target !== stage) {
+          return;
+        }
+        x1 = getRelativePointerPosition(group).x;
+        y1 = getRelativePointerPosition(group).y;
+        x2 = getRelativePointerPosition(group).x;
+        y2 = getRelativePointerPosition(group).y;
+        selectionRectangle.visible(true);
+        selectionRectangle.width(0);
+        selectionRectangle.height(0);
+        layer.draw();
+      });
+      stage.on('mousemove touchmove', () => {
+        if (event.which!=3){
+          return;
+          }else if (!selectionRectangle.visible()) {
+          return;
+        }
+        x2 = getRelativePointerPosition(group).x;
+        y2 = getRelativePointerPosition(group).y;
+        selectionRectangle.setAttrs({
+          x: Math.min(x1, x2),
+          y: Math.min(y1, y2),
+          width: Math.abs(x2 - x1),
+          height: Math.abs(y2 - y1),
+        });
+        layer.batchDraw();
+      });
+      stage.on('mouseup touchend', () => {
+        if (event.which!=3){
+          return;
+          }else if (!selectionRectangle.visible()) {
+          return;
+        }
+        setTimeout(() => {
+          selectionRectangle.visible(false);
+          layer.batchDraw();
+        });
+
+        var shapes = stage.find('Image').toArray();
+        var box = selectionRectangle.getClientRect();
+        var selected = shapes.filter((shape) =>
+          Konva.Util.haveIntersection(box, shape.getClientRect())
+        );
+        tr.nodes(selected);
+        layer.batchDraw();
+      });
+      stage.on('click tap', function (e) {
+if (selectionRectangle.visible()) {
+          return;
+        }
+        if (e.target === stage) {
+          tr.nodes([]);
+          layer.draw();
+          return;        }
+        if (!e.target.hasName('Image')) {
+          return;}
+        const metaPressed = e.evt.shiftKey || e.evt.ctrlKey || e.evt.metaKey;
+        const isSelected = tr.nodes().indexOf(e.target) >= 0;
+
+        if (!metaPressed && !isSelected) {
+          tr.nodes([e.target]);
+        } else if (metaPressed && isSelected) {
+          const nodes = tr.nodes().slice(); // use slice to have new copy of array
+          nodes.splice(nodes.indexOf(e.target), 1);
+          tr.nodes(nodes);
+        } else if (metaPressed && !isSelected) {
+          const nodes = tr.nodes().concat([e.target]);
+          tr.nodes(nodes);
+        }
+        layer.draw();
+      });
+
+$(document).keydown(function(e) {
+if (e.keyCode == 67 && e.ctrlKey) {
+tr.nodes().forEach(function(entry) {
+var clone=entry.clone()
+moduleimage(clone);
+layer.add(clone);
+engadd(clone.attrs.eng)
+});
+save()
+}})
+
 stage.on('dragmove',()=>{document.body.style.cursor='move'});
 stage.on('dragend',()=>{document.body.style.cursor='default'});
 stage.on('wheel', (e) => {
@@ -234,7 +390,6 @@ stage.scale({ x: newScale, y: newScale });
 var newPos = {x: pointer.x - mousePointTo.x * newScale,y: pointer.y - mousePointTo.y * newScale,};
 stage.position(newPos);
 stage.batchDraw();
-console.log("stage");
 });}
 function json(ev) {
 ev.preventDefault();
@@ -247,10 +402,10 @@ const nativeImage = new window.Image();
 nativeImage.onload = () => {
 imageNode.image(nativeImage);
 stagesetup(stage);
-moduleimage(imageNode,layer,1);
-usage=string[1];
-energy=string[2];
-percent=string[3];
+moduleimage(imageNode,1);
+usage=parseInt(string[1]);
+energy=parseInt(string[2]);
+percent=parseInt(string[3]);
 $("output").html(percent+"% "+usage+"/"+energy);
 imageNode.getLayer().batchDraw();}
 nativeImage.src = imageNode.getAttr('source');})
@@ -295,11 +450,21 @@ source: imageObj.src,
 rad:imageObj.rad,
 color:imageObj.color
 });
-moduleimage(img,layer);
+console.log($("canvas"));
+
+moduleimage(img);
+console.log($("canvas"));
+
 layer.add(img);
+console.log($("canvas"));
+
 stage.add(layer);
+console.log($("canvas"));
+
 }//drawimage
-function moduleimage(img,layer,json){
+function moduleimage(img,json){
+  console.log($("canvas"));
+
   if (img.attrs.rad){
     var circle = new Konva.Circle({
   x:img.x()+img.width()/2,
@@ -317,7 +482,9 @@ if (json){layer=img.getLayer()};
   y: Math.round(hitbox.y() / blockSize) * blockSize});
   img.position({x: hitbox.x(),y: hitbox.y()});
   circle.position({x: hitbox.x()+img.width()/2,y: hitbox.y()+img.height()/2,});
-  layer.batchDraw();});
+  layer.batchDraw();
+  save()
+  });
   img.on('mouseover', function () {   
   layer.add(circle);
   layer.add(hitbox);
@@ -329,7 +496,9 @@ if (json){layer=img.getLayer()};
   y: Math.round(hitbox.y() / blockSize) * blockSize});
   hitbox.position({x: hitbox.x(),y: hitbox.y()});
   circle.position({x: hitbox.x()+img.width()/2,y: hitbox.y()+img.height()/2,});
-  layer.batchDraw();});
+  layer.batchDraw();
+  save()
+  });
 
   hitbox.on('mouseout', function () {
   circle.remove();
@@ -348,16 +517,22 @@ if (json){layer=img.getLayer()};
   }else if(energy/usage*100>100){percent=100;
   }else{percent=Math.round(energy/usage*100);}
   $("output").html(percent+"% "+usage+"/"+energy);
+  save()
   });
 
 }else{
-  img.on('dragmove mouseover mouseout dblclick dbltap', (e) => {
+  img.on('dragmove mouseover mouseout dblclick dbltap dragend ', (e) => {
+  layer=img.getLayer()
+
 switch(e.type) {
   case 'dragmove':
     img.position({
     x: Math.round(img.x() / blockSize) * blockSize,
     y: Math.round(img.y() / blockSize) * blockSize});
-    layer.batchDraw()
+    layer.batchDraw();
+    break;
+  case 'dragend':
+    save();
     break;
   case 'mouseover':
   document.body.style.cursor='move';
@@ -370,9 +545,9 @@ switch(e.type) {
     img.destroy();
     layer.batchDraw();
     stage.draw();
-
     document.body.style.cursor = 'default';
     engremove(img.attrs.eng);
+    save()
     break;
 }  }
 );}
@@ -380,12 +555,14 @@ switch(e.type) {
 
 }
 function engadd(eng){
-if(eng<0){usage+=eng*(-1);
-}else{energy+=eng*(1);}
-if(usage==0){percent=0;
-}else if(energy/usage*100>100){percent=100;
-}else{percent=Math.round(energy/usage*100);}
-$("output").html(percent+"% "+usage+"/"+energy);
+console.log(usage, typeof usage);
+if(eng<0){usage+=eng*(-1)
+}else{energy+=eng*(1)}
+console.log(usage, typeof usage);
+if(usage==0){percent=0
+}else if(energy/usage*100>100){percent=100
+}else{percent=Math.round(energy/usage*100)}
+$("output").html(percent+"% "+usage+"/"+energy)
 }
 function engremove(eng){
 if (eng<0){
