@@ -64,9 +64,10 @@ class MyClient(discord.Client):
 		channel = client.get_channel(payload.channel_id)
 		message=await channel.fetch_message(payload.message_id)
 		member= guild.get_member(payload.user_id)
-		if channel.guild== guild and message.content.startswith('__***Rules & Important***__') and member.id!=563319785811869698 and channel.name.startswith('rules'):
+		if channel.guild==guild and message.content.startswith('__***Rules & Important***__') and member.id!=563319785811869698 and channel.name.startswith('rules') and (len(member.roles)>2 or not member.top_role.id in [517175120431808523,515299388080390145,558226800296329216]):
 			await member.remove_roles(dictionary[payload.emoji.name])
-		elif channel.guild== guild and message.content.startswith('Press ') and member.id!=563319785811869698 and channel.name.startswith('rules') and payload.emoji.name=='ru':await member.remove_roles(ru)
+		elif channel.guild== guild and message.content.startswith('Press ') and member.id!=563319785811869698 and channel.name.startswith('rules') and payload.emoji.name=='ru' and  (len(member.roles)>2 or member.top_role.id!=657521436113764352):
+			await member.remove_roles(ru)
 	async def on_message(self, message):
 		if message.content.startswith('Your top ship class:') and message.channel.name.startswith('rules') and channel.guild== guild:
 			await message.add_reaction('<a:corvette:648546484425326612>')
