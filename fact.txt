@@ -1,4 +1,5 @@
 ﻿PSS = Pirate States Ship	
+Damage  - Armor stat  = real damaged receive
 There are 5 ways to lose the battle: 0 reactors / 0 weapons / Lost 75% modules / Top right surrender flag / Disconnect from internet 
 Warp Drive can stack to increase warp frequency.				
 SpaceArena birthday is 30 Nov 2016					

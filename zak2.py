@@ -144,7 +144,7 @@ async def fact(ctx):await ctx.send(' '.join(random.choice(factlist)))
 @client.command()
 async def about(ctx):await ctx.send(embed =discord.Embed(description='<@563319785811869698> is made by <@270864978569854976>\nFor the Space Arena Offical Server\nBorn at 10/12/2019\nNice to meet you Senpi!\n__[Invite link](https://discordapp.com/oauth2/authorize?client_id=563319785811869698&scope=bot&permissions=314432)__\n__[Github](http://github.com/ZacharyLaw/Zak)__',colour=discord.Colour.from_rgb(47,49,54)))
 @client.command()
-async def builder(ctx):await ctx.send(embed =discord.Embed(description='[Website Ship Builder](http://zacharylaw.github.io/Zak)',colour=discord.Colour.from_rgb(47,49,54)))
+async def builder(ctx):await ctx.send(embed =discord.Embed(description='[Website Ship Builder](http://sa-zak.github.io)',colour=discord.Colour.from_rgb(47,49,54)))
 @client.command()
 async def sector(ctx,*,arg):
 	args=arg.split(' ')
@@ -616,7 +616,7 @@ async def build(ctx,*,arg):
 					embed.description=index+' '+str(page)+'/'+str(len(ship))+'\n👍'+str(int(ship.iloc[page-1,6]*100))+'%\nAuthor: '+author+'\n'+str(ship.iloc[page-1,2])+desc
 					embed.set_image(url='https://cdn.discordapp.com/attachments/674632751390916609/'+str(ship.iloc[page-1,0])+'/'+str(ship.index[page-1])+'.png')
 					await msg.edit(embed=embed)
-			await msg.remove_reaction(reaction,user) 
+					await msg.remove_reaction(reaction,user) 
 	except:
 		embed.set_footer(text='')
 		await msg.edit(embed=embed)
