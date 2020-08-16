@@ -57,11 +57,9 @@ Top to bottom, priority order
 - Post game category youtube & subreddit notification
 
 For website builder
+- Consistent export
 - Ship outline
-- undo/redo
 - Favorite category
-- Ship layout
-- Cell builder
 - Tab scroll switch favorite
 - Resource page
 - Dev leaks
@@ -69,4 +67,3 @@ For website builder
 - Estimate winrate
 - Weapon count + percentage
 - Edit stat
-
