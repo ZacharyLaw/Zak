@@ -143,8 +143,8 @@ async def zak(ctx):await ctx.message.add_reaction('👋')
 async def fact(ctx):await ctx.send(' '.join(random.choice(factlist)))
 @client.command()
 async def about(ctx):await ctx.send(embed =discord.Embed(description='<@563319785811869698> is made by <@270864978569854976>\nFor the Space Arena Offical Server\nBorn at 10/12/2019\nNice to meet you Senpi!\n__[Invite link](https://discordapp.com/oauth2/authorize?client_id=563319785811869698&scope=bot&permissions=314432)__\n__[Github](http://github.com/ZacharyLaw/Zak)__',colour=discord.Colour.from_rgb(47,49,54)))
-@client.command()
-async def builder(ctx):await ctx.send(embed =discord.Embed(description='[Website Ship Builder](http://sa-zak.github.io)',colour=discord.Colour.from_rgb(47,49,54)))
+@client.command(aliases=(['design','builder']))
+async def designer(ctx):await ctx.send(embed =discord.Embed(description='[Website Ship Builder](http://sa-zak.github.io)\n[Website Ship Designer](http://sa-zak.github.io/designer)',colour=discord.Colour.from_rgb(47,49,54)))
 @client.command()
 async def sector(ctx,*,arg):
 	args=arg.split(' ')
@@ -490,12 +490,12 @@ async def submit(ctx,*,arg):
 			elif ',' not in arg:shipname=re.sub(r"http\S+", "",  arg)				
 			if ',' not in arg:desc=''
 			else:desc=re.sub(r"http\S+", "",  arg.split(',',1)[1])			
-		if len(message.attachments)==0 and len(urls)==0:await sender.send('No image recieved')
+		if len(ctx.message.attachments)==0 and len(urls)==0:await sender.send('No image recieved')
 		elif shipname=='':await sender.send('No shipname received')
 		elif not (process.extractOne(shipname,buildcorrect.index.values ,score_cutoff=80) or process.extractOne(shipname,buildcorrect.index.values ,score_cutoff=80)):await sender.channel.send('Shipname not found')
 		else:
-			if len(urls)==0 and len(message.attachments)>1:urls=[message.attachments[0].url,message.attachments[1].url]
-			elif len(urls)==0 and len(message.attachments)==1:urls=[message.attachments[0].url]
+			if len(urls)==0 and len(ctx.message.attachments)==2:urls=[ctx.message.attachments[0].url,ctx.message.attachments[1].url]
+			elif len(urls)==0 and len(ctx.message.attachments)==1:urls=[ctx.message.attachments[0].url]
 			if process.extractOne(shipname,buildcorrect.index.values ,score_cutoff=80):
 				filename=str(buildcorrect.loc[process.extractOne(shipname,buildcorrect.index.values ,score_cutoff=80)[0],'Filename'])
 				index=str(process.extractOne(shipname,buildcorrect.index.values ,score_cutoff=80)[0])
@@ -517,25 +517,44 @@ async def submit(ctx,*,arg):
 			screenshot=await botchannel.send(file=discord.File(filename))
 			os.remove(filename)
 			desc2='\n' if desc=='' else ''+desc
-			embed = discord.Embed(description=index+'\nAuthor: '+str(message.author)+'\n'+str(message.created_at.strftime("%d/%m/%Y"))+desc2,colour=discord.Colour.from_rgb(47,49,54))
+			if sender.message.mentions:author=sender.message.mentions[0]
+			else: author=message.author
+			if len(urls)==2:footadd='🔄 To swap'
+			else: footadd=''
+			embed = discord.Embed(description=index+'\nAuthor: '+str(author)+'\n'+str(message.created_at.strftime("%d/%m/%Y"))+desc2,colour=discord.Colour.from_rgb(47,49,54))
 			embed.set_image(url=screenshot.attachments[0].url)
-			embed.set_footer(text='✅ To Confirm',icon_url='https://cdn.discordapp.com/attachments/674632751390916609/700745020994617428/invis.png')
+			embed.set_footer(text='✅ To Confirm'+footadd,icon_url='https://cdn.discordapp.com/attachments/674632751390916609/700745020994617428/invis.png')
 			try:
 				confirm=await sender.send(embed=embed)
-				def check(reaction,user):return user == sender.author and reaction.emoji=='✅'
+				def check(reaction,user):return user == sender.author and reaction.emoji in ['✅','🔄']
 				await confirm.add_reaction('✅')
-				reaction,user = await client.wait_for('reaction_add',check=check,timeout=60.0)
-				buildpd.loc[filename.replace('.png','')]=[str(screenshot.attachments[0].id),str(message.author.id),str(message.created_at.strftime("%d/%m/%Y")),desc,'','']
-				os.remove('build.csv')
-				buildpd.to_csv('build.csv')
-				embed.set_footer(text='Submitted')
-				await confirm.edit(embed=embed)
-				await confirm.clear_reactions()
+				if len(urls)==2:await confirm.add_reaction('🔄')
+				while True:
+					reaction,user = await client.wait_for('reaction_add',check=check,timeout=60.0)
+					if reaction.emoji=='✅': 
+						buildpd.loc[filename.replace('.png','')]=[str(screenshot.attachments[0].id),str(message.author.id),str(message.created_at.strftime("%d/%m/%Y")),desc,'','']
+						os.remove('build.csv')
+						buildpd.to_csv('build.csv')
+						embed.set_footer(text='Submitted')
+						await confirm.edit(embed=embed)
+						await confirm.clear_reactions()
+					elif reaction.emoji=='🔄' and len(urls)==2: 
+						urls[0], urls[1] = urls[1], urls[0]
+						open(filename, 'wb').write(requests.get(urls[0]).content)
+						open('temp.png', 'wb').write(requests.get(urls[1]).content)
+						horizontal_resize_merge(filename, 'temp.png',filename)
+						os.remove('temp.png')
+						screenshot=await botchannel.send(file=discord.File(filename))
+						os.remove(filename)
+						embed.set_image(url=screenshot.attachments[0].url)
+						await confirm.edit(embed=embed)
+						await confirm.remove_reaction(reaction,user) 
 			except:
 				embed.set_footer(text='Failed Submit')
 				await confirm.edit(embed=embed)
 				await confirm.clear_reactions()
 	except discord.errors.Forbidden:await sender.channel.send('Missing permission')
+
 @client.command(aliases=(['b']))
 async def build(ctx,*,arg):
 	message=ctx.message
@@ -551,7 +570,7 @@ async def build(ctx,*,arg):
 			filename=str(buildcorrect.loc[index,'Filename'])
 	ship=buildpd.loc[buildpd.index.str.startswith(filename)]
 	ship['Ratio']=[ 0.5 if str(row.Upvote).count('.')==0 and str(row.Downvote).count('.')==0 else str(row.Upvote).count('.')/(str(row.Upvote).count('.')+str(row.Downvote).count('.'))  for index, row in ship.iterrows() ]
-	ship.sort_values('Ratio',ascending=True)
+	ship=ship.sort_values(by=['Ratio'],ascending=False)
 	page=1
 	try:author=str(client.get_user(int(ship.iloc[0,1])))
 	except:author='Unknown'
@@ -581,8 +600,8 @@ async def build(ctx,*,arg):
 				if page!=1:page-=1
 				try:author=str(client.get_user(int(ship.iloc[page-1,1])))
 				except:author='Unknown'
-				if str(ship.iloc[page-1,4])=='nan':desc=''
-				else:desc='\n'+str(ship.iloc[page-1,4])
+				if str(ship.iloc[page-1,3])=='nan':desc=''
+				else:desc='\n'+str(ship.iloc[page-1,3])
 				embed.description=index+' '+str(page)+'/'+str(len(ship))+'\n👍'+str(int(ship.iloc[page-1,6]*100))+'%\nAuthor: '+author+'\n'+str(ship.iloc[page-1,2])+desc
 				embed.set_image(url='https://cdn.discordapp.com/attachments/674632751390916609/'+str(ship.iloc[page-1,0])+'/'+str(ship.index[page-1])+'.png')
 				await msg.edit(embed=embed)
@@ -590,8 +609,8 @@ async def build(ctx,*,arg):
 				if page!=len(ship):page+=1
 				try:author=str(client.get_user(int(ship.iloc[page-1,1])))
 				except:author='Unknown'
-				if str(ship.iloc[page-1,4])=='nan':desc=''
-				else:desc='\n'+str(ship.iloc[page-1,4])
+				if str(ship.iloc[page-1,3])=='nan':desc=''
+				else:desc='\n'+str(ship.iloc[page-1,3])
 				embed.description=index+' '+str(page)+'/'+str(len(ship))+'\n👍'+str(int(ship.iloc[page-1,6]*100))+'%\nAuthor: '+author+'\n'+str(ship.iloc[page-1,2])+desc
 				embed.set_image(url='https://cdn.discordapp.com/attachments/674632751390916609/'+str(ship.iloc[page-1,0])+'/'+str(ship.index[page-1])+'.png')
 				await msg.edit(embed=embed)
@@ -616,7 +635,7 @@ async def build(ctx,*,arg):
 					embed.description=index+' '+str(page)+'/'+str(len(ship))+'\n👍'+str(int(ship.iloc[page-1,6]*100))+'%\nAuthor: '+author+'\n'+str(ship.iloc[page-1,2])+desc
 					embed.set_image(url='https://cdn.discordapp.com/attachments/674632751390916609/'+str(ship.iloc[page-1,0])+'/'+str(ship.index[page-1])+'.png')
 					await msg.edit(embed=embed)
-					await msg.remove_reaction(reaction,user) 
+			await msg.remove_reaction(reaction,user) 
 	except:
 		embed.set_footer(text='')
 		await msg.edit(embed=embed)

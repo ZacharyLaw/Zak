@@ -5,7 +5,7 @@ import os
 async def add1(channel,message,member,payload):
 	if unverified in member.roles:
 		await member.remove_roles(unverified)
-		await gen_ch.send('Welcome '+member.mention+'.\nYou may introduce yourself in <#575503557701271553> so we get to know you better! If you are in the top 100 or are a content creator for Space Arena, message a Jedi master (moderator) for your special role')
+		await gen_ch.send('Welcome '+member.mention+'.\nYou may introduce yourself in <#575503557701271553> so we get to know you better! If you are in the top 10 or are a content creator for Space Arena, message a Jedi master (moderator) for your special role')
 		await log_ch.send('Verified '+member.mention)
 async def add2(channel,message,member,payload):
 	if message.content.startswith('__***Rules & Important***__'):
