@@ -57,7 +57,6 @@ Top to bottom, priority order
 - Post game category youtube & subreddit notification
 
 For website builder
-- Consistent export
 - Ship outline
 - Favorite category
 - Tab scroll switch favorite
